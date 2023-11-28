@@ -22,6 +22,7 @@
 
 .btn-outline-dark {
   @include darkTheme();
+  @include setTranspareentBackgrForBTN();
 }
 
 //  /* style */
@@ -63,5 +64,6 @@
 .btn-large:hover,
 .btn-medium:hover,
 .btn-small:hover {
- @include addMainHoverAction()
+ @include addMainHoverAction();
+ @include lightTheme();
 }

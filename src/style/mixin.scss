@@ -7,6 +7,12 @@
     min-width: $minWidth;
 }
 
+@mixin setTranspareentBackgrForBTN(){
+    background-color: transparent;
+    border: 1px solid $mainLightColor;
+    
+}
+
 @mixin darkTheme(){
     color: $mainLightColor;
     background-color: $mainDarkColor;
@@ -15,6 +21,7 @@
 @mixin lightTheme(){
     color: $mainDarkColor;
     background-color: $mainLightColor;
+    
 }
 
 
