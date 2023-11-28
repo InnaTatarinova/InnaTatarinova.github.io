@@ -1,0 +1,67 @@
+@import "../../style/mainStyle.scss";
+@import "../../style/mixin.scss";
+
+.btnMain {
+  border-radius: 8px;
+  outline: none !important;
+  border: none;
+  cursor: pointer;
+  font-size: $mainFontSize;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
+.btnMain:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-outline-light {
+  @include lightTheme();
+}
+
+.btn-outline-dark {
+  @include darkTheme();
+}
+
+//  /* style */
+// .signUp-btn-activ {
+//   text-decoration: black solid 3px;
+// }
+
+// .btn-standart {
+//   background-color: #fff;
+//   color: #242424;
+//   border: 1px solid #fff;
+// }
+
+// .btn-standart-black {
+//   background-color: rgb(0, 0, 0);
+//   color: white;
+//   border: 1px solid black;
+//   min-width: 150px;
+// }
+
+// /* form */
+// .btn-ellipse {
+//   border-radius: 8px;
+// }
+
+/* size */
+.btn-large {
+  @include setbtnSize(20px, 900, 190px);
+}
+
+.btn-medium {
+  @include setbtnSize(18px, 700, 150px);
+}
+
+.btn-small {
+  @include setbtnSize(16px, 500, 70px);
+}
+
+.btn-large:hover,
+.btn-medium:hover,
+.btn-small:hover {
+ @include addMainHoverAction()
+}

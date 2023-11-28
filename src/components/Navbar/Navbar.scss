@@ -1,0 +1,140 @@
+@import "../../style/mainStyle.scss";
+@import "../../style/mixin.scss";
+
+.nav-block {
+    height: 90px;
+    background-color: $mainDarkColor;
+    @include addMainFlex(row, $maxWidth);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-logo {
+    margin-left: 5%;
+    position: fixed;
+}
+
+.nav-img {
+    height: $heightForHeader;
+}
+
+.menuBtn {
+    display: none;
+}
+
+.bi-list,
+.bi-x-lg,
+.bi-telephone {
+    font-size: 30px;
+    color: $mainLightColor;
+}
+
+.bi-telephone {
+    margin-right: 30px;
+    float: right;
+    transform: scaleX(-1);
+}
+
+.nav-menu {
+    @include addMainFlex(row, $maxWidth/1.3);
+    list-style: none;
+    margin-right: 3%;
+    justify-content: flex-end;
+    height: $heightForHeader;
+}
+
+.nav-menu-li {
+    height: $heightForHeader;
+    min-width: 120px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.nav-menu-li:hover {
+    @include addMainHoverAction();
+}
+
+.nav-menu-item {
+    @include setbtnSize(20px, 900, 190px);
+    text-decoration: none;
+    color: $mainLightColor;
+}
+
+.nav-menu-item:hover {
+    color: $mainLightColor;
+    border-bottom: 4px solid $mainLightColor;
+    transition: all 0.5s ease-out;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.phoneNumberStyle {
+    margin-right: 3%;
+}
+
+@media screen and (max-width: 1300px) {
+    .phoneNumberStyle {
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .menuBtn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        background: $mainDarkColor;
+        left: 0;
+        @include addMainFlex(column, $maxWidth);
+        height: 100vh;
+        position: absolute;
+        top: 80px;
+        opacity: 1;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+    }
+
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: $mainLightColor;
+        padding: 14px 20px;
+        border: 1px solid $mainLightColor;
+        transition: all 1s ease-out;
+        font-size: $mainFontSize;
+        font-weight: bold;
+        margin-right: 30px;
+    }
+
+    .nav-menu-li {
+        height: $heightForHeader;
+        width: 80%;
+    }
+
+    .nav-links-mobile:hover {
+        background: $mainLightColor;
+        color: $mainDarkColor;
+        transition: 250ms;
+    }
+}
