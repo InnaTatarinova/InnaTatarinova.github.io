@@ -16,39 +16,35 @@
   box-shadow: none;
 }
 
-.btn-outline-light {
+//Color
+.btn-light {
   @include lightTheme();
 }
 
-.btn-outline-dark {
+.btn-dark {
   @include darkTheme();
+
+  
+}
+
+//Style
+.btn-transparent{
   @include setTranspareentBackgrForBTN();
 }
 
-//  /* style */
-// .signUp-btn-activ {
-//   text-decoration: black solid 3px;
-// }
+//Border
+.btn-border-dark{
+  @include addBorder($mainDarkColor);
+}
 
-// .btn-standart {
-//   background-color: #fff;
-//   color: #242424;
-//   border: 1px solid #fff;
-// }
+.btn-border-light{
+  @include addBorder($mainLightColor);
+}
 
-// .btn-standart-black {
-//   background-color: rgb(0, 0, 0);
-//   color: white;
-//   border: 1px solid black;
-//   min-width: 150px;
-// }
 
-// /* form */
-// .btn-ellipse {
-//   border-radius: 8px;
-// }
 
-/* size */
+
+// Size
 .btn-large {
   @include setbtnSize(20px, 900, 190px);
 }

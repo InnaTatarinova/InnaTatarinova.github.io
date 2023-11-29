@@ -58,7 +58,7 @@ const Navbar = () => {
               href="tel:+1123-456-7890"
               className="phoneNumberStyle showInSmallWind"
             >
-              <ButtonComponent btnStyle="btn-outline-light" btnSize="btn-large">
+              <ButtonComponent btnStyle="btn-transparent" btnSize="btn-large" btnColor="btn-dark" btnBorder="btn-border-light">
                 +1 234 567 89 98
               </ButtonComponent>
             </Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
             href="tel:+1123-456-7890"
             className="phoneNumberStyle showInSmallWind"
           >
-            <ButtonComponent btnStyle="btn-outline-dark" btnSize="btn-large">
+            <ButtonComponent btnStyle="btn-transparent" btnSize="btn-large" btnColor="btn-dark" btnBorder="btn-border-light">
               +1 234 567 89 98
             </ButtonComponent>
           </Link>

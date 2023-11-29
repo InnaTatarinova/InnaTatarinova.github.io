@@ -1,5 +1,12 @@
 @import "./mainStyle.scss";
 
+@mixin addMainFlex($direction, $width) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    width: $width;
+}
+
 
 @mixin setbtnSize($fontSize, $fontWeight, $minWidth){
     font-size: $fontSize;
@@ -7,11 +14,21 @@
     min-width: $minWidth;
 }
 
-@mixin setTranspareentBackgrForBTN(){
-    background-color: transparent;
-    border: 1px solid $mainLightColor;
+@mixin setTextSize($fontSize, $fontWeight){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
     
 }
+
+@mixin setTranspareentBackgrForBTN(){
+    background-color: transparent;
+}
+
+@mixin addBorder($fontColor) {
+    border: 2px solid $fontColor;
+}
+
+
 
 @mixin darkTheme(){
     color: $mainLightColor;
@@ -26,23 +43,13 @@
 
 
 
-
-// @mixin addBorderToBtn($fontColor) {
-//     border: 2px solid $fontColor;
-// }
-
 @mixin addMainHoverAction() {
     transition: all 1s ease-out;
     transition: 250ms;
     transform: scale(1.1);
 }
 
-@mixin addMainFlex($direction, $width) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: center;
-    width: $width;
-}
+
 
 @mixin addTextStyleForName($fontSize){
     font-size: $fontSize;

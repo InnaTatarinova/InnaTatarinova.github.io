@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Banner } from '../components/Banner/Banner';
 
 
 
@@ -8,8 +9,8 @@ export const Home = () => {
  }, []);
   return (
     <div>
-      {/* <Banner/>
-      <InfoCard/> */}
+      <Banner/>
+      {/* <InfoCard/> */}
       </div>
   )
 }

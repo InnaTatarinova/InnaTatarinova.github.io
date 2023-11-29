@@ -2,7 +2,7 @@
 @import "../../style/mixin.scss";
 
 .nav-block {
-    height: 90px;
+    height: $heightForHeaderContainer;
     background-color: $mainDarkColor;
     @include addMainFlex(row, $maxWidth);
     position: fixed;
