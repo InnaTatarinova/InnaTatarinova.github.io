@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.319f5131.css",
-    "main.js": "/static/js/main.b4e2ffd2.js",
+    "main.css": "/static/css/main.ef0d80e0.css",
+    "main.js": "/static/js/main.98071b64.js",
+    "static/media/truckResiz.png": "/static/media/truckResiz.4cb6eda048348878509b.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.319f5131.css.map": "/static/css/main.319f5131.css.map",
-    "main.b4e2ffd2.js.map": "/static/js/main.b4e2ffd2.js.map"
+    "main.ef0d80e0.css.map": "/static/css/main.ef0d80e0.css.map",
+    "main.98071b64.js.map": "/static/js/main.98071b64.js.map"
   },
   "entrypoints": [
-    "static/css/main.319f5131.css",
-    "static/js/main.b4e2ffd2.js"
+    "static/css/main.ef0d80e0.css",
+    "static/js/main.98071b64.js"
   ]
 }
