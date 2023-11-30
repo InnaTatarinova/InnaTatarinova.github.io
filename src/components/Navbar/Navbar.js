@@ -36,10 +36,14 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
-    window.location.href = "tel://+12345678998";
     if (window.innerWidth > 450) {
       setVisiblePhoneNumber(!visiblePhoneNumber);
     }
+    phoneNumberDial();
+  };
+
+  const phoneNumberDial = () => {
+    window.location.href = "tel://+12345678998";
   };
 
   useEffect(() => {
@@ -128,7 +132,7 @@ const Navbar = () => {
               btnColor="btn-dark"
               btnBorder="btn-border-light"
               className="visiblePhoneNumber"
-              onClick={() =>  window.location.href = "tel://+12345678998"}
+              onClick={phoneNumberDial}
             >
               +1 234 567 89 98
             </ButtonComponent>
