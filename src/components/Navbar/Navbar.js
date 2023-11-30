@@ -36,8 +36,8 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
+    window.location.href = "tel://+12345678998";
     if (window.innerWidth > 450) {
-      window.location.href = "tel:// +1 234 567 89 98";
       setVisiblePhoneNumber(!visiblePhoneNumber);
     }
   };
@@ -128,7 +128,7 @@ const Navbar = () => {
               btnColor="btn-dark"
               btnBorder="btn-border-light"
               className="visiblePhoneNumber"
-              onClick={() =>  window.location.href = "+12345678998"}
+              onClick={() =>  window.location.href = "tel://+12345678998"}
             >
               +1 234 567 89 98
             </ButtonComponent>
