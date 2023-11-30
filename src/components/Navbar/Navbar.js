@@ -128,7 +128,7 @@ const Navbar = () => {
               btnColor="btn-dark"
               btnBorder="btn-border-light"
               className="visiblePhoneNumber"
-              onClick={() =>  window.location.href = "+1 234 567 89 98"}
+              onClick={() =>  window.location.href = "+12345678998"}
             >
               +1 234 567 89 98
             </ButtonComponent>
