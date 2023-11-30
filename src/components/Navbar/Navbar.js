@@ -125,14 +125,13 @@ const Navbar = () => {
         </ul>
 
         {button && (
-          <Link className="phoneNumberStyle showInSmallWind">
+          <Link className="phoneNumberStyle showInSmallWind" >
             <ButtonComponent
               btnStyle="btn-transparent"
               btnSize="btn-large"
               btnColor="btn-dark"
               btnBorder="btn-border-light"
               className="visiblePhoneNumber"
-              onClick={phoneNumberDial}
             >
               +1 234 567 89 98
             </ButtonComponent>
