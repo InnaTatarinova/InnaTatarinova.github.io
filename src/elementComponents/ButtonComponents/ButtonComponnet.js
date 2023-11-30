@@ -15,7 +15,7 @@ export const ButtonComponent = ({
   const SIZES = ["btn-medium", "btn-small", "btn-large"];
   const BORDER = ["", "btn-border-light", "btn-border-dark"];
   const COLOR = ["btn-light", "btn-dark"];
-  const CLASSNAME = [""];
+  const CLASSNAME = ["", "visiblePhoneNumber"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];
   const checkBtnSize = SIZES.includes(btnSize) ? btnSize : SIZES[0];

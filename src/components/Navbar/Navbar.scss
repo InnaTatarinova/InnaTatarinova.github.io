@@ -30,6 +30,11 @@
     color: $mainLightColor;
 }
 
+.bi:hover {
+   color: $thirdColor;
+}
+
+
 .bi-telephone {
     margin-right: 30px;
     float: right;
@@ -75,10 +80,24 @@
     margin-right: 3%;
 }
 
+
 @media screen and (max-width: 1300px) {
     .phoneNumberStyle {
-        margin-right: 5%;
+        margin-right: 3%;
     }
+    .nav-menu-li {
+        min-width: 100px;  
+    }
+    
+    .nav-menu-item {
+        @include setbtnSize(18px, 800, 150px);
+      
+    }
+
+    .visiblePhoneNumber{
+        @include setbtnSize(18px, 500, 170px);
+    }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -102,11 +121,12 @@
         @include addMainFlex(column, $maxWidth);
         height: 100vh;
         position: absolute;
-        top: 80px;
+        top: 90px;
         opacity: 1;
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 0px;
+        padding-top: 90px;
     }
 
     .nav-links-mobile {
@@ -138,3 +158,16 @@
         transition: 250ms;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .visiblePhoneNumber{
+        @include setbtnSize(15px, 500, 150px);
+        
+    } 
+
+    .phoneNumberStyle {
+        margin-left: -55px;
+    }
+}
+
+

@@ -17,6 +17,9 @@ const Navbar = () => {
     } else {
       setShowButton(true);
     }
+    if (window.innerWidth < 450) {
+      setVisiblePhoneNumber(false);
+    }
   };
 
   window.addEventListener("resize", showButton);
@@ -24,7 +27,6 @@ const Navbar = () => {
   //Show/hide menu list in small window
   const clickOnMenu = () => {
     setclickOnMenuStatus(!clickOnMenuStatus);
-    setVisiblePhoneNumber(!visiblePhoneNumber);
   };
 
   //close menulist after choosing some link
@@ -34,11 +36,13 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
-    setVisiblePhoneNumber(!visiblePhoneNumber);
+    if (window.innerWidth > 450) {
+      window.location.href = "tel:// +1 234 567 89 98";
+      setVisiblePhoneNumber(!visiblePhoneNumber);
+    }
   };
 
   useEffect(() => {
-    setVisiblePhoneNumber(!visiblePhoneNumber);
     showButton();
   }, []);
 
@@ -51,14 +55,17 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="menuBtn" onClick={showPhoneNumber}>
-          {visiblePhoneNumber ? (
+          {!visiblePhoneNumber ? (
             <i className="bi bi-telephone"></i>
           ) : (
-            <Link
-              href="tel:+1123-456-7890"
-              className="phoneNumberStyle showInSmallWind"
-            >
-              <ButtonComponent btnStyle="btn-transparent" btnSize="btn-large" btnColor="btn-dark" btnBorder="btn-border-light">
+            <Link className="phoneNumberStyle">
+              <ButtonComponent
+                btnStyle="btn-transparent"
+                btnSize="btn-large"
+                btnColor="btn-dark"
+                btnBorder="btn-border-light"
+                className="visiblePhoneNumber"
+              >
                 +1 234 567 89 98
               </ButtonComponent>
             </Link>
@@ -102,14 +109,27 @@ const Navbar = () => {
               Price
             </Link>
           </li>
+          <li className="nav-menu-li">
+            <Link
+              to="/products"
+              onClick={clickToCloseMenu}
+              className="nav-menu-item"
+            >
+              Contact us
+            </Link>
+          </li>
         </ul>
 
         {button && (
-          <Link
-            href="tel:+1123-456-7890"
-            className="phoneNumberStyle showInSmallWind"
-          >
-            <ButtonComponent btnStyle="btn-transparent" btnSize="btn-large" btnColor="btn-dark" btnBorder="btn-border-light">
+          <Link className="phoneNumberStyle showInSmallWind">
+            <ButtonComponent
+              btnStyle="btn-transparent"
+              btnSize="btn-large"
+              btnColor="btn-dark"
+              btnBorder="btn-border-light"
+              className="visiblePhoneNumber"
+              onClick={() =>  window.location.href = "tel:// +1 234 567 89 98"}
+            >
               +1 234 567 89 98
             </ButtonComponent>
           </Link>
