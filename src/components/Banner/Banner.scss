@@ -1,25 +1,24 @@
 @import "../../style/mainStyle.scss";
 @import "../../style/mixin.scss";
 
-
-.hidden{
+.hidden {
     width: 100%;
     z-index: 100;
     position: fixed;
     top: -100vh;
     transition: 0.5s linear;
-
 }
 
 .banner-container {
     width: 100%;
     height: 100vh;
     background-color: $mainDarkColor;
+    position: relative;
 }
 .banner-h1 {
     @include setTextSize(350%, 900);
     @include darkTheme();
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: 6%;
     padding-right: 6%;
     text-shadow: #edcc068a 1px 0 5px;
@@ -29,13 +28,14 @@
 }
 
 .banner-img {
-    position: relative;
+    position: absolute;
     width: 100%;
+    height: 70%;
     object-fit: cover;
-    left: 0;
+    bottom: 0;
     animation: truckSlide 5s normal;
     text-align: center;
-    margin-top: 4vw;
+    margin-top: 20px;
 }
 
 @keyframes truckSlide {
@@ -48,9 +48,13 @@
 }
 
 .banner-img img {
+    position: absolute;
     overflow: hidden;
-    width: 80%;
-    height: 100%;
+    width: $widthFotTruck;
+    height: calc(#{$widthFotTruck} * 1);
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
 }
 
 @keyframes opacityOn {
@@ -76,22 +80,16 @@
 .callout-banner {
     background-color: yellow;
     padding: 1rem;
-  
-  }
+}
 
 @media screen and (max-width: 1280px) {
     .banner-img img {
-        width: 90%;
-    }
-
-    .banner-img {
-        margin-top: 10vw;
+        height: calc(#{$widthFotTruck} * 0.93);
     }
 
     .banner-h1 {
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 15vw;
     }
 
     .askPriceStyle h2 {
@@ -101,21 +99,21 @@
 
 @media screen and (max-width: 1024px) {
     .banner-h1 {
-        // @include setTextSize(60px, 700);
+        padding-top: 170px;
     }
 
     .banner-img {
-        margin-top: 20vw;
+        height: calc(#{$widthFotTruck} * 0.6);
     }
 
     .askPriceStyle {
-        top: 6%;
-        left: 6%;
+        top: 20%;
+        left: 8%;
         width: 60%;
     }
 
     .askPriceStyle h2 {
-        @include setTextSize(30px, 700);
+        @include setTextSize(40px, 700);
     }
 }
 
@@ -124,30 +122,27 @@
         @include setTextSize(250%, 700);
         padding-top: 25vw;
     }
-    .banner-img {
-        margin-top: 27vw;
-        object-fit: cover;
-    }
 
     .banner-img img {
-        width: 70%;
+        height: 60%;
+        width: 80%;
+        bottom: 50%;
+        left: 10%;
+        right: 10%;
     }
 
     .askPriceStyle {
         text-align: center;
         width: 90%;
-        top: 110%;
+        top: 50%;
+        left: 10%;
+        right: 10%;
+        
     }
 
     .askPriceStyle h2 {
         color: $thirdColor;
         margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 568px) {
-    .banner-img {
-        margin-top: 20vw;
     }
 }
 
@@ -157,16 +152,15 @@
         padding-top: 40vw;
     }
 
-    .banner-img {
-        margin-top: 35vw;
-    }
 
     .banner-img img {
-        width: 80%;
+        height: 50%;
+        bottom: 60%;
+
     }
 
     .askPriceStyle h2 {
         color: $thirdColor;
-        @include setTextSize(20px, 500);
+        @include setTextSize(30px, 500);
     }
 }

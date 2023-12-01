@@ -43,7 +43,7 @@ export const Banner = () => {
 
   return (
     // className="banner-container"
-    <div className={`banner-container ${show ? '' : 'hidden'}`}>
+    <div className={show ? 'banner-container' : 'hidden'}>
       {/* //  className={`banner-container ${show && "hidden"}` */}
       <h1 className="banner-h1">We promise you will enjoy moving </h1>
 
