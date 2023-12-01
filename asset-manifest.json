@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4ca32e0.css",
+    "main.css": "/static/css/main.24b12eb3.css",
     "main.js": "/static/js/main.d41a18e6.js",
     "static/media/truckLOGO.png": "/static/media/truckLOGO.2a768e89a24d9bfcb29d.png",
     "static/media/truckResize.png": "/static/media/truckResize.1c8356ef1ece2e1be295.png",
@@ -13,11 +13,11 @@
     "static/media/delivery.jpg": "/static/media/delivery.e874b1dcb06965a558e3.jpg",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.d4ca32e0.css.map": "/static/css/main.d4ca32e0.css.map",
+    "main.24b12eb3.css.map": "/static/css/main.24b12eb3.css.map",
     "main.d41a18e6.js.map": "/static/js/main.d41a18e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4ca32e0.css",
+    "static/css/main.24b12eb3.css",
     "static/js/main.d41a18e6.js"
   ]
 }
