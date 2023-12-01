@@ -81,7 +81,7 @@
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
     .phoneNumberStyle {
         margin-right: 3%;
     }
@@ -100,7 +100,7 @@
 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
     .menuBtn {
         display: block;
         position: absolute;
@@ -159,7 +159,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .visiblePhoneNumber{
         @include setbtnSize(15px, 500, 150px);
         

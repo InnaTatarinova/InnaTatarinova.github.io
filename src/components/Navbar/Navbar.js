@@ -12,12 +12,12 @@ const Navbar = () => {
 
   //show btn with phoneNumber
   const showButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1024) {
       setShowButton(false);
     } else {
       setShowButton(true);
     }
-    if (window.innerWidth < 450) {
+    if (window.innerWidth < 480) {
       setVisiblePhoneNumber(false);
     }
   };
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
-    if (window.innerWidth > 450) {
+    if (window.innerWidth > 480) {
       setVisiblePhoneNumber(!visiblePhoneNumber);
     }
     phoneNumberDial();
@@ -125,7 +125,7 @@ const Navbar = () => {
         </ul>
 
         {button && (
-          <Link className="phoneNumberStyle showInSmallWind" >
+          <Link className="phoneNumberStyle" >
             <ButtonComponent
               btnStyle="btn-transparent"
               btnSize="btn-large"

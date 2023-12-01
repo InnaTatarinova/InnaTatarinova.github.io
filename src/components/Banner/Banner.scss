@@ -79,7 +79,7 @@
   
   }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
     .banner-img img {
         width: 90%;
     }
@@ -99,7 +99,7 @@
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
     .banner-h1 {
         // @include setTextSize(60px, 700);
     }
@@ -119,7 +119,7 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .banner-h1 {
         @include setTextSize(250%, 700);
         padding-top: 25vw;
@@ -145,13 +145,13 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 568px) {
     .banner-img {
         margin-top: 20vw;
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
     .banner-h1 {
         @include setTextSize(200%, 500);
         padding-top: 40vw;

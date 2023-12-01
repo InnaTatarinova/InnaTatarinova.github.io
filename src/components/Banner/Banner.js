@@ -7,20 +7,26 @@ const bannerLogo = require("../../assets/img/truckLOGO.png");
 
 export const Banner = () => {
   const [smallWindow, setSmallWindow] = useState(false);
+    const [show, setShow] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
 
   const changePhotoTruck = () => {
-    if (window.innerWidth <= 769) {
+    if (window.innerWidth <= 768) {
       setSmallWindow(true);
     } else {
       setSmallWindow(false);
     }
   };
 
-  const [show, setShow] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  window.addEventListener("resize",changePhotoTruck);
+
+  useEffect(()=>{
+   changePhotoTruck();
+  },[]);
 
   useEffect(() => {
-    changePhotoTruck();
+     
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       setShow(
@@ -34,11 +40,6 @@ export const Banner = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
-
-
-  // useEffect(() => {
-  //   changePhotoTruck();
-  // }, []);
 
   return (
     // className="banner-container"

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { Banner } from '../components/Banner/Banner';
+import { AboutUs } from '../components/AboutUs/AboutUs';
+import { Services } from '../components/Services/Services';
 
 
 
@@ -10,6 +12,8 @@ export const Home = () => {
   return (
     <div>
       <Banner/>
+      <Services/>
+      <AboutUs/>
       {/* <InfoCard/> */}
       </div>
   )

@@ -17,6 +17,7 @@
 @mixin setTextSize($fontSize, $fontWeight){
     font-size: $fontSize;
     font-weight: $fontWeight;
+    text-align: center;
     
 }
 
