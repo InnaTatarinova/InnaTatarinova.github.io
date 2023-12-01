@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.956de1ec.css",
-    "main.js": "/static/js/main.460a1856.js",
-    "static/media/truckResiz.png": "/static/media/truckResiz.4cb6eda048348878509b.png",
+    "main.css": "/static/css/main.d4ca32e0.css",
+    "main.js": "/static/js/main.d41a18e6.js",
+    "static/media/truckLOGO.png": "/static/media/truckLOGO.2a768e89a24d9bfcb29d.png",
+    "static/media/truckResize.png": "/static/media/truckResize.1c8356ef1ece2e1be295.png",
+    "static/media/storage.jpg": "/static/media/storage.a8cfa3a328502f1cf9c1.jpg",
+    "static/media/local.jpg": "/static/media/local.0e09a60a2417825a8bf8.jpg",
+    "static/media/longDistance.jpg": "/static/media/longDistance.dd078e6ed3584ccc2779.jpg",
+    "static/media/commercial.jpg": "/static/media/commercial.1dc29ddcc7fc5e4d3abe.jpg",
+    "static/media/junk.jpg": "/static/media/junk.464515550ec8b277728e.jpg",
+    "static/media/packing.jpg": "/static/media/packing.7f9f9f8a67bbc1d25688.jpg",
+    "static/media/delivery.jpg": "/static/media/delivery.e874b1dcb06965a558e3.jpg",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.956de1ec.css.map": "/static/css/main.956de1ec.css.map",
-    "main.460a1856.js.map": "/static/js/main.460a1856.js.map"
+    "main.d4ca32e0.css.map": "/static/css/main.d4ca32e0.css.map",
+    "main.d41a18e6.js.map": "/static/js/main.d41a18e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.956de1ec.css",
-    "static/js/main.460a1856.js"
+    "static/css/main.d4ca32e0.css",
+    "static/js/main.d41a18e6.js"
   ]
 }
