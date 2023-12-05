@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Banner } from '../components/Banner/Banner';
 import { AboutUs } from '../components/AboutUs/AboutUs';
 import { Services } from '../components/Services/Services';
@@ -6,13 +6,11 @@ import { Services } from '../components/Services/Services';
 
 
 export const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
- }, []);
+  const resultRef = useRef(null);
   return (
     <div>
-      <Banner/>
-      <Services/>
+      <Banner resultRef={resultRef}/>
+      <Services ref={resultRef}/>
       <AboutUs/>
       {/* <InfoCard/> */}
       </div>

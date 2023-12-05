@@ -7,54 +7,57 @@
     width: $width;
 }
 
-
-@mixin setbtnSize($fontSize, $fontWeight, $minWidth){
+//Button
+@mixin setbtnSize($fontSize, $fontWeight, $minWidth) {
     font-size: $fontSize;
     font-weight: $fontWeight;
     min-width: $minWidth;
 }
 
-@mixin setTextSize($fontSize, $fontWeight){
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    text-align: center;
-    
-}
-
-@mixin setTranspareentBackgrForBTN(){
+@mixin setTranspareentBackgrForBTN() {
     background-color: transparent;
 }
 
+//Text
+@mixin setTextSize($fontSize, $fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-align: center;
+}
+
+@mixin addTextStyleForName($fontSize) {
+    font-size: $fontSize;
+    font-weight: bold;
+}
+
+//Border
 @mixin addBorder($fontColor) {
     border: 2px solid $fontColor;
 }
 
-
-
-@mixin darkTheme(){
+//Theme
+@mixin darkTheme() {
     color: $mainLightColor;
     background-color: $mainDarkColor;
 }
 
-@mixin lightTheme(){
+@mixin lightTheme() {
     color: $mainDarkColor;
     background-color: $mainLightColor;
-    
 }
 
+@mixin addDarkTheme {
+    @include darkTheme();
+}
 
+@mixin addLightTheme {
+    @include lightTheme();
+}
 
+//Hover
 @mixin addMainHoverAction() {
-    transition: all 1s ease-out;
-    transition: 250ms;
     transform: scale(1.1);
-}
-
-
-
-@mixin addTextStyleForName($fontSize){
-    font-size: $fontSize;
-    font-weight: bold;
+    
 }
 
 // @mixin formEl($width, $mainBorderRadius, $mainActiveFontColor) {

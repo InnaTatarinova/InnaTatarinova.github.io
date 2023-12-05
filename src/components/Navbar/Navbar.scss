@@ -30,15 +30,14 @@
     color: $mainLightColor;
 }
 
-.bi:hover {
-   color: $thirdColor;
+.menuIcon:hover {
+    color: $thirdColor;    
 }
-
 
 .bi-telephone {
     margin-right: 30px;
     float: right;
-    transform: scaleX(-1);
+    transform: rotateY(180deg);
 }
 
 .nav-menu {
@@ -80,24 +79,29 @@
     margin-right: 3%;
 }
 
+.visiblePhoneNumber:hover{
+    @include addLightTheme();
+}
 
 @media screen and (max-width: 1280px) {
     .phoneNumberStyle {
         margin-right: 3%;
     }
     .nav-menu-li {
-        min-width: 100px;  
-    }
-    
-    .nav-menu-item {
-        @include setbtnSize(18px, 800, 150px);
-      
+        min-width: 100px;
     }
 
-    .visiblePhoneNumber{
+    .nav-menu-item {
+        @include setbtnSize(18px, 800, 150px);
+    }
+
+    .visiblePhoneNumber {
         @include setbtnSize(18px, 500, 170px);
     }
 
+    .visiblePhoneNumber:hover{
+        @include addLightTheme();
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -129,45 +133,18 @@
         padding-top: 90px;
     }
 
-    .nav-links-mobile {
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: transparent;
-        color: $mainLightColor;
-        padding: 14px 20px;
-        border: 1px solid $mainLightColor;
-        transition: all 1s ease-out;
-        font-size: $mainFontSize;
-        font-weight: bold;
-        margin-right: 30px;
-    }
-
     .nav-menu-li {
         height: $heightForHeader;
         width: 80%;
     }
-
-    .nav-links-mobile:hover {
-        background: $mainLightColor;
-        color: $mainDarkColor;
-        transition: 250ms;
-    }
 }
 
 @media screen and (max-width: 640px) {
-    .visiblePhoneNumber{
+    .visiblePhoneNumber {
         @include setbtnSize(15px, 500, 150px);
-        
-    } 
+    }
 
     .phoneNumberStyle {
         margin-left: -55px;
     }
 }
-
-

@@ -8,10 +8,11 @@ import junkPhoto from "../../assets/img/junk.jpg";
 import packingPhoto from "../../assets/img/packing.jpg";
 import deliveryPhoto from "../../assets/img/delivery.jpg";
 import storagePhoto from "../../assets/img/storage.jpg";
+import { forwardRef } from "react";
 
-export const Services = () => {
+export const Services = forwardRef((props,ref) => {
   return (
-    <div className="infoCards">
+    <div className="infoCards" ref={ref}>
       <h2 className="infoCard-title">WELCOME TO OUR MOVING WORLD!</h2>
       <ul className="infoCard-list">
         <CardItemComponent
@@ -74,4 +75,5 @@ export const Services = () => {
       </ul>
     </div>
   );
-};
+
+});

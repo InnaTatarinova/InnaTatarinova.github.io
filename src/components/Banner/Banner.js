@@ -2,67 +2,62 @@ import React, { useEffect, useState } from "react";
 import { ButtonComponent } from "../../elementComponents/ButtonComponents/ButtonComponnet";
 import "./Banner.scss";
 
-const banner = require("../../assets/img/truckResize.png");
-const bannerLogo = require("../../assets/img/truckLOGO.png");
+const banner = require("../../assets/img/whiteTruckResize.png");
+const bannerLogo = require("../../assets/img/truckWithSmallLogoResize.png");
 
-export const Banner = () => {
+export const Banner = ({ resultRef }) => {
   const [smallWindow, setSmallWindow] = useState(false);
-    const [show, setShow] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
 
   const changePhotoTruck = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
       setSmallWindow(true);
     } else {
       setSmallWindow(false);
     }
   };
 
-  window.addEventListener("resize",changePhotoTruck);
+  window.addEventListener("resize", changePhotoTruck);
 
-  useEffect(()=>{
-   changePhotoTruck();
-  },[]);
+  const scrollDown = (e) => {
+    e.preventDefault();
+    resultRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
-     
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setShow(
-        (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) ||
-          currentScrollPos < 10
-      );
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+    changePhotoTruck();
+  }, []);
 
   return (
-    // className="banner-container"
-    <div className={show ? 'banner-container' : 'hidden'}>
-      {/* //  className={`banner-container ${show && "hidden"}` */}
+    <div className="banner-container">
       <h1 className="banner-h1">We promise you will enjoy moving </h1>
-
       <div className="banner-img">
         {smallWindow ? (
-          <img src={bannerLogo} alt="truck" />
-        ) : (
           <img src={banner} alt="truck" />
+        ) : (
+          <img src={bannerLogo} alt="truck" />
         )}
         <div className="askPriceStyle">
           <h2>Want to know approximate price?</h2>
           <ButtonComponent
             btnSize="btn-large"
-            btnColor="btn-light"
+            btnColor="btn-dark"
             btnBorder="btn-border-dark"
+            className="clickMe"
           >
             Click here
           </ButtonComponent>
         </div>
+      </div>
+      <div className="scroll-btn" onClick={scrollDown}>
+        <ButtonComponent
+          btnColor="btn-dark"
+          btnBorder="btn-border-light"
+          btnForm="btn-circle"
+          btnStyle="btn-transparent"
+          btnHoverStyle="btn-lightHoverTheme"
+        >
+          <i className="bi bi-chevron-down"></i>
+        </ButtonComponent>
       </div>
     </div>
   );

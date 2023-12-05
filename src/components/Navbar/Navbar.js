@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
         <div className="menuBtn" onClick={showPhoneNumber}>
           {!visiblePhoneNumber ? (
-            <i className="bi bi-telephone"></i>
+            <i className="bi bi-telephone menuIcon"></i>
           ) : (
             <Link className="phoneNumberStyle">
               <ButtonComponent
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
 
         <div onClick={clickOnMenu} className="menuBtn">
-          <i className={clickOnMenuStatus ? "bi bi-x-lg" : "bi bi-list"}></i>
+          <i className={clickOnMenuStatus ? "bi bi-x-lg menuIcon" : "bi bi-list menuIcon"}></i>
         </div>
 
         <ul className={clickOnMenuStatus ? "nav-menu active" : "nav-menu"}>
