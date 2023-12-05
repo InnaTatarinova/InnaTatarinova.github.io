@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.24b12eb3.css",
-    "main.js": "/static/js/main.d41a18e6.js",
-    "static/media/truckLOGO.png": "/static/media/truckLOGO.2a768e89a24d9bfcb29d.png",
-    "static/media/truckResize.png": "/static/media/truckResize.1c8356ef1ece2e1be295.png",
+    "main.css": "/static/css/main.86741f5c.css",
+    "main.js": "/static/js/main.37f6f418.js",
+    "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
+    "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/storage.jpg": "/static/media/storage.a8cfa3a328502f1cf9c1.jpg",
     "static/media/local.jpg": "/static/media/local.0e09a60a2417825a8bf8.jpg",
     "static/media/longDistance.jpg": "/static/media/longDistance.dd078e6ed3584ccc2779.jpg",
@@ -13,11 +13,11 @@
     "static/media/delivery.jpg": "/static/media/delivery.e874b1dcb06965a558e3.jpg",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.24b12eb3.css.map": "/static/css/main.24b12eb3.css.map",
-    "main.d41a18e6.js.map": "/static/js/main.d41a18e6.js.map"
+    "main.86741f5c.css.map": "/static/css/main.86741f5c.css.map",
+    "main.37f6f418.js.map": "/static/js/main.37f6f418.js.map"
   },
   "entrypoints": [
-    "static/css/main.24b12eb3.css",
-    "static/js/main.d41a18e6.js"
+    "static/css/main.86741f5c.css",
+    "static/js/main.37f6f418.js"
   ]
 }
