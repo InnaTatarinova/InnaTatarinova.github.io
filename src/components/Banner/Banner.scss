@@ -3,7 +3,7 @@
 
 .banner-container {
     width: 100%;
-    height: calc(100vh - #{$heightForHeaderContainer});
+    height: calc(100vh - 1vh - #{$heightForHeaderContainer});
     background-color: $mainDarkColor;
     position: relative;
     margin-top: $heightForHeaderContainer;
@@ -154,7 +154,7 @@
 @media screen and (max-width: 1024px) {
     .banner-img img {
         bottom: auto;
-        height: calc(70% - 5% - 5%);
+        height: calc(65% - 5% - 5%);
     }
 
     .askPriceStyle {
