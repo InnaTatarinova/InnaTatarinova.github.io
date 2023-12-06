@@ -32,7 +32,7 @@
     animation: truckSlide 5s normal;
     text-align: center;
     margin-top: 20px;
-    background-color: purple;
+   
 }
 
 @keyframes truckSlide {
@@ -69,7 +69,6 @@
     left: 5%;
     width: 33%;
     transform: translate(7%, 30%);
-    background-color: red;
     border-radius: 5px;
     height: 40%;
 }
