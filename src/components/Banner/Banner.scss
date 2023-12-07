@@ -65,7 +65,7 @@
 
 .askPriceStyle {
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 5%;
     width: 33%;
     transform: translate(7%, 30%);
@@ -74,7 +74,7 @@
 }
 
 .askPriceStyle h2 {
-    @include setTextSize(350%, 700);
+    @include setTextSize(330%, 700);
     color: $colorTruckLogo;
 }
 
@@ -119,14 +119,12 @@
 
 @media screen and (max-width: 1460px) {
     .askPriceStyle {
-        top: 7%;
-        // left: 5%;
-        // width: 33%;
-        // transform: translate(7%, 30%);
+        top: 4%;
+      
     }
 
     .askPriceStyle h2 {
-        @include setTextSize(300%, 700);
+        @include setTextSize(250%, 700);
     }
 }
 
@@ -223,12 +221,20 @@
 }
 
 
-@media screen and(max-height: 600px){
+@media screen and(max-height: 601px){
     .banner-container{
-        height: 800px;
+        height: 1000px;
     }
 
 };
-    
+
+
+
+@media screen and(min-height: 1024px){
+    .banner-img img {
+        height: calc(50% - 5% - 5%);
+        top: 5%;
+    }
+};
 
 
