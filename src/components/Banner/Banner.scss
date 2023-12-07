@@ -3,7 +3,7 @@
 
 .banner-container {
     width: 100%;
-    height: calc(100vh - 1vh - #{$heightForHeaderContainer});
+    height: calc(100vh - #{$heightForHeaderContainer});
     background-color: $mainDarkColor;
     position: relative;
     margin-top: $heightForHeaderContainer;
@@ -200,6 +200,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .banner-container {
+        height: calc(100vh - 5vh - #{$heightForHeaderContainer});       
+    }
     .banner-h1 {
         @include setTextSize(250%, 500);
     }
