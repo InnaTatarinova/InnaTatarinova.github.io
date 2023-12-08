@@ -7,7 +7,6 @@
     background-color: $mainDarkColor;
     position: relative;
     margin-top: $heightForHeaderContainer;
-    
 }
 .banner-h1 {
     @include setTextSize(400%, 900);
@@ -32,7 +31,6 @@
     animation: truckSlide 5s normal;
     text-align: center;
     margin-top: 20px;
-   
 }
 
 @keyframes truckSlide {
@@ -86,8 +84,12 @@
 .scroll-btn {
     position: absolute;
     bottom: 20px;
-    right: 47%;
-    left: 47%;
+    width: 100%;
+    text-align: center;
+}
+
+.bi-chevron-down {
+    float: left;
 }
 
 @keyframes pulse {
@@ -120,7 +122,6 @@
 @media screen and (max-width: 1460px) {
     .askPriceStyle {
         top: 4%;
-      
     }
 
     .askPriceStyle h2 {
@@ -185,7 +186,6 @@
 @media screen and (max-width: 768px) {
     .banner-h1 {
         @include setTextSize(300%, 700);
-        
     }
 
     .banner-img img {
@@ -199,7 +199,7 @@
 
 @media screen and (max-width: 480px) {
     .banner-container {
-        height: calc(100vh - 5vh - #{$heightForHeaderContainer});       
+        height: calc(100vh - 5vh - #{$heightForHeaderContainer});
     }
     .banner-h1 {
         @include setTextSize(250%, 500);
@@ -220,21 +220,22 @@
     }
 }
 
+// @media screen and(max-height: 601px){
+//     .banner-container{
+//         height: 1000px;
+//     }
 
-@media screen and(max-height: 601px){
-    .banner-container{
+// };
+
+@media (max-height: 601px) and (orientation: landscape) {
+    .banner-container {
         height: 1000px;
     }
+}
 
-};
-
-
-
-@media screen and(min-height: 1024px){
+@media screen and(min-height: 1024px) {
     .banner-img img {
         height: calc(50% - 5% - 5%);
         top: 5%;
     }
-};
-
-
+}

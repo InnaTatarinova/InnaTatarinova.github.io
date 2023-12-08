@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Banner } from '../components/Banner/Banner';
 import { AboutUs } from '../components/AboutUs/AboutUs';
 import { Services } from '../components/Services/Services';
+import { ServiceArea } from '../components/ServiceArea/ServiceArea';
 
 
 
@@ -11,7 +12,8 @@ export const Home = () => {
     <div>
       <Banner resultRef={resultRef}/>
       <Services ref={resultRef}/>
-      <AboutUs/>
+      <ServiceArea/>
+      {/* <AboutUs/> */}
       {/* <InfoCard/> */}
       </div>
   )

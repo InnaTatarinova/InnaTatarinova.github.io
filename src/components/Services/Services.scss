@@ -9,11 +9,9 @@
 }
 
 .infoCard-title {
-  @include setTextSize(250%, 900);
-  text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  @include titleForComponent(#21364496);
   @include lightTheme();
-  text-shadow: 0px 2px 2px #21364496;
+ 
 }
 
 .infoCard-list {

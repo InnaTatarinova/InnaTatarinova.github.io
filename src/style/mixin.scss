@@ -7,6 +7,15 @@
     width: $width;
 }
 
+//Title
+
+@mixin titleForComponent($shadowColor){
+    @include setTextSize(250%, 900);
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    // text-shadow: 0px 2px 2px $shadowColor;
+}
+
 //Button
 @mixin setbtnSize($fontSize, $fontWeight, $minWidth) {
     font-size: $fontSize;
@@ -59,6 +68,8 @@
     transform: scale(1.1);
     
 }
+
+
 
 // @mixin formEl($width, $mainBorderRadius, $mainActiveFontColor) {
 //     width: $width;

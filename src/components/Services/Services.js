@@ -1,13 +1,13 @@
 import React from "react";
 import { CardItemComponent } from "./CardComponent";
 import "./Services.scss";
-import localPhoto from "../../assets/img/local.jpg";
-import longDistPhoto from "../../assets/img/longDistance.jpg";
-import commerPhoto from "../../assets/img/commercial.jpg";
-import junkPhoto from "../../assets/img/junk.jpg";
-import packingPhoto from "../../assets/img/packing.jpg";
-import deliveryPhoto from "../../assets/img/delivery.jpg";
-import storagePhoto from "../../assets/img/storage.jpg";
+import localPhoto from "../../assets/img/ServicePhoto/local.jpg";
+import longDistPhoto from "../../assets/img/ServicePhoto/longDistance.jpg";
+import commerPhoto from "../../assets/img/ServicePhoto/commercial.jpg";
+import junkPhoto from "../../assets/img/ServicePhoto/junk.jpg";
+import packingPhoto from "../../assets/img/ServicePhoto/packing.jpg";
+import deliveryPhoto from "../../assets/img/ServicePhoto/delivery.jpg";
+import storagePhoto from "../../assets/img/ServicePhoto/storage.jpg";
 import { forwardRef } from "react";
 
 export const Services = forwardRef((props,ref) => {
