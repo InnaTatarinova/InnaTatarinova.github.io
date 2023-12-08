@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.f410b3cd.css",
-    "main.js": "/static/js/main.37f6f418.js",
+    "main.css": "/static/css/main.f2a10298.css",
+    "main.js": "/static/js/main.f9d5523c.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
+    "static/media/bradford.jpg": "/static/media/bradford.c31239ab8aad6520c868.jpg",
     "static/media/storage.jpg": "/static/media/storage.a8cfa3a328502f1cf9c1.jpg",
     "static/media/local.jpg": "/static/media/local.0e09a60a2417825a8bf8.jpg",
+    "static/media/london.jpg": "/static/media/london.0eb776751b6adfed75cb.jpg",
+    "static/media/milton.jpg": "/static/media/milton.724108b7a9ffe449b0b7.jpg",
+    "static/media/inisfill.jpg": "/static/media/inisfill.774f6a4d6162e7c48bdf.jpg",
     "static/media/longDistance.jpg": "/static/media/longDistance.dd078e6ed3584ccc2779.jpg",
+    "static/media/brampton.jpg": "/static/media/brampton.ebb1fd5a569e4e8c24dc.jpg",
     "static/media/commercial.jpg": "/static/media/commercial.1dc29ddcc7fc5e4d3abe.jpg",
     "static/media/junk.jpg": "/static/media/junk.464515550ec8b277728e.jpg",
     "static/media/packing.jpg": "/static/media/packing.7f9f9f8a67bbc1d25688.jpg",
     "static/media/delivery.jpg": "/static/media/delivery.e874b1dcb06965a558e3.jpg",
+    "static/media/toronto.jpg": "/static/media/toronto.a74ea123cfef44d87361.jpg",
+    "static/media/kitchener.jpg": "/static/media/kitchener.72cd53ed3e87bd391444.jpg",
+    "static/media/niagaraFall.jpg": "/static/media/niagaraFall.e43c45d5f987c6ada316.jpg",
+    "static/media/mississagua.jpg": "/static/media/mississagua.faa2e259b6d2d1122db3.jpg",
+    "static/media/whitby.jpg": "/static/media/whitby.3f1fe251c5b176b2090e.jpg",
+    "static/media/barrie.jpg": "/static/media/barrie.1d342aeaf9d8055d3a7e.jpg",
+    "static/media/vaughan.jpg": "/static/media/vaughan.a6f59203e909f4f7284d.jpg",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.f410b3cd.css.map": "/static/css/main.f410b3cd.css.map",
-    "main.37f6f418.js.map": "/static/js/main.37f6f418.js.map"
+    "main.f2a10298.css.map": "/static/css/main.f2a10298.css.map",
+    "main.f9d5523c.js.map": "/static/js/main.f9d5523c.js.map"
   },
   "entrypoints": [
-    "static/css/main.f410b3cd.css",
-    "static/js/main.37f6f418.js"
+    "static/css/main.f2a10298.css",
+    "static/js/main.f9d5523c.js"
   ]
 }
