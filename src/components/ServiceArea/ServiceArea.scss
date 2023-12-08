@@ -3,7 +3,7 @@
 
 .serviceArea-conteiner {
     background-color: $mainDarkColor;
-    height: calc(100vh - #{$heightForHeaderContainer});
+    height:100%;
     width: 100%;
     padding: 30px 0px;
 }
@@ -65,6 +65,22 @@
     text-align: center;
     color: $mainLightColor;
 }
+
+.bottomServiceArea{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.titleForQuestion{
+    margin:0px;
+    margin-bottom: 10px;
+   color: $thirdColor;
+    @include setTranspareentBackgrForBTN();
+   
+}
+
+
 
 @media screen and (max-width: 1460px) {
     .serviceAreaCardItem-text {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ServiceArea.scss";
 import { ServiceAreaCard } from "./ServiceAreaCard";
+import { ButtonComponent } from "../../elementComponents/ButtonComponents/ButtonComponnet";
 
 const toronto = require("../../assets/img/serviceAreaPhoto/toronto.jpg");
 const barrie = require("../../assets/img/serviceAreaPhoto/barrie.jpg");
@@ -16,6 +17,9 @@ const whitby = require("../../assets/img/serviceAreaPhoto/whitby.jpg");
 const kitchener = require("../../assets/img/serviceAreaPhoto/kitchener.jpg");
 
 export const ServiceArea = () => {
+  const phoneNumberDial = () => {
+    window.location.href = "tel://+12345678998";
+  };
   return (
     <div className="serviceArea-conteiner">
       <h2 className="serviceArea-title">Service Area</h2>
@@ -93,6 +97,18 @@ export const ServiceArea = () => {
           gridName="img12"
         />
       </ul>
+      <div className="bottomServiceArea">
+        <h2 className="titleForQuestion">Can't find your city?</h2>
+        <ButtonComponent
+          btnSize="btn-large"
+          btnColor="btn-dark"
+          btnBorder="btn-border-light"
+          btnHoverStyle="btn-lightHoverTheme"
+          onClick={phoneNumberDial}
+        >
+          Call now
+        </ButtonComponent>
+      </div>
     </div>
   );
 };
