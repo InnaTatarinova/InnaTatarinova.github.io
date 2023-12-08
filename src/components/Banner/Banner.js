@@ -49,15 +49,7 @@ export const Banner = ({ resultRef }) => {
         </div>
       </div>
       <div className="scroll-btn" onClick={scrollDown}>
-        <ButtonComponent
-          btnColor="btn-dark"
-          btnBorder="btn-border-light"
-          btnForm="btn-circle"
-          btnStyle="btn-transparent"
-          btnHoverStyle="btn-lightHoverTheme"
-        >
-          <i className="bi bi-chevron-down"></i>
-        </ButtonComponent>
+        <i className="bi bi-chevron-down"></i>
       </div>
     </div>
   );

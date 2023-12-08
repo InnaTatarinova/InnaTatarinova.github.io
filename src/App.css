@@ -1,6 +1,5 @@
 .App {
   min-width: 40%;
- 
 }
 
 .mainPageInfo {
@@ -10,7 +9,7 @@
   text-align: center;
 }
 
-h1{
+h1 {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
@@ -32,7 +31,6 @@ h3 {
   text-align: left;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 10px;
-  
 }
 
 h4 {
@@ -41,4 +39,9 @@ h4 {
   text-align: left;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 10px;
+}
+
+.bi {
+  font-size: 30px;
+  color: white;
 }

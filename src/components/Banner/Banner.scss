@@ -88,8 +88,9 @@
     text-align: center;
 }
 
-.bi-chevron-down {
-    float: left;
+.bi-chevron-down:hover {
+  color: $thirdColor;
+  font-size: 40px;
 }
 
 @keyframes pulse {
