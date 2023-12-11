@@ -9,7 +9,7 @@
 }
 
 .infoCard-title {
-  @include titleForComponent(#21364496);
+  @include titleForComponent($fontSizeForPC,900,#21364496);
   @include lightTheme();
  
 }
@@ -100,7 +100,7 @@ figure {
 
 @media screen and (max-width: 568px) {
   .infoCard-title {
-    @include setTextSize(150%, 900);
+    @include setTextSize($fontSizeForMobile, 900);
     margin: 0;
     
   }

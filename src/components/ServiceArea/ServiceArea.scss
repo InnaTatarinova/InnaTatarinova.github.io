@@ -3,13 +3,13 @@
 
 .serviceArea-conteiner {
     background-color: $mainDarkColor;
-    height:100%;
+    height: 100%;
     width: 100%;
     padding: 30px 0px;
 }
 
 .serviceArea-title {
-    @include titleForComponent($thirdColor);
+    @include titleForComponent(250%, 900,$thirdColor);
     @include darkTheme();
     margin-top: 20px;
 }
@@ -66,21 +66,18 @@
     color: $mainLightColor;
 }
 
-.bottomServiceArea{
+.bottomServiceArea {
     width: 100%;
     height: 100px;
     text-align: center;
 }
 
-.titleForQuestion{
-    margin:0px;
+.titleForQuestion {
+    margin: 0px;
     margin-bottom: 10px;
-   color: $thirdColor;
+    color: $thirdColor;
     @include setTranspareentBackgrForBTN();
-   
 }
-
-
 
 @media screen and (max-width: 1460px) {
     .serviceAreaCardItem-text {
@@ -149,7 +146,6 @@
 }
 
 @media screen and (max-width: 480px) {
- 
     .serviceAreaCardItem-conteiner {
         width: 95%;
         height: 60px;
@@ -175,14 +171,15 @@
         color: $mainLightColor;
         margin: auto;
     }
-
-    @media screen and (max-width: 320px) {
-        .serviceAreaCardItem-text {
-            @include setTextSize(100%, 700);
-        }
+    .titleForQuestion {
+      font-size: 30px;
     }
 }
-
+@media screen and (max-width: 320px) {
+    .serviceAreaCardItem-text {
+        @include setTextSize(100%, 700);
+    }
+}
 @media (max-height: 601px) and (orientation: landscape) {
     .serviceArea-conteiner {
         height: 100%;
@@ -191,8 +188,6 @@
     .serviceArea-list {
         height: 100%;
     }
-
-
 }
 
 //Grid

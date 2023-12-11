@@ -9,8 +9,9 @@
 
 //Title
 
-@mixin titleForComponent($shadowColor){
-    @include setTextSize(250%, 900);
+@mixin titleForComponent($size, $weight, $color) {
+    color: $color;
+    @include setTextSize($size, $weight);
     text-align: center;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     // text-shadow: 0px 2px 2px $shadowColor;
@@ -66,10 +67,7 @@
 //Hover
 @mixin addMainHoverAction() {
     transform: scale(1.1);
-    
 }
-
-
 
 // @mixin formEl($width, $mainBorderRadius, $mainActiveFontColor) {
 //     width: $width;
