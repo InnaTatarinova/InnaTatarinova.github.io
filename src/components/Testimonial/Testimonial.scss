@@ -2,8 +2,7 @@
 @import "../../style/mixin.scss";
 
 .testimonials-component {
-    height: 100%;
-    padding: 20px;
+    @include addMainContainer($mainLightColor);
 }
 
 .testimonials-title {

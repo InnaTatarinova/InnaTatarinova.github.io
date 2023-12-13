@@ -2,10 +2,7 @@
 @import "../../style/mixin.scss";
 
 .serviceArea-conteiner {
-    background-color: $mainDarkColor;
-    height: 100%;
-    width: 100%;
-    padding: 30px 0px;
+    @include addMainContainer($mainDarkColor);
 }
 
 .serviceArea-title {

@@ -2,16 +2,13 @@
 @import "../../style/mixin.scss";
 
 .infoCards {
-  background-color: $mainLightColor;
-  padding: $mainPadding;
+  @include addMainContainer($mainLightColor);
   padding-top: 50px;
-  width: $maxWidth;
 }
 
 .infoCard-title {
-  @include titleForComponent($fontSizeForPC,900,#21364496);
+  @include titleForComponent($fontSizeForPC, 900, #21364496);
   @include lightTheme();
- 
 }
 
 .infoCard-list {
@@ -102,7 +99,6 @@ figure {
   .infoCard-title {
     @include setTextSize($fontSizeForMobile, 900);
     margin: 0;
-    
   }
 
   .cardItem-conteiner {
@@ -116,7 +112,4 @@ figure {
   .cardItem-conteiner:nth-last-child(-n + 3) {
     width: 90%;
   }
-
-
-
 }

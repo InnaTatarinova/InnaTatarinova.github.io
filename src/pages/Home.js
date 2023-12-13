@@ -4,6 +4,7 @@ import { AboutUs } from '../components/AboutUs/AboutUs';
 import { Services } from '../components/Services/Services';
 import { ServiceArea } from '../components/ServiceArea/ServiceArea';
 import { Testimonial } from '../components/Testimonial/Testimonial';
+import { ContactUs } from '../components/ContactUs/ContactUs';
 
 
 
@@ -15,6 +16,7 @@ export const Home = () => {
       <Services ref={resultRef}/>
       <ServiceArea/>
       <Testimonial/>
+      <ContactUs/>
       {/* <AboutUs/> */}
       {/* <InfoCard/> */}
       </div>

@@ -1,0 +1,54 @@
+@import "../../style/mainStyle.scss";
+@import "../../style/mixin.scss";
+
+.formContactUs {
+    display: grid;
+    grid-template-rows: 80px 1fr 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2%;
+    grid-template-areas:
+        "inputName inputPhone"
+        "inputMessage inputMessage"
+        "submitBTN submitBTN";
+}
+
+.submitBTN {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    grid-area: submitBTN;
+}
+
+.infoSuccess {
+    color: rgb(13, 156, 13);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.inputName {
+    grid-area: inputName;
+}
+
+.inputPhone {
+    grid-area: inputPhone;
+}
+
+.inputMessage {
+    grid-area: inputMessage;
+}
+
+@media screen and (max-width: 1024px) {
+    .formContactUs {
+        display: grid;
+        grid-template-rows: 80px 80px 1fr 100px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 2%;
+        grid-template-areas:
+            "inputName"
+            "inputPhone"
+            "inputMessage"
+            "submitBTN";
+    }
+}

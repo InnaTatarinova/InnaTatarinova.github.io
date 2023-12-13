@@ -1,0 +1,72 @@
+@import "../../style/mainStyle.scss";
+@import "../../style/mixin.scss";
+
+.contactUs-container {
+    @include addMainContainer($mainDarkColor);
+}
+
+.contactUs-title {
+    @include titleForComponent($fontSizeForPC, 900, $mainLightColor);
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: row;
+    padding: $mainPadding;
+    padding-top: 25px;
+    column-gap: 30px;
+    @include darkTheme();
+}
+
+.contactInfo {
+    width: 50%;
+}
+
+.contactInfoName{
+    @include setTextSize($fontSizeForMobile, 900);
+    color:$thirdColor;
+    text-align: left
+}
+
+.contactInfoValue{
+    @include setTextSize($fontSizeForMini, 900);
+}
+
+
+
+.writeUs {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-block {
+        flex-direction: column;
+    }
+
+    .contactInfo {
+        width: 100%;
+    }
+
+    .writeUs {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .contactUs-title {
+        @include titleForComponent($fontSizeForMobile, 900, $mainLightColor);
+    }
+    .contactInfoName{
+        @include setTextSize($fontSizeForMini, 700);
+        color:$thirdColor;
+        text-align: left
+    }
+    
+    .contactInfoValue{
+        @include setTextSize($fontSizeForMini, 700);
+    }
+    
+
+}

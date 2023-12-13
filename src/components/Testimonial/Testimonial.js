@@ -62,7 +62,7 @@ export const Testimonial = () => {
 
   return (
     <div className="testimonials-component">
-      <h2 className="testimonials-title">TESTIMONIALS</h2>
+      <h2 className="testimonials-title">Testimonials</h2>
       <div className="testimonItem">
         <div className="testimIcon" onClick={showPrev}>
           <i className="bi bi-chevron-left"></i>
