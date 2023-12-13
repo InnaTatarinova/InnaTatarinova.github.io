@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a1c1e80a.css",
-    "main.js": "/static/js/main.58afa4f2.js",
+    "main.css": "/static/css/main.7d2f32d1.css",
+    "main.js": "/static/js/main.48d096be.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/bradford.jpg": "/static/media/bradford.c31239ab8aad6520c868.jpg",
@@ -28,11 +28,11 @@
     "static/media/photo2.jpg": "/static/media/photo2.309b4b198423c5ac4810.jpg",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.a1c1e80a.css.map": "/static/css/main.a1c1e80a.css.map",
-    "main.58afa4f2.js.map": "/static/js/main.58afa4f2.js.map"
+    "main.7d2f32d1.css.map": "/static/css/main.7d2f32d1.css.map",
+    "main.48d096be.js.map": "/static/js/main.48d096be.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1c1e80a.css",
-    "static/js/main.58afa4f2.js"
+    "static/css/main.7d2f32d1.css",
+    "static/js/main.48d096be.js"
   ]
 }
