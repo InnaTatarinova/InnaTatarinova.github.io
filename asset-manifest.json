@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d2f32d1.css",
-    "main.js": "/static/js/main.48d096be.js",
+    "main.css": "/static/css/main.484dd184.css",
+    "main.js": "/static/js/main.6d779f2f.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/bradford.jpg": "/static/media/bradford.c31239ab8aad6520c868.jpg",
+    "static/media/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg": "/static/media/johnson-johnson-U6Q6zVDgmSs-unsplash.35c9d697da81f3621943.jpg",
     "static/media/storage.jpg": "/static/media/storage.a8cfa3a328502f1cf9c1.jpg",
     "static/media/local.jpg": "/static/media/local.0e09a60a2417825a8bf8.jpg",
     "static/media/london.jpg": "/static/media/london.0eb776751b6adfed75cb.jpg",
@@ -26,13 +27,14 @@
     "static/media/photo1.jpg": "/static/media/photo1.7505058fdaf65519ce95.jpg",
     "static/media/photo3.jpg": "/static/media/photo3.410fe87c19f451cf7001.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.309b4b198423c5ac4810.jpg",
+    "static/media/Logo_justImg_Mini.png": "/static/media/Logo_justImg_Mini.825d5cb5aa2300263d86.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.7d2f32d1.css.map": "/static/css/main.7d2f32d1.css.map",
-    "main.48d096be.js.map": "/static/js/main.48d096be.js.map"
+    "main.484dd184.css.map": "/static/css/main.484dd184.css.map",
+    "main.6d779f2f.js.map": "/static/js/main.6d779f2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d2f32d1.css",
-    "static/js/main.48d096be.js"
+    "static/css/main.484dd184.css",
+    "static/js/main.6d779f2f.js"
   ]
 }
