@@ -4,18 +4,32 @@
 .banner-container {
     width: 100%;
     height: calc(100vh - #{$heightForHeaderContainer});
-    background-color: $mainDarkColor;
     position: relative;
     margin-top: $heightForHeaderContainer;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25)),
+        url(../../assets/img/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
+
+.banner-img-block {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .banner-h1 {
     @include setTextSize(400%, 900);
-    @include darkTheme();
-    color: $thirdColor;
+    color: red;
+    text-shadow:
+        0px 0px 5px rgba(255, 255, 255, 1),
+        0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 15px rgba(255, 255, 255, 1);
     padding-top: 20px;
     padding-left: 6%;
     padding-right: 6%;
-    text-shadow: #edcc068a 1px 0 5px;
     animation-name: opacityOn;
     animation-duration: 1s;
     margin: 0px;
@@ -23,14 +37,14 @@
 }
 
 .banner-img {
-    position: absolute;
     width: 100%;
-    height: calc(85% - 80px - 20px);
-    object-fit: cover;
-    bottom: 80px;
-    animation: truckSlide 5s normal;
     text-align: center;
-    margin-top: 20px;
+    min-height: 20%;
+    min-height: 160px;
+    overflow: hidden;
+    position: relative;
+    bottom: 0%;
+    animation: truckSlide 4s ease;
 }
 
 @keyframes truckSlide {
@@ -38,18 +52,15 @@
         left: -100%;
     }
     100% {
-        left: calc(100% - 100%);
+        left: 0%;
     }
 }
 
 .banner-img img {
-    position: absolute;
-    overflow: hidden;
-    width: calc(#{$widthFotTruck} - 30px - 30px);
-    bottom: 3%;
-    left: 20px;
-    right: 20px;
-    height: calc(100% - 5% - 5%);
+    bottom: 10px;
+    width: 100%;
+    height: 100%;
+   
 }
 
 @keyframes opacityOn {
@@ -62,13 +73,10 @@
 }
 
 .askPriceStyle {
-    position: absolute;
-    top: 3%;
-    left: 5%;
     width: 33%;
     transform: translate(7%, 30%);
     border-radius: 5px;
-    height: 40%;
+    height: 70%;
 }
 
 .askPriceStyle h2 {
@@ -77,26 +85,27 @@
 }
 
 .clickMe {
-    background-color: $colorTruckLogo;
-    animation: pulse 2s infinite;
+    background-color: $fourthColor;
+    // animation: pulse 2s infinite;
 }
 
 .scroll-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     width: 100%;
     text-align: center;
+    color: $mainDarkColor;
+    font-size: 30px;
 }
 
 .bi-chevron-down:hover {
-  color: $thirdColor;
-  font-size: 40px;
+    font-size: 40px;
 }
 
 @keyframes pulse {
     0% {
         -moz-box-shadow: 0 0 0 0 $mainDarkColor;
-        box-shadow: 0 0 0 0 $thirdColor;
+        box-shadow: 0 0 0 0 $fourthColor;
     }
     70% {
         -moz-box-shadow: 0 0 0 10px $mainDarkColor;
@@ -137,9 +146,9 @@
         height: 20%;
     }
 
-    .banner-img {
-        height: calc(75% - 80px - 20px);
-    }
+    // .banner-img {
+    //     height: calc(75% - 80px - 20px);
+    // }
 
     .askPriceStyle {
         left: 3%;
@@ -152,35 +161,34 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .banner-img img {
-        bottom: auto;
-        height: calc(65% - 5% - 5%);
-    }
+    // .banner-img img {
+    //     bottom: auto;
+    //     height: calc(65% - 5% - 5%);
+    // }
 
     .askPriceStyle {
         text-align: center;
-        width: 90%;
-        right: 5%;
+        width: 100%;
+
         transform: none;
-        bottom: 10%;
-        top: auto;
-        height: auto;
+        // bottom: 10%;
+        // top: auto;
+        // height: auto;
     }
 
     .askPriceStyle h2 {
         @include setTextSize(250%, 700);
-        color: $thirdColor;
+        color: $mainDarkColor;
         margin-bottom: 30px;
     }
 
     .clickMe {
-        background-color: $mainLightColor;
-        color: $mainDarkColor;
+        background-color: $fourthColor;
     }
 
     .clickMe:hover {
         background-color: $mainLightColor;
-        color: $mainDarkColor;
+        color: $fourthColor;
     }
 }
 
@@ -190,7 +198,7 @@
     }
 
     .banner-img img {
-        height: calc(45% - 5% - 5%);
+        // height: calc(45% - 5% - 5%);
     }
 
     .askPriceStyle h2 {
@@ -236,7 +244,7 @@
 
 @media screen and(min-height: 1024px) {
     .banner-img img {
-        height: calc(50% - 5% - 5%);
-        top: 5%;
+        // height: calc(50% - 5% - 5%);
+        // top: 5%;
     }
 }

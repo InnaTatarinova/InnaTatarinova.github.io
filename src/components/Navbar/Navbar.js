@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ButtonComponent } from "../../elementComponents/ButtonComponents/ButtonComponnet";
 import "./Navbar.scss";
 
-const logo = require("../../assets/img/Logo_justImg.png");
+const logoFull = require("../../assets/img/Logo_justImg.png");
+const logo = require("../../assets/img/Logo_justImg_Mini.png");
 
 const Navbar = () => {
   const [clickOnMenuStatus, setclickOnMenuStatus] = useState(false);
@@ -58,9 +59,9 @@ const Navbar = () => {
             <img src={logo} alt="logo" className="nav-img" />
           </Link>
         </div>
-        <div className="menuBtn" onClick={showPhoneNumber}>
+        <div className="phoneBtn" onClick={showPhoneNumber}>
           {!visiblePhoneNumber ? (
-            <i className="bi bi-telephone menuIcon"></i>
+            <i className="bi bi-telephone-fill menuIcon"></i>
           ) : (
             <Link className="phoneNumberStyle">
               <ButtonComponent
@@ -77,7 +78,11 @@ const Navbar = () => {
         </div>
 
         <div onClick={clickOnMenu} className="menuBtn">
-          <i className={clickOnMenuStatus ? "bi bi-x-lg menuIcon" : "bi bi-list menuIcon"}></i>
+          <i
+            className={
+              clickOnMenuStatus ? "bi bi-x-lg menuIcon" : "bi bi-list menuIcon"
+            }
+          ></i>
         </div>
 
         <ul className={clickOnMenuStatus ? "nav-menu active" : "nav-menu"}>
@@ -125,7 +130,7 @@ const Navbar = () => {
         </ul>
 
         {button && (
-          <Link className="phoneNumberStyle" >
+          <Link className="phoneNumberStyle">
             <ButtonComponent
               btnStyle="btn-transparent"
               btnSize="btn-large"

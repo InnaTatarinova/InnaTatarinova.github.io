@@ -8,7 +8,7 @@
   cursor: pointer;
   font-size: $mainFontSize;
   font-weight: bold;
-  margin-right: 5%;
+
 }
 
 .btnMain:focus {
@@ -40,7 +40,11 @@
 .btn-dark {
   @include darkTheme();
 
-  
+}
+
+.btn-red{
+  background-color: $fourthColor;
+  color: $mainLightColor;
 }
 
 //Style

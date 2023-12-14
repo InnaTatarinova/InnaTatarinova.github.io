@@ -11,30 +11,35 @@
 }
 
 .nav-logo {
-    margin-left: 5%;
+    // margin-left: 10px;
     position: fixed;
+    width: 170px;
 }
 
 .nav-img {
-    height: $heightForHeader;
+    height: 75px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .menuBtn {
     display: none;
 }
+.phoneBtn {
+    display: none;
+}
 
-.bi-list,
-.bi-x-lg,
-.bi-telephone {
+
+.menuIcon {
     font-size: 30px;
     color: $mainLightColor;
 }
 
-.menuIcon:hover {
-    color: $thirdColor;    
+.bi:hover {
+    color: $fourthColor;    
 }
 
-.bi-telephone {
+.bi-telephone-fill {
     margin-right: 30px;
     float: right;
     transform: rotateY(180deg);
@@ -140,6 +145,17 @@
 }
 
 @media screen and (max-width: 640px) {
+    .phoneBtn{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+
+}
+
     .visiblePhoneNumber {
         @include setbtnSize(15px, 500, 150px);
     }

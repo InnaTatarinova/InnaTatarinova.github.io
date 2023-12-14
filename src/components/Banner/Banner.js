@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ButtonComponent } from "../../elementComponents/ButtonComponents/ButtonComponnet";
 import "./Banner.scss";
+import { FormForQuote } from "./FormForQuote";
 
 const banner = require("../../assets/img/whiteTruckResize.png");
 const bannerLogo = require("../../assets/img/truckWithSmallLogoResize.png");
@@ -30,26 +31,20 @@ export const Banner = ({ resultRef }) => {
   return (
     <div className="banner-container">
       <h1 className="banner-h1">We promise you will enjoy moving </h1>
-      <div className="banner-img">
-        {smallWindow ? (
-          <img src={banner} alt="truck" />
-        ) : (
-          <img src={bannerLogo} alt="truck" />
-        )}
+      <div className="banner-img-block">
         <div className="askPriceStyle">
-          <h2>Want to know approximate price?</h2>
-          <ButtonComponent
-            btnSize="btn-large"
-            btnColor="btn-dark"
-            btnBorder="btn-border-dark"
-            className="clickMe"
-          >
-            Click here
-          </ButtonComponent>
+          <FormForQuote />
         </div>
-      </div>
-      <div className="scroll-btn" onClick={scrollDown}>
-        <i className="bi bi-chevron-down"></i>
+        <div className="banner-img">
+          {smallWindow ? (
+            <img src={banner} alt="truck" className="banner-img" />
+          ) : (
+            <img src={bannerLogo} alt="truck" />
+          )}
+          <div className="scroll-btn" onClick={scrollDown}>
+            <i className="bi bi-chevron-down"></i>
+          </div>
+        </div>
       </div>
     </div>
   );

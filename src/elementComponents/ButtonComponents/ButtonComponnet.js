@@ -18,7 +18,7 @@ export const ButtonComponent = ({
   const SIZES = [" ", "btn-medium", "btn-small", "btn-large"];
   const BORDER = ["", "btn-border-light", "btn-border-dark"];
   const FORM = ["", "btn-circle", "btn-circle-small"];
-  const COLOR = ["btn-light", "btn-dark"];
+  const COLOR = ["btn-light", "btn-dark", "btn-red"];
   const CLASSNAME = ["", "visiblePhoneNumber", "clickMe"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];

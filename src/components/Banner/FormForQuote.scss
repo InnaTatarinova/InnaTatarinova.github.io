@@ -1,0 +1,96 @@
+@import "../../style/mainStyle.scss";
+@import "../../style/mixin.scss";
+
+.formQuote {
+    display: grid;
+    grid-template-rows: 50px 1fr 100px;
+    border-radius: 5%;
+    height: 80%;
+    margin: auto;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.514);
+    grid-template-areas:
+        "inputFrom inputFrom"
+        "inputTo inputTo"
+        "inputMessage inputMessage"
+        "submitBTN submitBTN";
+}
+
+.submitBTN {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    grid-area: submitBTN;
+}
+
+.infoSuccess {
+    color: rgb(13, 156, 13);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.formQuote div input {
+    height: 40px;
+    border:1.5px solid $mainDarkColor;
+    width: 80%;
+    margin: auto;
+}
+
+.chooseMovingType{
+    grid-area: chooseMovingType;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border: 1.5px solid #213644;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    font-size: 18px;
+    padding-left: 20px;
+    background-color: $mainLightColor;
+
+}
+
+.chooseMovingTypeName{
+    margin: auto 0;
+}
+.bi-caret-down-fill{
+    color: #213644;
+    font-size: 25px;
+    // padding-right: 10px;
+    margin-left: 10px;
+}
+
+
+.inputFrom {
+    grid-area: inputFrom ;
+}
+
+.inputTo {
+    grid-area: inputTo ;
+}
+
+.inputMessage {
+    grid-area: inputMessage;
+}
+
+@media screen and (max-width: 1024px) {
+    .formQuote {
+        display: grid;
+        width: 80%;
+        grid-template-rows: 50px 50px 50px 100px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1%;
+        grid-template-areas:
+            "inputFrom"
+            "inputTo"
+            "chooseMovingType"
+            "submitBTN";
+    }
+}
