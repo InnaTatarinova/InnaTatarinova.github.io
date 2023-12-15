@@ -41,9 +41,9 @@ export const Banner = ({ resultRef }) => {
           ) : (
             <img src={bannerLogo} alt="truck" />
           )}
-          <div className="scroll-btn" onClick={scrollDown}>
-            <i className="bi bi-chevron-down"></i>
-          </div>
+        </div>
+        <div className="scroll-btn" onClick={scrollDown}>
+          <i className="bi bi-chevron-down"></i>
         </div>
       </div>
     </div>
