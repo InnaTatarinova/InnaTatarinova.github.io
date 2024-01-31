@@ -1,0 +1,34 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.formFormSelect {
+  @include form(rgba(255, 255, 255, 0.82), 80%, 90%);
+  list-style-type: none;
+  padding: 0px;
+  padding-top: 3px;
+}
+
+.formFormSelect li {
+  border-bottom: 0.5px rgb(165, 159, 159) solid;
+  height: 12.5%;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.serviceTypeName:hover {
+  transform: scale(1.2);
+}
+
+.selectDropItem{
+  border-radius: 5%;
+  margin: auto;
+  padding-top: 20px;
+  background-color: white;
+  list-style-type: none;
+  padding-top: 3px;
+  border: 1px black solid;
+  width: 98%;
+  padding-left: 2px;
+}

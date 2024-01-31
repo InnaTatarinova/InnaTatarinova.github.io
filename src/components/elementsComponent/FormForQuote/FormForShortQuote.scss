@@ -1,0 +1,33 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+// .formShortQuote {
+//     display: grid;
+//    
+//     grid-template-rows: 50px 1fr 100px;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-column-gap: 5%;
+//    
+//     grid-template-areas:
+//         "inputFrom inputFrom"
+//         "inputTo inputTo"
+  
+//         "submitBTN submitBTN";
+// }
+
+
+@media screen and (max-width: 1024px) {
+    .formShortQuote {
+        display: grid; 
+        @include form($formColor, 80%, 90%);
+        grid-template-rows: 50px 50px 50px 100px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1%; 
+        grid-row-gap: 5%;
+        grid-template-areas:
+            "inputFrom"
+            "inputTo"
+            "chooseMovingType"
+            "submitBTN";
+    }
+}

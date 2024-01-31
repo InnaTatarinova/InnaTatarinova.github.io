@@ -1,0 +1,169 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.testimonials-component {
+    @include addMainContainer($mainLightColor);
+}
+
+.testimonials-title {
+    @include titleForComponent($fontSizeForPC, 900, $mainDarkColor);
+}
+
+.testimonItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.testimIcon {
+    margin: auto;
+}
+
+.testimIcon:hover {
+    transform: scale(1.3);
+}
+
+.testimon {
+    height: 350px;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    @include addBorder($mainDarkColor);
+}
+
+.bi-chevron-left,
+.bi-chevron-right {
+    color: $mainDarkColor;
+    @include setTextSize(40px, 900);
+    margin: auto;
+}
+
+.testimonCardComponent {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "photoTestim star"
+        "photoTestim textReview"
+        "photoTestim nameReviewer";
+}
+
+.photoTestim {
+    width: 150px;
+    height: 150px;
+    grid-area: photoTestim;
+    margin: auto;
+}
+
+.photoTestim img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.star {
+    grid-area: star;
+    text-align: center;
+}
+
+.bi-star-fill {
+    color: $thirdColor;
+}
+
+.textReview {
+    grid-area: textReview;
+    font-size: $mainFontSize;
+    margin: auto;
+}
+
+.nameReviewer {
+    grid-area: nameReviewer;
+    font-size: 25px;
+    text-align: end;
+}
+
+@media screen and (max-width: 1280px) {
+    .testimonCardComponent {
+        grid-template-columns: 200px 2fr;
+        grid-template-rows: 50px 1fr 50px;
+    }
+    .textReview {
+        font-size: 20px;
+    }
+    .nameReviewer {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .textReview {
+        font-size: 17px;
+    }
+
+    .nameReviewer {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .testimonCardComponent {
+        grid-template-rows: 150px 1fr 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "photoTestim star"
+            "textReview textReview"
+            "nameReviewer nameReviewer";
+    }
+    .textReview {
+        margin-top: 25px;
+    }
+
+    .star {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 568px) {
+    .testimonials-title {
+        @include titleForComponent($fontSizeForMobile, 900, $mainDarkColor);
+    }
+
+    .photoTestim {
+        width: 100px;
+        height: 100px;
+    }
+    .textReview {
+        font-size: 15px;
+    }
+
+    .nameReviewer {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonCardComponent {
+        grid-template-rows: 100px 50px 1fr 50px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photoTestim"
+            "star"
+            "textReview"
+            "nameReviewer";
+    }
+}
+@media screen and (max-width: 320px) {
+    .bi-chevron-left,
+    .bi-chevron-right {
+        @include setTextSize(25px, 900);
+    }
+
+    .testimonials-component {
+        padding: 10px;
+    }
+
+    .nameReviewer {
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.quoteFullForm {
+    @include form($mainLightColor, 90%, 100%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(50px, 70px));
+    grid-template-columns: 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 5%;
+    grid-template-areas:
+        "inputFrom"
+        "inputTo"
+        "chooseMovingType";
+}

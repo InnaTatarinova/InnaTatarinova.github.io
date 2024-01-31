@@ -78,6 +78,17 @@
     padding: 30px 0px;
 }
 
+//Form
+@mixin form($background, $width, $height){
+    width: $width;
+    border-radius: 5%;
+    height: $height;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: $background;
+}
+
 // @mixin formEl($width, $mainBorderRadius, $mainActiveFontColor) {
 //     width: $width;
 //     min-height: 50px;

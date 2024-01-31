@@ -5,11 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach to Chrome",
+            "port": 3000,
+            //"inspectUri": "https://localhost",
+            "request": "attach",
+            "type": "chrome",
+            //"address": "https://localhost",
+            //"url": "https://localhost:3000",
+            //"urlFilter": "https://localhost/*",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "url": "https://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            // "runtimeArgs": [
+            //     "--incognito"
+            //   ]
         }
     ]
 }

@@ -1,0 +1,132 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.chossenItemSpan {
+    font-size: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #42df4a;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 95%;
+    margin: auto;
+}
+
+.chossenItemFromSelected {
+    width: 97%;
+}
+
+.quoteInputLine {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    font-size: 18px;
+    width: 95%;
+    margin: 10px 5px;
+    font-weight: 500;
+}
+
+.inputName {
+    font-weight: 900;
+    width: 30%;
+    color: $fourthColor;
+}
+
+.zPosition1 {
+    z-index: 3;
+}
+.zPosition2 {
+    z-index: 2;
+}
+
+.zPosition3 {
+    z-index: 1;
+}
+
+.chooseType {
+    grid-area: chooseMovingType;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border: 1.5px solid #213644;
+    // width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: $mainLightColor;
+}
+
+.chooseTypeFullForm {
+    width: 97%;
+}
+
+.chooseName {
+    margin: auto 0;
+    text-align: left;
+}
+
+.chooseNameWidth {
+    width: 80%;
+}
+
+.bi-caret-down-fill {
+    color: #213644;
+    font-size: 25px;
+    margin-left: 30%;
+    width: 20%;
+}
+
+.biWidth {
+    margin-left: 80%;
+}
+
+.chooseName:hover {
+    background-color: red;
+}
+
+.submitBTN {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    grid-area: submitBTN;
+}
+
+.infoSuccess {
+    color: rgb(13, 156, 13);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.inputFrom {
+    grid-area: inputFrom;
+}
+
+.inputTo {
+    grid-area: inputTo;
+}
+
+.inputMessage {
+    grid-area: inputMessage;
+}
+
+.getQuoteBtn {
+    border-radius: 8px;
+    outline: none !important;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    min-width: 190px;
+    border: 2px solid white;
+    text-decoration: none;
+    display: inline-block;
+}

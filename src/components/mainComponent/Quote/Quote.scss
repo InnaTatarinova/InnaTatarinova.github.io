@@ -1,0 +1,30 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.quote_component {
+    @include addMainContainer($mainDarkColor);
+    background-image: url("../../../assets/img/calculation5.jpg");
+    background-size: cover;
+   
+
+}
+
+.quote-title {
+    @include titleForComponent($fontSizeForPC, 900, $fourthColor);
+    margin-bottom: 2px;
+    text-shadow: 0px 11px 10px #21364463;
+   
+}
+
+.quote-titleRed{
+    @include titleForComponent($fontSizeForPC, 900, $fourthColor);
+    margin-top: 2px;
+}
+
+.quoteItem{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+}
