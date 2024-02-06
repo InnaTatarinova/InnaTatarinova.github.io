@@ -17,6 +17,36 @@ const MovingFormReducer = (state, action) => {
         ...state,
         serviceType: action.payload,
       };
+    case "RESIDENCE_TYPE":
+      return {
+        ...state,
+        residenceType: action.payload,
+      };
+    case "BEDROOM_QUANTITY":
+      return {
+        ...state,
+        bedroomQuantity: action.payload,
+      };
+    case "FLOOR_LEVEL":
+      return {
+        ...state,
+        floor: action.payload,
+      };
+    case "TRUCK_SIZE":
+      return {
+        ...state,
+        truckSize: action.payload,
+      };
+    case "MOVERS":
+      return {
+        ...state,
+        movers: action.payload,
+      };
+      case "HOURS":
+      return {
+        ...state,
+        hours: action.payload,
+      };
     default:
       return state;
   }
@@ -26,7 +56,12 @@ const initialMovingForm = {
   movingFromInput: null,
   movingToInput: null,
   serviceType: null,
-  
+  residenceType: "",
+  bedroomQuantity: "",
+  floor: "",
+  truckSize: "",
+  movers: "",
+  hours:"",
 };
 
 export const MovingFormContext = createContext();
@@ -39,6 +74,12 @@ export const MovingFormProvider = (props) => {
         movingFromInput: state.movingFromInput,
         movingToInput: state.movingToInput,
         serviceType: state.serviceType,
+        residenceType: state.residenceType,
+        bedroomQuantity: state.bedroomQuantity,
+        floor: state.floor,
+        truckSize: state.truckSize,
+        movers: state.movers,
+        hours:state.hours,
         dispatch,
       }}
     >

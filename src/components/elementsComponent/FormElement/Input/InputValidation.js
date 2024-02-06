@@ -13,6 +13,18 @@ export const name_validation = {
   },
 };
 
+export const number_validation = {
+  type: "text",
+  id: "number",
+  placeholder: "",
+  multiline: false,
+  label: "number",
+  name:"number",
+  validation: {
+    pattern : { value: /^\d+$/, message: "only number"},
+  },
+};
+
 export const phoneNumber_validation = {
   type: "tel",
   id: "phone",
