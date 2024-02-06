@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.de7db852.css",
-    "main.js": "/static/js/main.35399e00.js",
+    "main.css": "/static/css/main.245e1b5a.css",
+    "main.js": "/static/js/main.9033a780.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/bradford.jpg": "/static/media/bradford.c31239ab8aad6520c868.jpg",
@@ -27,14 +27,15 @@
     "static/media/photo1.jpg": "/static/media/photo1.7505058fdaf65519ce95.jpg",
     "static/media/photo3.jpg": "/static/media/photo3.410fe87c19f451cf7001.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.309b4b198423c5ac4810.jpg",
+    "static/media/calculation5.jpg": "/static/media/calculation5.e4d4ea3386b00fe7e7cb.jpg",
     "static/media/Logo_justImg_Mini.png": "/static/media/Logo_justImg_Mini.825d5cb5aa2300263d86.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.de7db852.css.map": "/static/css/main.de7db852.css.map",
-    "main.35399e00.js.map": "/static/js/main.35399e00.js.map"
+    "main.245e1b5a.css.map": "/static/css/main.245e1b5a.css.map",
+    "main.9033a780.js.map": "/static/js/main.9033a780.js.map"
   },
   "entrypoints": [
-    "static/css/main.de7db852.css",
-    "static/js/main.35399e00.js"
+    "static/css/main.245e1b5a.css",
+    "static/js/main.9033a780.js"
   ]
 }
