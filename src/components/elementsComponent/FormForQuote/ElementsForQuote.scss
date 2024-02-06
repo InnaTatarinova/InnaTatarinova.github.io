@@ -191,12 +191,27 @@
     grid-area: residenceType;
 }
 
+.residenceType:empty{
+    display: none;
+   
+}
+
 .bedroomQuantity{
     grid-area: bedroomQuantity;
 }
 
+.bedroomQuantity:empty{
+    display: none;
+   
+}
+
 .floor{
     grid-area: floor;
+}
+
+.floor:empty{
+    display: none;
+   
 }
 
 .truckSize{
@@ -227,6 +242,29 @@
     color: $fourthColor;
     font-weight: 900;
     padding-left: 0px;
+}
+
+
+.formForChooseTypeOfForm{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: formForChooseTypeOfForm;
+}
+
+.formForChooseTypeOfForm div{
+    margin: auto;
+
+}
+
+.formForChooseTypeOfForm input{
+    height: 15px;
+   
+}
+
+.formForChooseTypeOfForm label{
+    margin: 7px;
+    size: 18px;
+    
 }
 
 

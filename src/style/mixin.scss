@@ -81,7 +81,7 @@
 //Form
 @mixin form($background, $width, $height){
     width: $width;
-    border-radius: 5%;
+    border-radius: 5px;
     height: $height;
     margin: auto;
     margin-top: 20px;
