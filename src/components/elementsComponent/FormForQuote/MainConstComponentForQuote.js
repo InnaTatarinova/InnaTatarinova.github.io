@@ -31,5 +31,16 @@ export const movingFromComponent = (
       className="chooseMovingType"
       name="Choose service type"
       type="SERVICE_TYPE"
+      classNameForList = "selectDropItem"
+    />
+  );
+
+  export const serviceTypeComponentSeperatedForm = (
+    <BlockForSelectItem
+      className="chooseMovingType"
+      name="Choose service type"
+      type="SERVICE_TYPE"
+      classNameForList = "formFormSelect"
+
     />
   );

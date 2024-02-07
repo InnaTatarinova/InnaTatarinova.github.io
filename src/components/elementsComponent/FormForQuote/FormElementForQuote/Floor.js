@@ -3,11 +3,11 @@ import { Input } from "../../FormElement/Input/Input";
 import { number_validation } from "../../FormElement/Input/InputValidation";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
-export const FloorForm = () => {
+export const Floor = (props) => {
   const [value, setValue] = useState("");
   const { dispatch } = useContext(MovingFormContext);
 
-  const setFloor = (props) => {
+  const setFloor = () => {
     dispatch({
       type: props.type,
       payload: value,
@@ -16,7 +16,7 @@ export const FloorForm = () => {
 
   return (
     <div className="floorForm-component" onblur={setFloor}>
-      <span>Floor</span>
+      <span>{props.name}</span>
       <Input
         {...number_validation}
         setValue={setValue}

@@ -8,7 +8,7 @@ import { BlockForInput } from "../FormElement/BlockForInput";
 import {
   movingFromComponent,
   movingToComponent,
-  serviceTypeComponent,
+  serviceTypeComponentSeperatedForm,
 } from "./MainConstComponentForQuote";
 
 export const FormForShortQuote = () => {
@@ -19,6 +19,8 @@ export const FormForShortQuote = () => {
   const onSubmit = methods.handleSubmit((data) => {
     methods.reset();
   });
+
+  
 
   return (
     <FormProvider {...methods}>
@@ -49,11 +51,12 @@ export const FormForShortQuote = () => {
         <BlockForInput
           name="Service:"
           value={serviceType}
-          component={serviceTypeComponent}
+          component={serviceTypeComponentSeperatedForm}
           componentType="serviceType"
           type="SERVICE_TYPE"
           form="short"
           className="chossenItemSpan"
+          classNameForList = "formFormSelect"
         />
 
         <div className="submitBTN" onClick={onSubmit}>

@@ -58,16 +58,16 @@
     color: $fourthColor;
 }
 
-.zPosition1 {
-    z-index: 3;
-}
-.zPosition2 {
-    z-index: 2;
-}
+// .zPosition1 {
+//     z-index: 3;
+// }
+// .zPosition2 {
+//     z-index: 2;
+// }
 
-.zPosition3 {
-    z-index: 1;
-}
+// .zPosition3 {
+//     z-index: 1;
+// }
 
 .chooseType {
     grid-area: chooseMovingType;
@@ -261,7 +261,7 @@
    
 }
 
-.formForChooseTypeOfForm label{
+.formForChooseTypeOfForm span{
     margin: 7px;
     size: 18px;
     
@@ -281,5 +281,35 @@
     min-width: 190px;
     border: 2px solid white;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block; 
+}
+
+.getEstimQuoteContainer{
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.getEstimQuoteBtn {
+    border-radius: 8px;
+    outline: none !important;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    min-width: 190px;
+    border: 2px solid #213644b5;
+    text-decoration: none;
+    display: inline-block; 
+    
+}
+
+
+.mistakeMessage{
+    
+    width: 100%;
+    text-align: center;
+    color: darkred;
 }

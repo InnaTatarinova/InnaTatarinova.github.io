@@ -19,7 +19,7 @@ export const BlockForSelectItem = (props) => {
         </div>
         <i className="bi bi-caret-down-fill biWidth"></i>
       </div>
-      {showSelectedList ? <SelectChoice type={props.type} className="selectDropItem" showSelectForm={setShowSelectedList}/> : null}
+      {showSelectedList ? <SelectChoice type={props.type} className={props.classNameForList} showSelectForm={setShowSelectedList}/> : null}
     </div>
   );
 };

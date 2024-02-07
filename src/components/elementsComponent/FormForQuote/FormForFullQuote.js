@@ -11,21 +11,45 @@ import {
 } from "./MainConstComponentForQuote";
 import { LocalResidentForm } from "./FormElementForQuote/LocalResidentForm";
 import { BedroomQuantityForm } from "./FormElementForQuote/BedroomQuantityForm";
-import { FloorForm } from "./FormElementForQuote/FloorForm";
+import { Floor } from "./FormElementForQuote/Floor";
 import { TruckSize } from "./FormElementForQuote/TruckSize";
 import { MoversQuantity } from "./FormElementForQuote/MoversQuantity";
 import { Hours } from "./FormElementForQuote/Hours";
+import { Storage } from "./FormElementForQuote/Storage";
+import { ButtonComponent } from "../ButtonComponents/ButtonComponnet";
+import { checkFormForQuote } from "../../../function/checkFormForQuote";
+import { MistakeComponent } from "../MistakeComponent/MistakeComponent";
 
 export const FormForFullQuote = () => {
   const methods = useForm();
 
-  const { movingFromInput, movingToInput, serviceType, residenceType } =
-    useContext(MovingFormContext);
+  const {
+    movingFromInput,
+    movingToInput,
+    serviceType,
+    residenceType,
+    truckSize,
+    movers,
+    hours,
+  } = useContext(MovingFormContext);
 
   const [selectedForm, setSelectedForm] = useState("full");
+  const [validForm, setValidForm] = useState("true");
 
   const handleRadioChange = (value) => {
     setSelectedForm(value);
+  };
+
+  const getEstimQuote = (e) => {
+    e.preventDefault();
+
+    if (selectedForm == "short") {
+      if (truckSize && movers && hours !== "") {
+        setValidForm(true);
+      } else {
+        setValidForm(false);
+      }
+    }
   };
 
   return (
@@ -54,6 +78,7 @@ export const FormForFullQuote = () => {
           componentType="serviceType"
           type="SERVICE_TYPE"
           form="full"
+          classNameForList = "selectDropItem"
         />
 
         <div className="formForChooseTypeOfForm">
@@ -65,7 +90,7 @@ export const FormForFullQuote = () => {
               checked={selectedForm === "full"}
               onChange={() => handleRadioChange("full")}
             />
-            <label htmlFor="option1">Full form</label>
+            <span>Full form</span>
           </div>
           <div>
             <input
@@ -75,14 +100,14 @@ export const FormForFullQuote = () => {
               checked={selectedForm === "short"}
               onChange={() => handleRadioChange("short")}
             />
-            <label htmlFor="option2">Short form</label>
+            <span>Short form</span>
           </div>
         </div>
 
-        {selectedForm === "full" ? (
+        {selectedForm === "full" && serviceType !== null ? (
           <form>
             <div className="residenceType">
-              {serviceType === null ? null : serviceType.id === 1 ? (
+              {serviceType.id === 1 || serviceType.id === 2 ? (
                 <LocalResidentForm />
               ) : null}
             </div>
@@ -92,12 +117,16 @@ export const FormForFullQuote = () => {
               residenceType === "Apartment" ||
               residenceType === "Condo" ? (
                 <BedroomQuantityForm />
+              ) : residenceType === "Storage" ? (
+                <Storage />
               ) : null}
             </div>
 
             <div className="floor">
-              {residenceType === "Apartment" || residenceType === "Condo" ? (
-                <FloorForm type="FLOOR_LEVEL" />
+              {residenceType === "Apartment" ||
+              residenceType === "Condo" ||
+              residenceType === "Storage" ? (
+                <Floor type="FLOOR_LEVEL" name="Floor" inputSize="1" />
               ) : null}
             </div>
           </form>
@@ -114,6 +143,19 @@ export const FormForFullQuote = () => {
             </div>
           </form>
         ) : null}
+
+        {validForm === false ? <MistakeComponent /> : null}
+        <div className="getEstimQuoteContainer">
+          <ButtonComponent
+            btnSize="btn-large"
+            btnColor="btn-dark"
+            btnBorder="btn-border-light"
+            className="getEstimQuoteBtn"
+            onClick={getEstimQuote}
+          >
+            Get Estimated Quote
+          </ButtonComponent>
+        </div>
       </form>
     </FormProvider>
   );
