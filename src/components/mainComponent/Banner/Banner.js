@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Banner.scss";
-import { FormForShortQuote } from "../../elementsComponent/FormForQuote/FormForShortQuote";
+import { FormForStartQuoteBanner } from "../../elementsComponent/FormForQuote/FormForStartQuoteBanner";
 
 const banner = require("../../../assets/img/whiteTruckResize.png");
 const bannerLogo = require("../../../assets/img/truckWithSmallLogoResize.png");
@@ -32,7 +32,7 @@ export const Banner = ({ resultRef }) => {
       <h1 className="banner-h1">We promise you will enjoy moving </h1>
       <div className="banner-img-block">
         <div className="askPriceStyle">
-          <FormForShortQuote />
+          <FormForStartQuoteBanner />
         </div>
         <div className="banner-img">
           {smallWindow ? (

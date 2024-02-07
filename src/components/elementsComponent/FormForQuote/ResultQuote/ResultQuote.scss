@@ -1,0 +1,68 @@
+@import "../../../../style/mainStyle.scss";
+@import "../../../../style/mixin.scss";
+
+.priceComponent {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.price {
+    color: red;
+    font-weight: 900;
+    font-size: 30px;
+
+}
+
+.price-explanation {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.proposedTocall-component {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.price-callUs {
+    color: darkblue;
+    margin-right: 5px;
+}
+
+.price-red{
+    color: red;
+    margin-right: 20px;
+}
+
+.movingPhone{
+    animation: wiggle 2s linear infinite;
+    
+}
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  

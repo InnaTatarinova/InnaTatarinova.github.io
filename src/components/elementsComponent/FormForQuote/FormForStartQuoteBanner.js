@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./FormForShortQuote.scss";
+import "./FormForStartQuoteBanner.scss";
 import "./ElementsForQuote.scss";
 import { FormProvider, useForm } from "react-hook-form";
 import { HashLink as Link } from "react-router-hash-link";
@@ -11,7 +11,7 @@ import {
   serviceTypeComponentSeperatedForm,
 } from "./MainConstComponentForQuote";
 
-export const FormForShortQuote = () => {
+export const FormForStartQuoteBanner = () => {
   const methods = useForm();
   const { serviceType, movingFromInput, movingToInput } =
     useContext(MovingFormContext);
@@ -20,7 +20,7 @@ export const FormForShortQuote = () => {
     methods.reset();
   });
 
-  
+
 
   return (
     <FormProvider {...methods}>
