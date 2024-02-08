@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.42eadcaa.css",
-    "main.js": "/static/js/main.c7b4f567.js",
+    "main.css": "/static/css/main.6fa81c3e.css",
+    "main.js": "/static/js/main.71857b48.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/bradford.jpg": "/static/media/bradford.c31239ab8aad6520c868.jpg",
@@ -21,21 +21,21 @@
     "static/media/kitchener.jpg": "/static/media/kitchener.72cd53ed3e87bd391444.jpg",
     "static/media/niagaraFall.jpg": "/static/media/niagaraFall.e43c45d5f987c6ada316.jpg",
     "static/media/mississagua.jpg": "/static/media/mississagua.faa2e259b6d2d1122db3.jpg",
+    "static/media/calculation8.jpg": "/static/media/calculation8.faa7913b5324026348bc.jpg",
     "static/media/whitby.jpg": "/static/media/whitby.3f1fe251c5b176b2090e.jpg",
     "static/media/barrie.jpg": "/static/media/barrie.1d342aeaf9d8055d3a7e.jpg",
     "static/media/vaughan.jpg": "/static/media/vaughan.a6f59203e909f4f7284d.jpg",
     "static/media/photo1.jpg": "/static/media/photo1.7505058fdaf65519ce95.jpg",
     "static/media/photo3.jpg": "/static/media/photo3.410fe87c19f451cf7001.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.309b4b198423c5ac4810.jpg",
-    "static/media/calculation5.jpg": "/static/media/calculation5.e4d4ea3386b00fe7e7cb.jpg",
     "static/media/Logo_justImg_Mini.png": "/static/media/Logo_justImg_Mini.825d5cb5aa2300263d86.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.42eadcaa.css.map": "/static/css/main.42eadcaa.css.map",
-    "main.c7b4f567.js.map": "/static/js/main.c7b4f567.js.map"
+    "main.6fa81c3e.css.map": "/static/css/main.6fa81c3e.css.map",
+    "main.71857b48.js.map": "/static/js/main.71857b48.js.map"
   },
   "entrypoints": [
-    "static/css/main.42eadcaa.css",
-    "static/js/main.c7b4f567.js"
+    "static/css/main.6fa81c3e.css",
+    "static/js/main.71857b48.js"
   ]
 }
