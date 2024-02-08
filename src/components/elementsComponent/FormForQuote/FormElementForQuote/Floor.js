@@ -4,7 +4,7 @@ import { number_validation } from "../../FormElement/Input/InputValidation";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
 export const Floor = (props) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(0);
   const { dispatch } = useContext(MovingFormContext);
 
   const setFloor = () => {

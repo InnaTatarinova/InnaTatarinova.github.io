@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import "../ElementsForQuote.scss";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
@@ -10,6 +10,12 @@ export const ItemForChoose = (props) => {
       type: props.type,
       payload: props.value,
     });
+    if (props.showRecom === "yes") {
+      dispatch({
+        type: "SHOW_RECOM",
+        payload: "yes",
+      });
+    }
   };
 
   return (
@@ -28,7 +34,10 @@ export const ItemForChoose = (props) => {
       ) : props.icon === "iconList" ? (
         <div className="iconList">
           {props.iconList.map((icon, index) => (
-            <i key={index} className={`bi iconType ${props.classNameIcon} ${props.classNameIconList}`}></i>
+            <i
+              key={index}
+              className={`bi iconType ${props.classNameIcon} ${props.classNameIconList}`}
+            ></i>
           ))}
         </div>
       ) : null}

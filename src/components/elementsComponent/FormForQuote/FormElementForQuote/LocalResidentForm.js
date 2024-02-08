@@ -8,7 +8,7 @@ export const LocalResidentForm = () => {
   const className = "typeWidthForFour";
   const type = "RESIDENCE_TYPE";
   const icon = "icon";
-  const classNameIcon = "bi-house-door";
+ 
 
   return (
     <div>
@@ -17,7 +17,7 @@ export const LocalResidentForm = () => {
         <ItemForChoose
           name="House"
           value="House"
-          classNameIcon={classNameIcon}
+          classNameIcon="bi-house-door"
           context={residenceType}
           icon={icon}
           type={type}
@@ -26,7 +26,7 @@ export const LocalResidentForm = () => {
         <ItemForChoose
           name="Apartment"
           value="Apartment"
-          classNameIcon={classNameIcon}
+          classNameIcon="bi-building"
           context={residenceType}
           icon={icon}
           type={type}
@@ -35,7 +35,7 @@ export const LocalResidentForm = () => {
         <ItemForChoose
           name="Condo"
           value="Condo"
-          classNameIcon={classNameIcon}
+          classNameIcon="bi-building"
           context={residenceType}
           icon={icon}
           type={type}
@@ -44,7 +44,7 @@ export const LocalResidentForm = () => {
         <ItemForChoose
           name="Storage"
           value="Storage"
-          classNameIcon={classNameIcon}
+          classNameIcon="bi-box"
           context={residenceType}
           icon={icon}
           type={type}

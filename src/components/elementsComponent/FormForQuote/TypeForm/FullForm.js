@@ -1,14 +1,54 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { LocalResidentForm } from "../FormElementForQuote/LocalResidentForm";
 import { BedroomQuantityForm } from "../FormElementForQuote/BedroomQuantityForm";
 import { Storage } from "../FormElementForQuote/Storage";
 import { Floor } from "../FormElementForQuote/Floor";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
+import { ShortForm } from "./ShortForm";
+import { conectionTruckSizeAndBedroom } from "../../../../data/calculationData";
 
 export const FullForm = () => {
-  const { serviceType, residenceType } = useContext(MovingFormContext);
+  const {
+    serviceType,
+    residenceType,
+    bedroomQuantity,
+    dispatch,
+  } = useContext(MovingFormContext);
+
+  const [showRecom, setShowRec] = useState(false);
+
+  const setRecomendationValue = () => {
+    if (bedroomQuantity !== 0) {
+      switch (residenceType) {
+        case "House":
+          for (let i of conectionTruckSizeAndBedroom) {
+            if (i.bedroom === bedroomQuantity) {
+              dispatch({
+                type: "TRUCK_SIZE",
+                payload: i.truckSize,
+              });
+              dispatch({
+                type: "MOVERS",
+                payload: i.movers,
+              });
+              dispatch({
+                type: "HOURS",
+                payload: i.hours,
+              });
+            }
+          }
+      }
+      setShowRec(true);
+    }
+    
+  };
+
+  useEffect(() => {
+    setRecomendationValue();
+  }, [bedroomQuantity]);
+
   return (
-    <form>
+    <div>
       <div className="residenceType">
         {serviceType.id === 1 || serviceType.id === 2 ? (
           <LocalResidentForm />
@@ -32,6 +72,16 @@ export const FullForm = () => {
           <Floor type="FLOOR_LEVEL" name="Floor" inputSize="1" />
         ) : null}
       </div>
-    </form>
+
+      {showRecom=== true ? (
+        <div>
+          <div className="proposedOptionBlockText">
+            You can choose the different options, but we recommend the next
+            ones:
+          </div>
+          <ShortForm />
+        </div>
+      ) : null}
+    </div>
   );
 };

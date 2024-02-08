@@ -21,7 +21,7 @@ export const MoversQuantity = () => {
       <div className="adContainerForQuote">
         <ItemForChoose
           name="2 movers"
-          value="2"
+          value={2}
           context={movers}
           icon={icon}
           type={type}
@@ -31,7 +31,7 @@ export const MoversQuantity = () => {
         />
         <ItemForChoose
           name="3 movers"
-          value="3"
+          value={3}
           context={movers}
           icon={icon}
           type={type}
@@ -41,7 +41,7 @@ export const MoversQuantity = () => {
           classNameIconList="iconListFor3"
         />
         <ItemForChoose
-          value="4"
+          value={4}
           name="4 movers"
           context={movers}
           icon={icon}
@@ -53,7 +53,7 @@ export const MoversQuantity = () => {
         />
         <ItemForChoose
           name="5 movers"
-          value="5"
+          value={5}
           context={movers}
           icon={icon}
           type={type}

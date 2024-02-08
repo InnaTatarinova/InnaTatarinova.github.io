@@ -2,9 +2,16 @@ import React, { useContext } from "react";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 import "./ResultQuote.scss";
 import { ButtonComponent } from "../../ButtonComponents/ButtonComponnet";
+import { Link } from "react-router-dom";
 
-export const ResultQuote = (props) => {
+import { phoneNumber } from "../../../../data/mainInfo";
+
+export const ResultQuote = () => {
   const { price } = useContext(MovingFormContext);
+
+  const dialPhone =()=>{
+    window.location.href = `tel://${phoneNumber}`
+  }
 
   return (
     <div className="priceComponent">
@@ -17,6 +24,7 @@ export const ResultQuote = (props) => {
       <div className="proposedTocall-component">
         <div className="price-callUs">Like this </div>
         <div className="price-red">price?</div>
+        <Link onClick={dialPhone}>
         <ButtonComponent
           btnSize="btn-small"
           btnBorder="btn-border-dark"
@@ -26,6 +34,7 @@ export const ResultQuote = (props) => {
         >
           <i className="bi bi-telephone"></i>
         </ButtonComponent>
+        </Link>
       </div>
     </div>
   );

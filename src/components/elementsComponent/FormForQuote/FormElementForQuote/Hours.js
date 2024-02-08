@@ -17,7 +17,7 @@ export const Hours = () => {
       <div className="adContainerForQuote">
         <ItemForChoose
           name="3 hours"
-          value="3"
+          value={3}
           icon={icon}
           type={type}
           context={hours}
@@ -26,7 +26,7 @@ export const Hours = () => {
         />
         <ItemForChoose
           name="4 hours"
-          value="4"
+          value={4}
           icon={icon}
           type={type}
           context={hours}
@@ -35,7 +35,7 @@ export const Hours = () => {
         />
         <ItemForChoose
           name="5 hours"
-          value="5"
+          value={5}
           icon={icon}
           type={type}
           context={hours}
@@ -44,7 +44,7 @@ export const Hours = () => {
         />
         <ItemForChoose
           name="6 hours"
-          value="6"
+          value={6}
           icon={icon}
           type={type}
           context={hours}
@@ -53,7 +53,7 @@ export const Hours = () => {
         />
         <ItemForChoose
           name="7 hours"
-          value="7"
+          value={7}
           icon={icon}
           type={type}
           context={hours}
@@ -62,7 +62,7 @@ export const Hours = () => {
         />
         <ItemForChoose
           name="8 hours"
-          value="8"
+          value={8}
           icon={icon}
           type={type}
           context={hours}

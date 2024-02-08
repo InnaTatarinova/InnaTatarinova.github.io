@@ -57,6 +57,7 @@ const MovingFormReducer = (state, action) => {
         ...state,
         price: action.payload,
       };
+  
     default:
       return state;
   }
@@ -67,13 +68,14 @@ const initialMovingForm = {
   movingToInput: null,
   serviceType: null,
   residenceType: "",
-  bedroomQuantity: "",
-  floor: "",
-  truckSize: "",
-  movers: "",
-  hours: "",
+  bedroomQuantity: 0,
+  floor: 0,
+  truckSize: null,
+  movers: 0,
+  hours: 0,
   storage: "",
   price:0,
+ 
 };
 
 export const MovingFormContext = createContext();
@@ -94,6 +96,7 @@ export const MovingFormProvider = (props) => {
         hours: state.hours,
         storage: state.storage,
         price:state.price,
+        
         dispatch,
       }}
     >

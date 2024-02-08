@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import { ButtonComponent } from "../../elementsComponent/ButtonComponents/ButtonComponnet";
 import "./Navbar.scss";
 
+import { phoneNumber } from "../../../data/mainInfo";
+
 const logoFull = require("../../../assets/img/Logo_justImg.png");
-const logo = require("../../../assets/img/Logo_justImg_Mini.png");
+const logoDarkBlue = require("../../../assets/img/Logo_justImg_Mini.png");
+const logo = require("../../../assets/img/Logo_justImg_MiniBlue.png");
+
 
 const Navbar = () => {
   const [clickOnMenuStatus, setclickOnMenuStatus] = useState(false);
@@ -44,7 +48,7 @@ const Navbar = () => {
   };
 
   const phoneNumberDial = () => {
-    window.location.href = "tel://+12345678998";
+    window.location.href = `tel://${phoneNumber}`
   };
 
   useEffect(() => {
@@ -71,7 +75,7 @@ const Navbar = () => {
                 btnBorder="btn-border-light"
                 className="visiblePhoneNumber"
               >
-                +1 234 567 89 98
+              {phoneNumber}
               </ButtonComponent>
             </Link>
           )}
@@ -138,7 +142,7 @@ const Navbar = () => {
               btnBorder="btn-border-light"
               className="visiblePhoneNumber"
             >
-              +1 234 567 89 98
+              {phoneNumber}
             </ButtonComponent>
           </Link>
         )}

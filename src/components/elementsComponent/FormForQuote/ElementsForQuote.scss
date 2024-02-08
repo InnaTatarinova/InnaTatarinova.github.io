@@ -21,25 +21,22 @@
     width: 97%;
 }
 
-.iconList{
+.iconList {
     display: flex;
     flex-direction: row;
     margin: auto;
 }
 
-.iconListFor3:not(:first-child){
+.iconListFor3:not(:first-child) {
     margin-left: -9px;
-    
 }
 
-.iconListFor4:not(:first-child){
+.iconListFor4:not(:first-child) {
     margin-left: -16px;
-    
 }
 
-.iconListFor5:not(:first-child){
+.iconListFor5:not(:first-child) {
     margin-left: -19px;
-    
 }
 
 .quoteInputLine {
@@ -110,6 +107,7 @@
 
 .iconType {
     color: $fourthColor;
+    color: $mainDarkColor;
 }
 
 .chooseName:hover {
@@ -131,31 +129,34 @@
     border-radius: 5px;
     font-size: 13px;
     font-weight: 500;
-    
+    box-shadow:
+        rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.typeWidthForSix{
-    width: 31%; 
+.typeWidthForSix {
+    width: 31%;
 }
-.typeWidthForFour{
-    width: 23%; 
+.typeWidthForFour {
+    width: 23%;
 }
 
-.typeWidthForThree{
+.typeWidthForThree {
     width: 31%;
 }
 
-
-.typeChoosen{
-    background-color: #ff000017;
+.typeChoosen {
+    background-color: #d9484854;
 }
 
-.spanChoosenItem{
-    color: $fourthColor;
+.spanChoosenItem {
+    // color: $fourthColor;
+    color:$mainDarkColor;
     font-size: 18px;
     font-weight: 700;
-
-
 }
 
 //Button
@@ -191,83 +192,73 @@
     grid-area: residenceType;
 }
 
-.residenceType:empty{
+.residenceType:empty {
     display: none;
-   
 }
 
-.bedroomQuantity{
+.bedroomQuantity {
     grid-area: bedroomQuantity;
 }
 
-.bedroomQuantity:empty{
+.bedroomQuantity:empty {
     display: none;
-   
 }
 
-.floor{
+.floor {
     grid-area: floor;
 }
 
-.floor:empty{
+.floor:empty {
     display: none;
-   
 }
 
-.truckSize{
+.truckSize {
     grid-area: truckSize;
 }
 
-.movers{
+.movers {
     grid-area: movers;
 }
 
-.hours{
+.hours {
     grid-area: hours;
 }
 
 //FloorForm
-.floorForm-component{
+.floorForm-component {
     display: flex;
     flex-direction: row;
-
 }
 
-.floor-input input{
+.floor-input input {
     height: 30px;
-    margin-left:20px;
+    margin-left: 20px;
     width: 70px;
-    border:1px solid $mainDarkColor;
+    border: 1px solid $mainDarkColor;
     text-align: center;
     color: $fourthColor;
     font-weight: 900;
     padding-left: 0px;
 }
 
-
-.formForChooseTypeOfForm{
+.formForChooseTypeOfForm {
     display: flex;
     flex-wrap: wrap;
     grid-area: formForChooseTypeOfForm;
 }
 
-.formForChooseTypeOfForm div{
+.formForChooseTypeOfForm div {
     margin: auto;
-
 }
 
-.formForChooseTypeOfForm input{
+.formForChooseTypeOfForm input {
     height: 15px;
-   
 }
 
-.formForChooseTypeOfForm span{
+.formForChooseTypeOfForm span {
     margin: 7px;
     size: 18px;
-    
 }
-
-
 
 //Button submit
 .getQuoteBtn {
@@ -281,14 +272,13 @@
     min-width: 190px;
     border: 2px solid white;
     text-decoration: none;
-    display: inline-block; 
+    display: inline-block;
 }
 
-.getEstimQuoteContainer{
+.getEstimQuoteContainer {
     text-align: center;
     margin-top: 30px;
     width: 100%;
-
 }
 
 .getEstimQuoteBtn {
@@ -302,8 +292,5 @@
     min-width: 190px;
     border: 2px solid #213644b5;
     text-decoration: none;
-    display: inline-block; 
-    
+    display: inline-block;
 }
-
-

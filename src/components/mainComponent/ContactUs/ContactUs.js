@@ -4,6 +4,12 @@ import { FormForContact } from "../../elementsComponent/FormForContact/FormForCo
 import ReactWhatsappButton from "react-whatsapp-button";
 import { Button } from "@react-email/components";
 
+import { phoneNumber } from "../../../data/mainInfo";
+import { email } from "../../../data/mainInfo";
+import { address } from "../../../data/mainInfo";
+import { countryCode } from "../../../data/mainInfo";
+import { shortPhoneNumber } from "../../../data/mainInfo";
+
 export const ContactUs = () => {
   return (
     <div className="contactUs-container">
@@ -11,12 +17,12 @@ export const ContactUs = () => {
       <div className="contact-block">
         <div className="contactInfo">
           <h2 className="contactInfoName">Phone:</h2>
-          <h3 className="contactInfoValue">+1 234 567 89 98</h3>
+          <h3 className="contactInfoValue">{ phoneNumber }</h3>
           <h2 className="contactInfoName">Email:</h2>
-          <h3 className="contactInfoValue">ourEmail@gmail.com</h3>
+          <h3 className="contactInfoValue">{email}</h3>
           <h2 className="contactInfoName">Address:</h2>
           <h3 className="contactInfoValue">
-            57 OurAdress , Toronto, ON, Canada, M9B 0B2
+            {address}
           </h3>
         </div>
         <div className="writeUs">
@@ -25,8 +31,8 @@ export const ContactUs = () => {
         </div>
 
         <ReactWhatsappButton
-          countryCode="1"
-          phoneNumber="2345678998"
+          countryCode={countryCode}
+          phoneNumber={shortPhoneNumber}
           animated
           // onClick={onSubmit}
         />

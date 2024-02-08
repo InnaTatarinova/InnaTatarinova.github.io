@@ -21,14 +21,16 @@
 
 .proposedTocall-component {
     display: flex;
-    flex-wrap: wrap;
     font-size: 25px;
     font-style: italic;
     font-weight: 900;
+    flex-direction: row;
+    margin-left: 20px;
+
 }
 
 .price-callUs {
-    color: darkblue;
+    color: $mainDarkColor;
     margin-right: 5px;
 }
 

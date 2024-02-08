@@ -9,15 +9,8 @@ import {
   movingToComponent,
   serviceTypeComponent,
 } from "./MainConstComponentForQuote";
-import { LocalResidentForm } from "./FormElementForQuote/LocalResidentForm";
-import { BedroomQuantityForm } from "./FormElementForQuote/BedroomQuantityForm";
-import { Floor } from "./FormElementForQuote/Floor";
-import { TruckSize } from "./FormElementForQuote/TruckSize";
-import { MoversQuantity } from "./FormElementForQuote/MoversQuantity";
-import { Hours } from "./FormElementForQuote/Hours";
-import { Storage } from "./FormElementForQuote/Storage";
 import { ButtonComponent } from "../ButtonComponents/ButtonComponnet";
-import { calculateShortQuote} from "../../../function/calculateShortQuote";
+import { calculateShortQuote } from "../../../function/calculateShortQuote";
 import { MistakeComponent } from "../MistakeComponent/MistakeComponent";
 import { FullForm } from "./TypeForm/FullForm";
 import { ShortForm } from "./TypeForm/ShortForm";
@@ -31,42 +24,65 @@ export const FormForFullQuote = () => {
     movingToInput,
     serviceType,
     residenceType,
+    bedroomQuantity,
     truckSize,
     movers,
-    hours, dispatch
+    hours,
+    dispatch,
   } = useContext(MovingFormContext);
 
-  const [selectedForm, setSelectedForm] = useState("full");
+  const [selectedForm, setSelectedForm] = useState("short");
   const [openMistakeForm, setOpenMistakeForm] = useState(false);
   const [validForm, setValidForm] = useState(false);
-
-
+  const [message, setMessage] = useState("");
 
   const handleRadioChange = (value) => {
     setSelectedForm(value);
+    setValidForm(false);
   };
 
   const getEstimQuote = (e) => {
     e.preventDefault();
 
-    if (selectedForm == "short") {
-      if (truckSize && movers && hours !== "") {
-        setValidForm(true); 
-        let price = calculateShortQuote(truckSize,movers, hours); 
-
-        dispatch({
-          type:"PRICE",
-          payload: price,
-        })
-
+    if (truckSize && movers && hours !== "") {
+      calculPrice();
+    } else if (selectedForm === "short") {
+      if (truckSize && movers && hours === "") {
+        setMessage(
+          "Please choose truck size, how many movers and hours would you prefer"
+        );
+      }
+    } else if (selectedForm === "full") {
+      if (movingFromInput && movingToInput && serviceType !== null) {
+        switch (serviceType.id) {
+          case 1:
+            if (residenceType && bedroomQuantity === "") {
+              callMistakeForm(
+                "Please choose residece type and how many bedroom"
+              );
+            }
+        }
       } else {
-       
-       
-        setOpenMistakeForm(true);
+        callMistakeForm(
+          "Please choose origin address, distination address and type of moving"
+        );
       }
     }
   };
 
+  const callMistakeForm = (text) => {
+    setMessage(text);
+    setOpenMistakeForm(true);
+  };
+
+  const calculPrice = () => {
+    setValidForm(true);
+    let price = calculateShortQuote(truckSize, movers, hours);
+    dispatch({
+      type: "PRICE",
+      payload: price,
+    });
+  };
   return (
     <FormProvider {...methods}>
       <form
@@ -102,6 +118,16 @@ export const FormForFullQuote = () => {
           <div>
             <input
               type="radio"
+              id="short"
+              value="short"
+              checked={selectedForm === "short"}
+              onChange={() => handleRadioChange("short")}
+            />
+            <span>Short form</span>{" "}
+          </div>
+          <div>
+            <input
+              type="radio"
               id="full"
               value="full"
               checked={selectedForm === "full"}
@@ -109,22 +135,14 @@ export const FormForFullQuote = () => {
             />
             <span>Full form</span>
           </div>
-          <div>
-            <input
-              type="radio"
-              id="short"
-              value="short"
-              checked={selectedForm === "short"}
-              onChange={() => handleRadioChange("short")}
-            />
-            <span>Short form</span>
-          </div>
         </div>
 
-        {selectedForm === "full" && serviceType !== null ? (
-          <FullForm />
-        ) : selectedForm === "short" ? (
-          <ShortForm />
+        {movingFromInput && movingToInput && serviceType !== null ? (
+          selectedForm === "full" ? (
+            <FullForm />
+          ) : selectedForm === "short" ? (
+            <ShortForm />
+          ) : null
         ) : null}
 
         <div className="getEstimQuoteContainer">
@@ -138,12 +156,12 @@ export const FormForFullQuote = () => {
             Get Estimated Quote
           </ButtonComponent>
         </div>
-        {validForm ? <ResultQuote/> : null}
+        {validForm ? <ResultQuote /> : null}
       </form>
 
       {openMistakeForm ? (
         <MistakeComponent
-          message="Please choose truck size, how many movers and hours would you prefer"
+          message={message}
           setOpenMistakeForm={setOpenMistakeForm}
         />
       ) : null}
