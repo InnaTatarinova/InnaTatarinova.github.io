@@ -4,7 +4,10 @@
 .infoCards {
   @include addMainContainer($mainLightColor);
   padding-top: 50px;
+ 
+ 
 }
+
 
 .infoCard-title {
   @include titleForComponent($fontSizeForPC, 900, #21364496);
@@ -34,6 +37,7 @@ figure {
   text-decoration: none;
   flex-flow: column;
   margin-bottom: 40px;
+  
 }
 
 .cardItem-conteiner:nth-last-child(-n + 3) {

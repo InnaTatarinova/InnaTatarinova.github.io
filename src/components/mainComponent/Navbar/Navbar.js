@@ -91,7 +91,7 @@ const Navbar = () => {
 
         <ul className={clickOnMenuStatus ? "nav-menu active" : "nav-menu"}>
           <li className="nav-menu-li">
-            <Link to="/" onClick={clickToCloseMenu} className="nav-menu-item">
+            <Link to="/about" onClick={clickToCloseMenu} className="nav-menu-item">
               About us
             </Link>
           </li>

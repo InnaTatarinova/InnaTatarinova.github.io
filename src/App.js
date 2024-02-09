@@ -3,7 +3,8 @@ import './App.css';
 import Navbar from './components/mainComponent/Navbar/Navbar';
 import { Home } from './pages/Home';
 import { ContactUs } from './components/mainComponent/ContactUs/ContactUs';
-import { Quote } from './components/mainComponent/Quote/Quote';
+import { AboutUs } from './pages/AboutUs';
+
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-     
+          <Route path="/about" exact element={<AboutUs/>} />
         </Routes>
        <ContactUs/>
       </BrowserRouter>
