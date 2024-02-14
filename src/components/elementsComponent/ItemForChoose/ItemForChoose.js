@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import "../ElementsForQuote.scss";
-import { MovingFormContext } from "../../../../context/MovingFormContext";
+import "../../elementsComponent/FormForQuote/ElementsForQuote.scss";
+
 
 export const ItemForChoose = (props) => {
-  const { dispatch } = useContext(MovingFormContext);
+  const { dispatch } = useContext(props.mainContextForm);
 
   const chooseItem = () => {
     dispatch({
@@ -12,8 +12,8 @@ export const ItemForChoose = (props) => {
     });
     if (props.showRecom === "yes") {
       dispatch({
-        type: "SHOW_RECOM",
-        payload: "yes",
+        type: props.showRecomType,
+        payload: props.showRecom,
       });
     }
   };

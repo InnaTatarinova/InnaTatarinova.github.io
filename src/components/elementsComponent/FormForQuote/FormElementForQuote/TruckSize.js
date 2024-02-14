@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
 export const TruckSize = () => {
@@ -22,6 +22,7 @@ export const TruckSize = () => {
           type={type}
           className={className}
           classNameIcon={classNameIcon}
+          mainContextForm = {MovingFormContext}
         
         />
         <ItemForChoose
@@ -32,6 +33,7 @@ export const TruckSize = () => {
           type={type}
           className={className}
           classNameIcon={classNameIcon}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="26' Truck"
@@ -41,6 +43,7 @@ export const TruckSize = () => {
           type={type}
           className={className}
           classNameIcon={classNameIcon}
+          mainContextForm = {MovingFormContext}
         />
       </div>
     </div>

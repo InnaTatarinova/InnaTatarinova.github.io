@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
 const list2 = ["bi-person", "bi-person"];
@@ -28,6 +28,7 @@ export const MoversQuantity = () => {
           className={className}
           iconList={list2}
           classNameIcon={classNameIcon}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="3 movers"
@@ -39,6 +40,7 @@ export const MoversQuantity = () => {
           classNameIcon={classNameIcon}
           iconList={list3}
           classNameIconList="iconListFor3"
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           value={4}
@@ -50,6 +52,7 @@ export const MoversQuantity = () => {
           classNameIcon={classNameIcon}
           iconList={list4}
           classNameIconList="iconListFor4"
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="5 movers"
@@ -61,6 +64,7 @@ export const MoversQuantity = () => {
           classNameIcon={classNameIcon}
           iconList={list5}
           classNameIconList="iconListFor5"
+          mainContextForm = {MovingFormContext}
         />
       </div>
     </div>

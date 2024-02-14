@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../ElementsForQuote.scss";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
 export const BedroomQuantityForm = () => {
@@ -9,6 +9,9 @@ export const BedroomQuantityForm = () => {
   const className = "typeWidthForSix";
   const type = "BEDROOM_QUANTITY";
   const icon = "no";
+  const showRecomType = "SHOW_RECOM";
+  const showRecom = "yes";
+  const mainContextForm = {MovingFormContext}
 
   return (
     <div>
@@ -22,7 +25,10 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
+          
          
         />
         <ItemForChoose
@@ -33,7 +39,9 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
         />
         <ItemForChoose
           name="3"
@@ -43,7 +51,9 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
         />
         <ItemForChoose
           name="4"
@@ -53,7 +63,9 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
         />
          <ItemForChoose
           name="5"
@@ -63,7 +75,9 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
         />
          <ItemForChoose
           name="6"
@@ -73,7 +87,9 @@ export const BedroomQuantityForm = () => {
           classNameSpan={classNameSpan}
           className={className}
           context={bedroomQuantity}
-          showRecom = "yes"
+          showRecom = {showRecom}
+          showRecomType = {showRecomType}
+          mainContextForm={mainContextForm}
         />
       </div>
     </div>

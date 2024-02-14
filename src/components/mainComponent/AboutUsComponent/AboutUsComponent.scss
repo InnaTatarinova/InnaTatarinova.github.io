@@ -1,3 +1,44 @@
-@import "../../style/mainStyle.scss";
-@import "../../style/mixin.scss";
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
 
+.aboutUsComponent {
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.aboutUs-title {
+    color: $mainDarkColor;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.highlight {
+    color: $mainDarkColor;
+    font-weight: 700;
+}
+
+.highlightRed {
+    color: $fourthColor;
+    font-weight: 700;
+}
+
+.itemListAboutUs {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconStyleForAboutUs {
+    color: red;
+    margin: auto;
+}
+
+.chosenIcon {
+    background-color: $mainDarkColor;
+}
+
+.blockForInformationFromIcon{
+    margin-top: 20px;
+}

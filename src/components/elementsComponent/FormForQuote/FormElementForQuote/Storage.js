@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
 export const Storage = () => {
@@ -22,6 +22,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="5' X 10'"
@@ -31,6 +32,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="10' X 10'"
@@ -40,6 +42,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="10' X 15'"
@@ -49,6 +52,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="10' X 20'"
@@ -58,6 +62,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="10' X 25'"
@@ -67,6 +72,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
          <ItemForChoose
           name="10' X 30'"
@@ -76,6 +82,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
           <ItemForChoose
           name="20' X 20'"
@@ -85,6 +92,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
          <ItemForChoose
           name="30' X 30'"
@@ -94,6 +102,7 @@ export const Storage = () => {
           context={storage}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
       </div>
     </div>

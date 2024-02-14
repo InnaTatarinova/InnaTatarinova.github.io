@@ -13,6 +13,7 @@ export const serviceTypeList = [
     img: { localPhoto },
     alt: "local_photo",
     label: "Local",
+   
   },
   {
     name: "Long-Distance Moving",

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 import "../ElementsForQuote.scss";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 
@@ -22,6 +22,7 @@ export const LocalResidentForm = () => {
           icon={icon}
           type={type}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="Apartment"
@@ -31,6 +32,7 @@ export const LocalResidentForm = () => {
           icon={icon}
           type={type}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="Condo"
@@ -40,6 +42,7 @@ export const LocalResidentForm = () => {
           icon={icon}
           type={type}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="Storage"
@@ -49,6 +52,7 @@ export const LocalResidentForm = () => {
           icon={icon}
           type={type}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
       </div>
     </div>

@@ -4,6 +4,7 @@ import Navbar from './components/mainComponent/Navbar/Navbar';
 import { Home } from './pages/Home';
 import { ContactUs } from './components/mainComponent/ContactUs/ContactUs';
 import { AboutUs } from './pages/AboutUs';
+import { Services } from './pages/Services';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<AboutUs/>} />
+          <Route path="/services" exact element={<Services/>} />
         </Routes>
        <ContactUs/>
       </BrowserRouter>

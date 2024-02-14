@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "../ElementsForQuote.scss";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
-import { ItemForChoose } from "../ElementForFormQuote/ItemForChoose";
+import { ItemForChoose } from "../../ItemForChoose/ItemForChoose";
 
 export const Hours = () => {
   const { hours } = useContext(MovingFormContext);
@@ -23,6 +23,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="4 hours"
@@ -32,6 +33,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="5 hours"
@@ -41,6 +43,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="6 hours"
@@ -50,6 +53,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="7 hours"
@@ -59,6 +63,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
         <ItemForChoose
           name="8 hours"
@@ -68,6 +73,7 @@ export const Hours = () => {
           context={hours}
           classNameSpan={classNameSpan}
           className={className}
+          mainContextForm = {MovingFormContext}
         />
       </div>
     </div>
