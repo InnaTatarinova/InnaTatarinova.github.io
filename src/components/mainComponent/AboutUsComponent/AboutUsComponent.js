@@ -6,6 +6,7 @@ import { ItemForChoose } from "../../elementsComponent/ItemForChoose/ItemForChoo
 import { MainContextFormContext } from "../../../context/MainContext";
 import { AboutUsDescrip } from "./AboutUsDescrip";
 import { ServiceList } from "../Services/ServiceList";
+import { MovingSteps } from "./MovingStep/MovingSteps";
 
 export const AboutUsComponent = () => {
   const { prosAboutUs } = useContext(MainContextFormContext);
@@ -81,6 +82,23 @@ export const AboutUsComponent = () => {
           classNameForText="cardItem-text-ForAboutUsPage"
           showImg="no"
         />
+      </section>
+      <section>
+        <p className="aboutUs-title">How we work</p>
+        <p>
+          KL Cargo Moving Company has developed a finely tuned process for
+          expertly tackling moves small and large, local or long distance, with
+          any level of complexity.
+        </p>
+        <p>
+          Our combination of training, moving services, technology, and
+          professional employees creates a pleasant, stress-free moving
+          experience.
+        </p>
+        <p className="highlight">Here’s how we work:</p>
+
+        {/* Section with steps */}
+        <MovingSteps />
       </section>
     </div>
   );
