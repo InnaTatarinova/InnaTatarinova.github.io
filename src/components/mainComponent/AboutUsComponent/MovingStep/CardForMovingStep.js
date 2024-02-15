@@ -15,7 +15,10 @@ export const CardForMovingStep = (props) => {
         .map((val, key) => {
           return (
             <div key={key}>
-              <div className="front">{val.name}</div>
+              <div className="front">
+                <img src={props.src} alt="service" className="frontImg" />
+                <p>{val.name}</p>
+              </div>
               <div className="back">
                 {val.step.map((el, key) => {
                   return <span key={key}>{el.value}</span>;
