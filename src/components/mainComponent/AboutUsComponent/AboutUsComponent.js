@@ -17,6 +17,7 @@ export const AboutUsComponent = () => {
 
   return (
     <div className="aboutUsComponent">
+      
       {/* Info about us*/}
       <AboutUsDescrip />
 

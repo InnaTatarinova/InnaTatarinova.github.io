@@ -12,7 +12,7 @@ export const Poster = (props) => {
         className="poster-container-img"
       ></img>
       <h1 className="poster-h1">{props.name}</h1>
-      <h3 className="poster-h3">Your moving starts here</h3>
+      <h3 className={`poster-h3 ${props.classNameH3}`}>Your moving starts here</h3>
       <div>
         <img
           src={props.srcImg}

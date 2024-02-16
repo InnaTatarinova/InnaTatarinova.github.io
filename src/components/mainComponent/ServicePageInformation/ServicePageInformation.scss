@@ -1,0 +1,68 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.servicePage-component {
+    margin: 120px 20px 20px 20px;
+    font-size: 18px;
+}
+
+.servicePage-title {
+    color: $mainDarkColor;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.highlight {
+    color: $mainDarkColor;
+    font-weight: 700;
+}
+
+.highlightRed {
+    color: $fourthColor;
+    font-weight: 700;
+}
+
+.highlightWhite{
+    color: $mainLightColor;
+}
+
+.linkStyle{
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f9071e;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    min-width: 120px;
+    border: 2px solid white;
+    text-decoration: none;
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    animation: pulse 2s infinite;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.backgroundDark{
+    background-color: $mainDarkColor;
+    animation: pulseDark 2s infinite;
+    margin-left: 15%;
+}
+
+@keyframes pulseDark {
+    0% {
+        box-shadow: 0 0 0 0 #0a58ca;
+        transform: scale(0.99);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(233, 22, 22, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(240, 6, 6, 0);
+    }
+}

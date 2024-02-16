@@ -106,6 +106,15 @@ const Navbar = () => {
           </li>
           <li className="nav-menu-li">
             <Link
+              to="/quote"
+              onClick={clickToCloseMenu}
+              className="nav-menu-item"
+            >
+              Price
+            </Link>
+          </li>
+          <li className="nav-menu-li">
+            <Link
               to="/products"
               onClick={clickToCloseMenu}
               className="nav-menu-item"

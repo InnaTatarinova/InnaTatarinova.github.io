@@ -6,7 +6,7 @@
   width: 77%;
   opacity: 1;
   cursor: pointer;
-  height: 100px;
+  height: 120px;
   border-radius: 5px;
   border: $mainDarkColor solid 2px;
   text-align: center;
@@ -20,7 +20,10 @@
     rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: rotate 5s ;
 }
+
+
 
 .blockForMovingStep:hover .front {
   transform: perspective(600px) rotateY(-180deg);
@@ -29,6 +32,8 @@
 .blockForMovingStep:hover .back {
   transform: perspective(600px) rotateY(0);
 }
+
+
 
 .front,
 .back {
@@ -43,19 +48,15 @@
 
 .front {
   transform: perspective(600px) rotateY(0);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
   color: $fourthColor;
-
-  // padding: 20px;
-  // display: flex;
-  // flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .front p {
-  padding: 10px;
-  position: absolute;
-  top: 20%;
+  padding: 25px 5px;
   text-shadow:
     0px 0px 5px white,
     0px 0px 10px white,
@@ -63,10 +64,9 @@
 }
 
 .frontImg {
-  width: 100%;
+  width: 40%;
   height: 100%;
   object-fit: cover;
-  -webkit-filter: blur(0.5px) brightness(1);
 }
 
 .back {
@@ -77,4 +77,5 @@
   font-size: 13px;
   padding-left: 5px;
   color: $mainDarkColor;
+  padding-top: 7px;
 }

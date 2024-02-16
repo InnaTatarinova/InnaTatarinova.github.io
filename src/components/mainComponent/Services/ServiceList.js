@@ -15,7 +15,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[0]}
         img= { localPhoto }
-        path="/"
+        path="/services/local"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -25,7 +25,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[1]}
         img= { longDistPhoto }
-        path="/"
+        path="/services/longDist"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -35,7 +35,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[2]}
         img= { commerPhoto }
-        path="/"
+        path="/services/commercial"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -45,7 +45,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[3]}
         img= { packingPhoto }
-        path="/"
+        path="/services/packing"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -55,7 +55,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[4]}
         img= { storagePhoto }
-        path="/"
+        path="/services/storage"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -65,7 +65,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[5]}
         img= { deliveryPhoto }
-        path="/"
+        path="/services/delivery"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
@@ -75,7 +75,7 @@ export const ServiceList = (props) => {
       <CardItemComponent
         value={serviceTypeList[6]}
         img ={ junkPhoto }
-        path="/"
+        path="/services/junk"
         classNameForContainer={props.classNameForContainer}
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
