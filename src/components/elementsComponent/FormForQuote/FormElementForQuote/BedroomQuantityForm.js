@@ -11,7 +11,7 @@ export const BedroomQuantityForm = () => {
   const icon = "no";
   const showRecomType = "SHOW_RECOM";
   const showRecom = "yes";
-  const mainContextForm = {MovingFormContext}
+ 
 
   return (
     <div>
@@ -27,7 +27,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
           
          
         />
@@ -41,7 +41,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
         />
         <ItemForChoose
           name="3"
@@ -53,7 +53,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
         />
         <ItemForChoose
           name="4"
@@ -65,7 +65,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
         />
          <ItemForChoose
           name="5"
@@ -77,7 +77,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
         />
          <ItemForChoose
           name="6"
@@ -89,7 +89,7 @@ export const BedroomQuantityForm = () => {
           context={bedroomQuantity}
           showRecom = {showRecom}
           showRecomType = {showRecomType}
-          mainContextForm={mainContextForm}
+          mainContextForm={MovingFormContext}
         />
       </div>
     </div>
