@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f37967b9.css",
-    "main.js": "/static/js/main.dda0afa5.js",
+    "main.css": "/static/css/main.aceb7a1b.css",
+    "main.js": "/static/js/main.2e14d05e.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/consultation.jpg": "/static/media/consultation.78e0fce472e6b070cb12.jpg",
@@ -26,6 +26,7 @@
     "static/media/niagaraFall.jpg": "/static/media/niagaraFall.e43c45d5f987c6ada316.jpg",
     "static/media/mississagua.jpg": "/static/media/mississagua.faa2e259b6d2d1122db3.jpg",
     "static/media/calculation8.jpg": "/static/media/calculation8.faa7913b5324026348bc.jpg",
+    "static/media/delivery2.jpg": "/static/media/delivery2.fb20667a86569867b1f6.jpg",
     "static/media/whitby.jpg": "/static/media/whitby.3f1fe251c5b176b2090e.jpg",
     "static/media/hauling.jpg": "/static/media/hauling.da97c3d46b6aa33be4cf.jpg",
     "static/media/barrie.jpg": "/static/media/barrie.1d342aeaf9d8055d3a7e.jpg",
@@ -38,11 +39,11 @@
     "static/media/Logo_justImg_Mini.png": "/static/media/Logo_justImg_Mini.825d5cb5aa2300263d86.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.f37967b9.css.map": "/static/css/main.f37967b9.css.map",
-    "main.dda0afa5.js.map": "/static/js/main.dda0afa5.js.map"
+    "main.aceb7a1b.css.map": "/static/css/main.aceb7a1b.css.map",
+    "main.2e14d05e.js.map": "/static/js/main.2e14d05e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f37967b9.css",
-    "static/js/main.dda0afa5.js"
+    "static/css/main.aceb7a1b.css",
+    "static/js/main.2e14d05e.js"
   ]
 }
