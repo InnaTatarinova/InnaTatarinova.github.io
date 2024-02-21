@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aceb7a1b.css",
-    "main.js": "/static/js/main.2e14d05e.js",
+    "main.css": "/static/css/main.b92c9422.css",
+    "main.js": "/static/js/main.6fb7258b.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/consultation.jpg": "/static/media/consultation.78e0fce472e6b070cb12.jpg",
@@ -35,15 +35,15 @@
     "static/media/photo3.jpg": "/static/media/photo3.410fe87c19f451cf7001.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.309b4b198423c5ac4810.jpg",
     "static/media/arrowBlue.png": "/static/media/arrowBlue.fb7c751d09f105c15ced.png",
+    "static/media/whiteLogo.png": "/static/media/whiteLogo.d19c57dd48fa64600f48.png",
     "static/media/arrowBlueToLeft.png": "/static/media/arrowBlueToLeft.b5af20d047e74a178c3d.png",
-    "static/media/Logo_justImg_Mini.png": "/static/media/Logo_justImg_Mini.825d5cb5aa2300263d86.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.aceb7a1b.css.map": "/static/css/main.aceb7a1b.css.map",
-    "main.2e14d05e.js.map": "/static/js/main.2e14d05e.js.map"
+    "main.b92c9422.css.map": "/static/css/main.b92c9422.css.map",
+    "main.6fb7258b.js.map": "/static/js/main.6fb7258b.js.map"
   },
   "entrypoints": [
-    "static/css/main.aceb7a1b.css",
-    "static/js/main.2e14d05e.js"
+    "static/css/main.b92c9422.css",
+    "static/js/main.6fb7258b.js"
   ]
 }
