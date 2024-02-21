@@ -10,7 +10,8 @@ export const ServiceAreaCard = (props) => {
           src={props.img}
           alt={props.alt}
         />
-        <h5 className="serviceAreaCardItem-text">{props.text}</h5>
+        <div className="serviceAreaCardItem-text">
+          <h5>{props.text}</h5></div>
       </li>
     </>
   );

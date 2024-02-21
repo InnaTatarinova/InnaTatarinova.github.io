@@ -17,6 +17,7 @@ const Navbar = () => {
   const [visiblePhoneNumber, setVisiblePhoneNumber] = useState(false);
 
 
+
   //show btn with phoneNumber
   const showButton = () => {
     if (window.innerWidth <= 1024) {
@@ -44,10 +45,13 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
+ 
     if (window.innerWidth > 480) {
       setVisiblePhoneNumber(!visiblePhoneNumber);
     }
     phoneNumberDial();
+   
+
   };
 
   const phoneNumberDial = () => {

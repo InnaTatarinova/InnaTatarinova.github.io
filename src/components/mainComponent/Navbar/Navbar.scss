@@ -15,7 +15,6 @@
     background-color: $mainLightColorTransp;
 }
 
-
 .nav-logo {
     // margin-left: 10px;
     position: fixed;
@@ -39,6 +38,7 @@
     font-size: 30px;
     // color: $mainLightColor;
     color: $mainDarkColor;
+    transition: $mainDarkColor 0.3s;
 }
 
 .bi:hover {
@@ -63,7 +63,7 @@
     min-width: 120px;
     padding-top: 30px;
     text-align: center;
-    border-bottom: 2px solid rgba(23,37,78,.6)
+    border-bottom: 2px solid rgba(23, 37, 78, 0.6);
 }
 
 .nav-menu-li:hover {
@@ -155,6 +155,7 @@
     }
 }
 
+//For mobile device
 @media screen and (max-width: 640px) {
     .phoneBtn {
         display: block;
@@ -166,6 +167,13 @@
         cursor: pointer;
     }
 
+    .bi:active {
+        color: $fourthColor;
+    }
+
+    .bi:not(:active) {
+        color: $mainDarkColor;
+    }
     .visiblePhoneNumber {
         @include setbtnSize(15px, 500, 150px);
     }

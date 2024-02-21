@@ -7,7 +7,7 @@
     height: 100vh;
     position: relative;
     // margin-top: $heightForHeaderContainer;
-    padding-top: $heightForHeaderContainer ;
+    padding-top: $heightForHeaderContainer;
     background-size: cover;
     background-position: center;
 
@@ -52,6 +52,7 @@
     bottom: 0%;
     animation: truckSlide 6s ease;
     animation-iteration-count: infinite;
+    
 }
 
 @keyframes truckSlide {
@@ -74,11 +75,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     //  position: absolute;
-    bottom: 77px;
-    left: 396px;
-    width: 22rem;
     height: 7.699rem;
-
+    width: 22rem;
 }
 
 .wheel {
@@ -86,6 +84,7 @@
     // animation: wheelanimation linear .6s infinite;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 .wheel2 {
     background-image: url(../../../assets/img/transformTruck/wheel2.png);
@@ -108,8 +107,7 @@
     margin-left: 170px;
 }
 
-@keyframes wheelanimation{
-
+@keyframes wheelanimation {
     0% {
         transform: rotate(0deg);
     }
@@ -121,24 +119,10 @@
         transform: rotate(360deg);
     }
 
-
     // 100% {
     //     transform: rotate(360deg);
     // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .banner-img img {
     bottom: 10px;
