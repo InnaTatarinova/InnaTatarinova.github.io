@@ -15,7 +15,7 @@ const Navbar = () => {
   const [clickOnMenuStatus, setclickOnMenuStatus] = useState(false);
   const [button, setShowButton] = useState(true);
   const [visiblePhoneNumber, setVisiblePhoneNumber] = useState(false);
-  const [changeNavbar, setChangeNavbar]=useState(false);
+
 
   //show btn with phoneNumber
   const showButton = () => {
@@ -30,13 +30,7 @@ const Navbar = () => {
   };
 
   window.addEventListener("resize", showButton);
-  window.onscroll = function () {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-      setChangeNavbar(true);
-    } else {
-      setChangeNavbar(false);
-    }
-  };
+
 
   //Show/hide menu list in small window
   const clickOnMenu = () => {
@@ -66,7 +60,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={!changeNavbar ? "nav-block" : "nav-block nav-block-Scroll"}>
+      <div className="nav-block" >
         <div className="nav-logo">
           <Link to="/">
             <img src={logo} alt="logo" className="nav-img" />
@@ -133,15 +127,6 @@ const Navbar = () => {
               className="nav-menu-item"
             >
               Testimonial
-            </Link>
-          </li>
-          <li className="nav-menu-li">
-            <Link
-              to="/products"
-              onClick={clickToCloseMenu}
-              className="nav-menu-item"
-            >
-              Price
             </Link>
           </li>
           <li className="nav-menu-li">

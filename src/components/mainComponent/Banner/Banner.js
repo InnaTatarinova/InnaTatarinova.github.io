@@ -35,12 +35,14 @@ export const Banner = ({ resultRef }) => {
           <FormForStartQuoteBanner />
         </div>
         <div className="banner-img">
-          {smallWindow ? (
-            <img src={banner} alt="truck" className="banner-img" />
-          ) : (
-            <img src={bannerLogo} alt="truck" />
-          )}
+          <div class="car"></div>
+          <div className="wheel">
+            <div class="wheel2"></div>
+            <div class="wheel1"></div>
+            
+          </div>
         </div>
+
         <div className="scroll-btn" onClick={scrollDown}>
           <i className="bi bi-chevron-down"></i>
         </div>

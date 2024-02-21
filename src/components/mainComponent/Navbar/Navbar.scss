@@ -8,15 +8,13 @@
     position: fixed;
     top: 0;
     z-index: 999;
-}
-
-.nav-block-Scroll {
     backdrop-filter: blur(30px);
     box-shadow:
         #0a58ca99 0px 6px 24px 0px,
         #0035660f 0px 0px 0px 1px;
     background-color: $mainLightColorTransp;
 }
+
 
 .nav-logo {
     // margin-left: 10px;
@@ -56,16 +54,16 @@
 .nav-menu {
     @include addMainFlex(row, $maxWidth/1.3);
     list-style: none;
-    margin-right: 3%;
     justify-content: flex-end;
     height: $heightForHeader;
+    padding: 0px;
 }
 
 .nav-menu-li {
-    height: $heightForHeader;
     min-width: 120px;
     padding-top: 30px;
     text-align: center;
+    border-bottom: 2px solid rgba(23,37,78,.6)
 }
 
 .nav-menu-li:hover {
@@ -76,6 +74,7 @@
     @include setbtnSize(20px, 900, 190px);
     text-decoration: none;
     color: $mainLightColor;
+    color: $mainDarkColor;
 }
 
 .nav-menu-item:hover {
@@ -143,12 +142,11 @@
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 0px;
-        padding-top: 90px;
-        backdrop-filter: blur(10px);
+        padding-top: 50px;
         box-shadow:
             #0a58ca99 0px 6px 24px 0px,
             #0035660f 0px 0px 0px 1px;
-        background: #003566eb;
+        background-color: $mainLightColor;
     }
 
     .nav-menu-li {

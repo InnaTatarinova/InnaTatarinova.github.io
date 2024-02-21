@@ -67,6 +67,79 @@
     }
 }
 
+//Test with wheel
+
+.car {
+    background-image: url(../../../assets/img/transformTruck/whiteTruckWithoutWheels.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    //  position: absolute;
+    bottom: 77px;
+    left: 396px;
+    width: 22rem;
+    height: 7.699rem;
+
+}
+
+.wheel {
+    // // position: absolute;
+    // animation: wheelanimation linear .6s infinite;
+    display: flex;
+    flex-direction: row;
+}
+.wheel2 {
+    background-image: url(../../../assets/img/transformTruck/wheel2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 49px;
+    animation: wheelanimation linear 6s infinite;
+    margin-top: -31px;
+    margin-left: 80px;
+}
+.wheel1 {
+    background-image: url(../../../assets/img/transformTruck/wheel1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 44px;
+    animation: wheelanimation linear 3s infinite;
+    margin-top: -31px;
+    margin-left: 170px;
+}
+
+@keyframes wheelanimation{
+
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+
+    // 100% {
+    //     transform: rotate(360deg);
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .banner-img img {
     bottom: 10px;
     width: 100%;
