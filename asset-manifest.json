@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.b92c9422.css",
-    "main.js": "/static/js/main.6fb7258b.js",
+    "main.css": "/static/css/main.d28b74a2.css",
+    "main.js": "/static/js/main.f565aef4.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
+    "static/media/whiteTruckWithoutWheels.png": "/static/media/whiteTruckWithoutWheels.0c08764e94e994968c1b.png",
     "static/media/consultation.jpg": "/static/media/consultation.78e0fce472e6b070cb12.jpg",
     "static/media/loading2.jpg": "/static/media/loading2.be021db4987070114f40.jpg",
     "static/media/packing.jpg": "/static/media/packing.7f9f9f8a67bbc1d25688.jpg",
@@ -22,7 +23,9 @@
     "static/media/junk.jpg": "/static/media/junk.464515550ec8b277728e.jpg",
     "static/media/delivery.jpg": "/static/media/delivery.e874b1dcb06965a558e3.jpg",
     "static/media/toronto.jpg": "/static/media/toronto.a74ea123cfef44d87361.jpg",
+    "static/media/wheel1.png": "/static/media/wheel1.be03e8c071d2d4d47eb1.png",
     "static/media/kitchener.jpg": "/static/media/kitchener.72cd53ed3e87bd391444.jpg",
+    "static/media/wheel2.png": "/static/media/wheel2.451865c1ff08f5c5ab46.png",
     "static/media/niagaraFall.jpg": "/static/media/niagaraFall.e43c45d5f987c6ada316.jpg",
     "static/media/mississagua.jpg": "/static/media/mississagua.faa2e259b6d2d1122db3.jpg",
     "static/media/calculation8.jpg": "/static/media/calculation8.faa7913b5324026348bc.jpg",
@@ -39,11 +42,11 @@
     "static/media/arrowBlueToLeft.png": "/static/media/arrowBlueToLeft.b5af20d047e74a178c3d.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.b92c9422.css.map": "/static/css/main.b92c9422.css.map",
-    "main.6fb7258b.js.map": "/static/js/main.6fb7258b.js.map"
+    "main.d28b74a2.css.map": "/static/css/main.d28b74a2.css.map",
+    "main.f565aef4.js.map": "/static/js/main.f565aef4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b92c9422.css",
-    "static/js/main.6fb7258b.js"
+    "static/css/main.d28b74a2.css",
+    "static/js/main.f565aef4.js"
   ]
 }
