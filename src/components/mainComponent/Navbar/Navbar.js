@@ -6,14 +6,16 @@ import "./Navbar.scss";
 import { phoneNumber } from "../../../data/mainInfo";
 
 const logoFull = require("../../../assets/img/Logo_justImg.png");
-const logoDarkBlue = require("../../../assets/img/Logo_justImg_Mini.png");
-const logo = require("../../../assets/img/Logo_justImg_MiniBlue.png");
-
+// const logoDarkBlue = require("../../../assets/img/Logo_justImg_Mini.png");
+// const logo = require("../../../assets/img/Logo_justImg_MiniBlue.png");
+//  const logo = require("../../../assets/img/whiteLogoWithOutAnyColor.png");
+const logo = require("../../../assets/img/whiteLogo.png");
 
 const Navbar = () => {
   const [clickOnMenuStatus, setclickOnMenuStatus] = useState(false);
   const [button, setShowButton] = useState(true);
   const [visiblePhoneNumber, setVisiblePhoneNumber] = useState(false);
+  const [changeNavbar, setChangeNavbar]=useState(false);
 
   //show btn with phoneNumber
   const showButton = () => {
@@ -28,6 +30,13 @@ const Navbar = () => {
   };
 
   window.addEventListener("resize", showButton);
+  window.onscroll = function () {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+      setChangeNavbar(true);
+    } else {
+      setChangeNavbar(false);
+    }
+  };
 
   //Show/hide menu list in small window
   const clickOnMenu = () => {
@@ -48,7 +57,7 @@ const Navbar = () => {
   };
 
   const phoneNumberDial = () => {
-    window.location.href = `tel://${phoneNumber}`
+    window.location.href = `tel://${phoneNumber}`;
   };
 
   useEffect(() => {
@@ -57,7 +66,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="nav-block">
+      <div className={!changeNavbar ? "nav-block" : "nav-block nav-block-Scroll"}>
         <div className="nav-logo">
           <Link to="/">
             <img src={logo} alt="logo" className="nav-img" />
@@ -75,7 +84,7 @@ const Navbar = () => {
                 btnBorder="btn-border-light"
                 className="visiblePhoneNumber"
               >
-              {phoneNumber}
+                {phoneNumber}
               </ButtonComponent>
             </Link>
           )}
@@ -91,7 +100,11 @@ const Navbar = () => {
 
         <ul className={clickOnMenuStatus ? "nav-menu active" : "nav-menu"}>
           <li className="nav-menu-li">
-            <Link to="/about" onClick={clickToCloseMenu} className="nav-menu-item">
+            <Link
+              to="/about"
+              onClick={clickToCloseMenu}
+              className="nav-menu-item"
+            >
               About us
             </Link>
           </li>

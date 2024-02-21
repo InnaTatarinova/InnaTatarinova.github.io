@@ -3,19 +3,23 @@
 
 .banner-container {
     width: 100%;
-
     height: calc(100vh - #{$heightForHeaderContainer});
+    height: 100vh;
     position: relative;
-    margin-top: $heightForHeaderContainer;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25)),
-        url(../../../assets/img/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg);
+    // margin-top: $heightForHeaderContainer;
+    padding-top: $heightForHeaderContainer ;
     background-size: cover;
     background-position: center;
+
+    background-color: #2136444a; /* Semi-transparent black */
+    background-image: url("../../../assets/img/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg");
+    background-blend-mode: hard-light;
 }
 
 .banner-img-block {
     position: absolute;
     height: 80%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,6 +87,7 @@
     transform: translate(7%, 30%);
     border-radius: 5px;
     height: 70%;
+    height: 65%;
 }
 
 .askPriceStyle h2 {
@@ -215,6 +220,7 @@
 @media screen and (max-width: 480px) {
     .banner-container {
         height: calc(100vh - 5vh - #{$heightForHeaderContainer});
+        height: calc(100vh - 5vh);
     }
     .banner-h1 {
         @include setTextSize(250%, 500);
@@ -243,9 +249,9 @@
 // };
 
 @media (max-height: 601px) and (orientation: landscape) {
-    .banner-container {
-        height: 1000px;
-    }
+    // .banner-container {
+    //     height: 1000px;
+    // }
 }
 
 @media screen and(min-height: 1024px) {

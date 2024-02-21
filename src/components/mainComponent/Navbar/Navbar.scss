@@ -3,12 +3,19 @@
 
 .nav-block {
     height: $heightForHeaderContainer;
-    background-color: $mainDarkColor;
+    // background-color: $mainDarkColor;
     @include addMainFlex(row, $maxWidth);
     position: fixed;
     top: 0;
     z-index: 999;
-    // overflow: hidden;
+}
+
+.nav-block-Scroll {
+    backdrop-filter: blur(30px);
+    box-shadow:
+        #0a58ca99 0px 6px 24px 0px,
+        #0035660f 0px 0px 0px 1px;
+    background-color: $mainLightColorTransp;
 }
 
 .nav-logo {
@@ -30,14 +37,14 @@
     display: none;
 }
 
-
 .menuIcon {
     font-size: 30px;
-    color: $mainLightColor;
+    // color: $mainLightColor;
+    color: $mainDarkColor;
 }
 
 .bi:hover {
-    color: $fourthColor;    
+    color: $fourthColor;
 }
 
 .bi-telephone-fill {
@@ -85,7 +92,7 @@
     margin-right: 3%;
 }
 
-.visiblePhoneNumber:hover{
+.visiblePhoneNumber:hover {
     @include addLightTheme();
 }
 
@@ -105,7 +112,7 @@
         @include setbtnSize(18px, 500, 170px);
     }
 
-    .visiblePhoneNumber:hover{
+    .visiblePhoneNumber:hover {
         @include addLightTheme();
     }
 }
@@ -126,7 +133,7 @@
     }
 
     .nav-menu.active {
-        background: $mainDarkColor;
+        // background: $mainDarkColor;
         left: 0;
         @include addMainFlex(column, $maxWidth);
         height: 100vh;
@@ -137,6 +144,11 @@
         justify-content: flex-start;
         margin-bottom: 0px;
         padding-top: 90px;
+        backdrop-filter: blur(10px);
+        box-shadow:
+            #0a58ca99 0px 6px 24px 0px,
+            #0035660f 0px 0px 0px 1px;
+        background: #003566eb;
     }
 
     .nav-menu-li {
@@ -146,7 +158,7 @@
 }
 
 @media screen and (max-width: 640px) {
-    .phoneBtn{
+    .phoneBtn {
         display: block;
         position: absolute;
         top: 0;
@@ -154,8 +166,7 @@
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-
-}
+    }
 
     .visiblePhoneNumber {
         @include setbtnSize(15px, 500, 150px);
