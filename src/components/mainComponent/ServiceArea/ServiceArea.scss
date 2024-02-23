@@ -85,6 +85,19 @@
     @include setTranspareentBackgrForBTN();
 }
 
+.btnCallUs{
+    animation: pulseCallMe 1.2s infinite;
+}
+
+@keyframes pulseCallMe{
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 127, 211, 0.75);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(37,211,101,0);
+    }
+}
+
 @media screen and (max-width: 1460px) {
     .serviceAreaCardItem-text {
         @include setTextSize(200%, 700);

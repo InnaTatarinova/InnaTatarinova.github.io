@@ -29,6 +29,11 @@
 
 .inputName {
     grid-area: inputName;
+    
+}
+
+.nameForContact{
+    width: 100%;
 }
 
 .inputPhone {
@@ -42,9 +47,10 @@
 @media screen and (max-width: 1024px) {
     .formContactUs {
         display: grid;
-        grid-template-rows: 80px 80px 1fr 100px;
+        grid-template-rows: 50px 50px 1fr 50px;
         grid-template-columns: 1fr;
-        grid-column-gap: 2%;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         grid-template-areas:
             "inputName"
             "inputPhone"

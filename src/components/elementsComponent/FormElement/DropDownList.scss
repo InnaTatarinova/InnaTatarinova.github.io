@@ -2,6 +2,7 @@
 @import "../../../style/mixin.scss";
 
 .dropDownList {
+  position: relative;
     height: 155px;
     background-color: $mainLightColor;
     margin-top: -3px;

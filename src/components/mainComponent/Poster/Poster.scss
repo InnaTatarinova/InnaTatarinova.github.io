@@ -17,7 +17,6 @@
     z-index: -1;
     position: absolute;
     object-fit: cover;
-
 }
 
 .poster-h1 {
@@ -36,20 +35,24 @@
     height: 15%;
 }
 
+.poster_getQuote {
+    margin-top: 120px;
+}
+
 .poster-h3 {
     color: $mainDarkColor;
-    padding-top: 170px;
     width: 50%;
     font-style: italic;
     @include setTextSize(175%, 900);
     text-shadow:
         0px 0px 17px white,
         0px 0px 30px white,
-        0px 0px 15px white;
+        0px 0px 5px white;
 }
 
 .fourthColor {
-    color: $fourthColor;
+    color: $mainLightColor;
+    text-shadow: none;
 }
 
 .poster-addPicture {
@@ -88,4 +91,3 @@
         box-shadow: 0 0 0 0 rgba(240, 6, 6, 0);
     }
 }
-

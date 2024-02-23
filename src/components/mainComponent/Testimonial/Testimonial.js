@@ -12,7 +12,7 @@ import photo3 from "../../../assets/img/Testimon/photo3.jpg";
 const testimList = [
   {
     photo: photo1,
-    text: " I recently used ABC Moving Company for my move from Philadelphia to New York City. The movers arrived on time and were very professional throughout the entire process. They took great care with my belongings and everything arrived at my new home in excellent condition. The customer service was also top-notch, with the staff being very responsive and helpful whenever I had questions. Overall, I had a great experience with ABC Moving Company and would highly recommend them to anyone in need of moving services",
+    text: " I recently used ABC Moving Company for my move from Philadelphia to New York City. The movers arrived on time and were very professional throughout the entire process. They took great care with my belongings and everything arrived at my new home in excellent condition. The customer service was also top-notch, with the staff being very responsive and helpful whenever I had questions.",
     name: "Nancy C. Gatewood",
     star: "5",
   },

@@ -67,7 +67,7 @@
 }
 
 .nav-menu-li:hover {
-    @include addMainHoverAction();
+    // @include addMainHoverAction();
 }
 
 .nav-menu-item {
@@ -78,7 +78,7 @@
 }
 
 .nav-menu-item:hover {
-    color: $mainLightColor;
+    // color: $mainLightColor;
     border-bottom: 4px solid $mainLightColor;
     transition: all 0.5s ease-out;
 }
@@ -167,11 +167,11 @@
         cursor: pointer;
     }
 
-    .bi:active {
+    .biNavbar:active {
         color: $fourthColor;
     }
 
-    .bi:not(:active) {
+    .bibiNavbar:not(:active) {
         color: $mainDarkColor;
     }
     .visiblePhoneNumber {

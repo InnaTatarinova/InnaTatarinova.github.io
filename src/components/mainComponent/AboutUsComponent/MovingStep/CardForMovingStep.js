@@ -17,11 +17,20 @@ export const CardForMovingStep = (props) => {
             <div key={key}>
               <div className="front">
                 <img src={props.src} alt="service" className="frontImg" />
-                <p>{val.name}</p>
+                <div className="textBlockForMovingStep">
+                  {" "}
+                  <p>{val.name}</p>
+                  <i className="bi bi-arrow-clockwise"></i>
+                </div>
               </div>
               <div className="back">
                 {val.step.map((el, key) => {
-                  return <span key={key}>{el.value}</span>;
+                  return (
+                    <div key={key}>
+                      <span >{el.value}</span>{" "}
+                      <i className="bi bi-arrow-clockwise color"></i>;
+                    </div>
+                  );
                 })}
               </div>
             </div>

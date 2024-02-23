@@ -12,18 +12,22 @@ export const Poster = (props) => {
         className="poster-container-img"
       ></img>
       <h1 className="poster-h1">{props.name}</h1>
-      <h3 className={`poster-h3 ${props.classNameH3}`}>Your moving starts here</h3>
-      <div>
-        <img
-          src={props.srcImg}
-          alt={props.altImg}
-          className="poster-addPicture"
-        ></img>
-      </div>
+      <div className="poster_getQuote">
+        <h3 className={`poster-h3 ${props.classNameH3}`}>
+          Your moving starts here
+        </h3>
+        <div>
+          <img
+            src={props.srcImg}
+            alt={props.altImg}
+            className="poster-addPicture"
+          ></img>
+        </div>
 
-      <Link to="/#quote" className="btnLink">
-        Get Quote
-      </Link>
+        <Link to="/quote" className="btnLink">
+          Get Quote
+        </Link>
+      </div>
     </div>
   );
 };

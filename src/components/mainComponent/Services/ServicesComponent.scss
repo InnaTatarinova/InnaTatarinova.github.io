@@ -101,6 +101,8 @@ figure {
   height: 30px;
 }
 
+//For Navbar
+
 @media screen and (max-width: 1280px) {
   .cardItem-conteiner {
     width: 40%;
@@ -161,7 +163,7 @@ figure {
   }
   .cardItem-container-ForMainPage {
     width: 45%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     height: 150px;
   }
 
@@ -176,11 +178,36 @@ figure {
     height: 50px;
     border: 1px #003566 solid;
     margin-bottom: 10px;
+   
   }
 
   .cardItem-text-ForAboutUsPage {
     @include setTextSize(100%, 500);
     height: 30px;
     color: $fourthColor;
+  }
+
+  //For Navbar
+  .cardItem-container-ForNavbar {
+    width: 90%;
+    box-shadow: none;
+    border-radius: none;
+    height: 30px;
+    margin-bottom: 0px;
+  }
+
+  .infoCard-list-ForNavbar {
+    cursor: pointer;
+    margin-top: 15px
+  }
+
+  .cardItem-text-ForNavbar {
+    @include setTextSize(15px, 500);
+    height: 30px;
+    padding: 0px;
+  }
+
+  .heightForServiceList {
+    height: 45%;
   }
 }

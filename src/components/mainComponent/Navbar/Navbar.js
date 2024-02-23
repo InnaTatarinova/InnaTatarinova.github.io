@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ButtonComponent } from "../../elementsComponent/ButtonComponents/ButtonComponnet";
 import "./Navbar.scss";
-
+import "../Services/ServicesComponent.scss";
 import { phoneNumber } from "../../../data/mainInfo";
+import { ServiceList } from "../Services/ServiceList";
 
 const logoFull = require("../../../assets/img/Logo_justImg.png");
 // const logoDarkBlue = require("../../../assets/img/Logo_justImg_Mini.png");
@@ -15,8 +16,7 @@ const Navbar = () => {
   const [clickOnMenuStatus, setclickOnMenuStatus] = useState(false);
   const [button, setShowButton] = useState(true);
   const [visiblePhoneNumber, setVisiblePhoneNumber] = useState(false);
-
-
+  const [showServiceType, setShowServiceType] = useState(false);
 
   //show btn with phoneNumber
   const showButton = () => {
@@ -32,30 +32,32 @@ const Navbar = () => {
 
   window.addEventListener("resize", showButton);
 
-
   //Show/hide menu list in small window
   const clickOnMenu = () => {
     setclickOnMenuStatus(!clickOnMenuStatus);
+    setShowServiceType(false);
   };
 
   //close menulist after choosing some link
   const clickToCloseMenu = () => {
     setclickOnMenuStatus(false);
+    setShowServiceType(false);
   };
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
- 
     if (window.innerWidth > 480) {
       setVisiblePhoneNumber(!visiblePhoneNumber);
     }
     phoneNumberDial();
-   
-
   };
 
   const phoneNumberDial = () => {
     window.location.href = `tel://${phoneNumber}`;
+  };
+
+  const showServiceList = () => {
+    setShowServiceType(!showServiceType);
   };
 
   useEffect(() => {
@@ -64,7 +66,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="nav-block" >
+      <div className="nav-block">
         <div className="nav-logo">
           <Link to="/">
             <img src={logo} alt="logo" className="nav-img" />
@@ -72,7 +74,7 @@ const Navbar = () => {
         </div>
         <div className="phoneBtn" onClick={showPhoneNumber}>
           {!visiblePhoneNumber ? (
-            <i className="bi bi-telephone-fill menuIcon"></i>
+            <i className="bi bi-telephone-fill menuIcon biNavbar"></i>
           ) : (
             <Link className="phoneNumberStyle">
               <ButtonComponent
@@ -91,7 +93,9 @@ const Navbar = () => {
         <div onClick={clickOnMenu} className="menuBtn">
           <i
             className={
-              clickOnMenuStatus ? "bi bi-x-lg menuIcon" : "bi bi-list menuIcon"
+              clickOnMenuStatus
+                ? "bi bi-x-lg menuIcon biNavbar:"
+                : "bi bi-list menuIcon biNavbar:"
             }
           ></i>
         </div>
@@ -106,14 +110,27 @@ const Navbar = () => {
               About us
             </Link>
           </li>
-          <li className="nav-menu-li">
-            <Link
-              to="/services"
-              onClick={clickToCloseMenu}
-              className="nav-menu-item"
-            >
-              Services
-            </Link>
+          <li
+            onClick={showServiceList}
+            className={
+              !showServiceType
+                ? `nav-menu-li`
+                : `nav-menu-li heightForServiceList`
+            }
+          >
+            <>
+              <div className="nav-menu-item">Services</div>
+              <div onClick={clickToCloseMenu}>
+                {showServiceType ? (
+                  <ServiceList
+                    classNameForList="infoCard-list-ForNavbar"
+                    classNameForContainer="cardItem-container-ForNavbar"
+                    classNameForText="cardItem-text-ForNavbar"
+                    showImg="no"
+                  />
+                ) : null}
+              </div>
+            </>
           </li>
           <li className="nav-menu-li">
             <Link

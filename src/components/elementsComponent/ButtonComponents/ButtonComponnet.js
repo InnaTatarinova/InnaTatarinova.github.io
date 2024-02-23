@@ -19,7 +19,7 @@ export const ButtonComponent = ({
   const BORDER = ["", "btn-border-light", "btn-border-dark"];
   const FORM = ["", "btn-circle", "btn-circle-small"];
   const COLOR = ["btn-light", "btn-dark", "btn-red"];
-  const CLASSNAME = ["", "visiblePhoneNumber", "clickMe", "getEstimQuoteBtn", "movingPhone"];
+  const CLASSNAME = ["", "visiblePhoneNumber", "clickMe", "getEstimQuoteBtn", "movingPhone","btnCallUs"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];
   const checkBtnHoverStyle = HOVERSTYLES.includes(btnHoverStyle) ? btnHoverStyle : STYLES[0];

@@ -20,6 +20,7 @@ export const ServiceList = (props) => {
         classNameForImg={props.classNameForImg}
         classNameForText={props.classNameForText}
         showImg={props.showImg}
+        
       
       />
       <CardItemComponent

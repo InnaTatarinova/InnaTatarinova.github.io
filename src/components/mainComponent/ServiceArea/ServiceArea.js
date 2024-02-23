@@ -105,6 +105,7 @@ export const ServiceArea = () => {
           btnBorder="btn-border-light"
           btnHoverStyle="btn-lightHoverTheme"
           onClick={phoneNumberDial}
+          className="btnCallUs"
         >
           Call now
         </ButtonComponent>

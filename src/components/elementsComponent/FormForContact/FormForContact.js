@@ -11,7 +11,6 @@ import {
   phoneNumber_validation,
 } from "../FormElement/Input/InputValidation";
 
-
 export const FormForContact = () => {
   const methods = useForm();
   const [success, setSuccess] = useState(false);
@@ -20,7 +19,6 @@ export const FormForContact = () => {
     console.log(data);
     methods.reset();
     setSuccess(true);
-  
   });
 
   return (
@@ -30,9 +28,8 @@ export const FormForContact = () => {
         onSubmit={(e) => e.preventDefault()}
         noValidate
         autoComplete="off"
-       
       >
-        <Input {...name_validation} className="inputName" />
+        <Input {...name_validation} className="inputName nameForContact" />
         <Input {...phoneNumber_validation} className="inputPhone" />
         <Input {...message_validation} className="inputMessage" />
 
@@ -41,14 +38,6 @@ export const FormForContact = () => {
             <p className="infoSuccess">Form has been submitted successfully</p>
           )}
           <div>
-            {/* <ReactWhatsappButton
-              countryCode="1"
-              phoneNumber="2345678998"
-              animated
-              onClick={onSubmit}
-              
-            /> */}
-
             <ButtonComponent
               btnSize="btn-large"
               btnColor="btn-dark"

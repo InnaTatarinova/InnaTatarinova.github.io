@@ -9,6 +9,7 @@ import { MovingFormProvider } from "../context/MovingFormContext";
 export const Home = () => {
   const resultRef = useRef(null);
 
+
   return (
     <MovingFormProvider>
       <div>

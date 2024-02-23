@@ -16,17 +16,21 @@ export const ContactUs = () => {
       <h1 className="contactUs-title">Contact Us</h1>
       <div className="contact-block">
         <div className="contactInfo">
-          <h2 className="contactInfoName">Phone:</h2>
-          <h3 className="contactInfoValue">{ phoneNumber }</h3>
-          <h2 className="contactInfoName">Email:</h2>
-          <h3 className="contactInfoValue">{email}</h3>
-          <h2 className="contactInfoName">Address:</h2>
-          <h3 className="contactInfoValue">
-            {address}
-          </h3>
+          <div className="contactInfoDetails">
+            <h2 className="contactInfoName">Phone:</h2>
+            <h3 className="contactInfoValue">{phoneNumber}</h3>
+          </div>
+          <div className="contactInfoDetails">
+            <h2 className="contactInfoName">Email:</h2>
+            <h3 className="contactInfoValue">{email}</h3>
+          </div>
+          <div className="contactInfoDetails">
+            <h2 className="contactInfoName">Address:</h2>
+            <h3 className="contactInfoValue">{address}</h3>
+          </div>
         </div>
         <div className="writeUs">
-          <h2 className="contactInfoName">Form to contact us:</h2>
+          <h2 className="contactUsTitle">Form to contact us:</h2>
           <FormForContact />
         </div>
 
@@ -40,4 +44,3 @@ export const ContactUs = () => {
     </div>
   );
 };
-

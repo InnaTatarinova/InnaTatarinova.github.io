@@ -16,26 +16,36 @@
     padding-top: 25px;
     column-gap: 30px;
     @include darkTheme();
+   
 }
 
 .contactInfo {
     width: 50%;
 }
 
-.contactInfoName{
+.contactInfoName {
     @include setTextSize($fontSizeForMobile, 900);
-    color:$thirdColor;
-    text-align: left
+    color: $thirdColor;
+    text-align: left;
+    width: 100px;
 }
 
-.contactInfoValue{
+.contactInfoValue {
     @include setTextSize($fontSizeForMini, 900);
+    margin-top: 0px;
+    margin-left: 10px;
+   
 }
-
-
 
 .writeUs {
     width: 50%;
+}
+
+.contactUsTitle {
+    @include setTextSize($fontSizeForMini, 900);
+    color: $thirdColor;
+    text-align: left;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -51,22 +61,24 @@
         width: 100%;
         margin-top: 20px;
     }
-
 }
 
 @media screen and (max-width: 480px) {
     .contactUs-title {
         @include titleForComponent($fontSizeForMobile, 900, $mainLightColor);
     }
-    .contactInfoName{
-        @include setTextSize($fontSizeForMini, 700);
-        color:$thirdColor;
-        text-align: left
-    }
-    
-    .contactInfoValue{
-        @include setTextSize($fontSizeForMini, 700);
-    }
-    
 
+    .contactInfoDetails {
+        display: flex;
+        flex-direction: row;
+    }
+    .contactInfoName {
+        @include setTextSize($fontSizeForMini, 700);
+        color: $thirdColor;
+        text-align: left;
+    }
+
+    .contactInfoValue {
+        @include setTextSize($fontSizeForMini, 700);
+    }
 }

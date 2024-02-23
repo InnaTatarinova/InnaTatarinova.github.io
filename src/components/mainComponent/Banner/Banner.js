@@ -35,10 +35,10 @@ export const Banner = ({ resultRef }) => {
           <FormForStartQuoteBanner />
         </div>
         <div className="banner-img">
-          <div class="car"></div>
+          <div className="car"></div>
           <div className="wheel">
-            <div class="wheel2"></div>
-            <div class="wheel1"></div>
+            <div className="wheel2"></div>
+            <div className="wheel1"></div>
             
           </div>
         </div>
