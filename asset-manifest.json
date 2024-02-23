@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.820d2116.css",
-    "main.js": "/static/js/main.272a653e.js",
+    "main.css": "/static/css/main.b2aa0b2f.css",
+    "main.js": "/static/js/main.2af54390.js",
     "static/media/whiteTruckResize.png": "/static/media/whiteTruckResize.63984ec5a1d8f4a100e7.png",
     "static/media/truckWithSmallLogoResize.png": "/static/media/truckWithSmallLogoResize.e6ecc4c5b6d7f45b81ea.png",
     "static/media/whiteTruckWithoutWheels.png": "/static/media/whiteTruckWithoutWheels.0c08764e94e994968c1b.png",
@@ -41,11 +41,11 @@
     "static/media/arrowBlueToLeft.png": "/static/media/arrowBlueToLeft.b5af20d047e74a178c3d.png",
     "static/media/Logo_justImg.png": "/static/media/Logo_justImg.048ed0c51f8bf7ede0ec.png",
     "index.html": "/index.html",
-    "main.820d2116.css.map": "/static/css/main.820d2116.css.map",
-    "main.272a653e.js.map": "/static/js/main.272a653e.js.map"
+    "main.b2aa0b2f.css.map": "/static/css/main.b2aa0b2f.css.map",
+    "main.2af54390.js.map": "/static/js/main.2af54390.js.map"
   },
   "entrypoints": [
-    "static/css/main.820d2116.css",
-    "static/js/main.272a653e.js"
+    "static/css/main.b2aa0b2f.css",
+    "static/js/main.2af54390.js"
   ]
 }
