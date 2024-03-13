@@ -8,7 +8,7 @@ export const Price = () => {
   }, []);
   return (
     <MovingFormProvider>
-      <div className="component">
+      <div className="componentStyle">
         <Quote />
       </div>
     </MovingFormProvider>

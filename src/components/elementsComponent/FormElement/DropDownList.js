@@ -20,23 +20,23 @@ export const DropDownList = (props) => {
     <ul className="dropDownList">
       {props.list
         //use filter only temporary for testing list without server. Map is permanent option
-        .filter((listInit) => {
-          if (
-            listInit.display_name
-              .toLowerCase()
-              .replaceAll(",", "")
-              .replaceAll(" ", "")
-              .includes(
-                props.value
-                  .toLowerCase()
-                  .replaceAll(",", "")
-                  .replaceAll(" ", "")
-              )
-          ) {
-            return listInit;
-          }
-          return "";
-        })
+        // .filter((listInit) => {
+        //   if (
+        //     listInit.display_name
+        //       .toLowerCase()
+        //       .replaceAll(",", "")
+        //       .replaceAll(" ", "")
+        //       .includes(
+        //         props.value
+        //           .toLowerCase()
+        //           .replaceAll(",", "")
+        //           .replaceAll(" ", "")
+        //       )
+        //   ) {
+        //     return listInit;
+        //   }
+        //   return "";
+        // })
 
         .map((place, key) => {
           return (

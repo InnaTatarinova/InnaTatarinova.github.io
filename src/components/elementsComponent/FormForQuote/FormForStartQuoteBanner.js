@@ -4,12 +4,12 @@ import "./ElementsForQuote.scss";
 import { FormProvider, useForm } from "react-hook-form";
 import { HashLink as Link } from "react-router-hash-link";
 import { MovingFormContext } from "../../../context/MovingFormContext";
-import { BlockForInput } from "../FormElement/BlockForInput";
 import {
   movingFromComponent,
   movingToComponent,
   serviceTypeComponentSeperatedForm,
 } from "./MainConstComponentForQuote";
+import { BlockForInputQuote } from "../FormElement/BlockForInputQuote";
 
 export const FormForStartQuoteBanner = () => {
   const methods = useForm();
@@ -30,7 +30,7 @@ export const FormForStartQuoteBanner = () => {
         noValidate
         autoComplete="off"
       >
-        <BlockForInput
+        <BlockForInputQuote
           name="From:"
           value={movingFromInput}
           component={movingFromComponent}
@@ -38,8 +38,9 @@ export const FormForStartQuoteBanner = () => {
           type="MOVING_FROM"
           form="short"
           className="chossenItemSpan"
+          context={MovingFormContext}
         />
-        <BlockForInput
+        <BlockForInputQuote
           name="To:"
           value={movingToInput}
           component={movingToComponent}
@@ -47,8 +48,9 @@ export const FormForStartQuoteBanner = () => {
           type="MOVING_TO"
           form="short"
           className="chossenItemSpan"
+          context={MovingFormContext}
         />
-        <BlockForInput
+        <BlockForInputQuote
           name="Service:"
           value={serviceType}
           component={serviceTypeComponentSeperatedForm}
@@ -57,6 +59,7 @@ export const FormForStartQuoteBanner = () => {
           form="short"
           className="chossenItemSpan"
           classNameForList = "formFormSelect"
+          context={MovingFormContext}
         />
 
         <div className="submitBTN" onClick={onSubmit}>

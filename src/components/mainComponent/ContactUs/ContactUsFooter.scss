@@ -3,6 +3,7 @@
 
 .contactUs-container {
     @include addMainContainer($mainDarkColor);
+    margin-top: 90px;
 }
 
 .contactUs-title {
@@ -37,6 +38,11 @@
    
 }
 
+.emailLink{
+    text-decoration: none;
+    color: $mainLightColor;
+}
+
 .writeUs {
     width: 50%;
 }
@@ -47,6 +53,8 @@
     text-align: left;
     width: 100%;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .contact-block {

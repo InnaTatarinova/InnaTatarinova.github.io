@@ -2,11 +2,16 @@
 @import "../../../../style/mixin.scss";
 
 .form-input {
-    height: 50px;
+    height: 40px;
     border-radius: 8px;
     font-size: 15px;
     padding-left: 10px;
     width: 100%; 
+    border:1px solid $mainDarkColor;
+}
+
+.form-input-withMistake{
+    border:1.5px $fourthColor solid;
 }
 
 
@@ -16,10 +21,10 @@
     font-size: 15px;
 }
 
-.formQuoteInput div input {
-    height: 40px;
-    border: 1.5px solid $mainDarkColor;
-}
+// .formQuoteInput div input {
+//     height: 40px;
+//     border: 1.5px solid $mainDarkColor;
+// }
 
 
 .form-message {

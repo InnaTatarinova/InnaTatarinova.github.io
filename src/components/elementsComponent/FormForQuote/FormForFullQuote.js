@@ -3,7 +3,6 @@ import "./FormForFullQuote.scss";
 import "./ElementsForQuote.scss";
 import { MovingFormContext } from "../../../context/MovingFormContext";
 import { FormProvider, useForm } from "react-hook-form";
-import { BlockForInput } from "../FormElement/BlockForInput";
 import {
   movingFromComponent,
   movingToComponent,
@@ -15,6 +14,7 @@ import { MistakeComponent } from "../MistakeComponent/MistakeComponent";
 import { FullForm } from "./TypeForm/FullForm";
 import { ShortForm } from "./TypeForm/ShortForm";
 import { ResultQuote } from "./ResultQuote/ResultQuote";
+import { BlockForInputQuote } from "../FormElement/BlockForInputQuote";
 
 export const FormForFullQuote = () => {
   const methods = useForm();
@@ -43,31 +43,31 @@ export const FormForFullQuote = () => {
 
   const getEstimQuote = (e) => {
     e.preventDefault();
-
-    if (truckSize && movers && hours !== "") {
-      calculPrice();
-    } else if (selectedForm === "short") {
-      if (truckSize && movers && hours === "") {
-        setMessage(
-          "Please choose truck size, how many movers and hours would you prefer"
-        );
-      }
-    } else if (selectedForm === "full") {
-      if (movingFromInput && movingToInput && serviceType !== null) {
-        switch (serviceType.id) {
-          case 1:
-            if (residenceType && bedroomQuantity === "") {
-              callMistakeForm(
-                "Please choose residece type and how many bedroom"
-              );
-            }
+    if (movingFromInput || movingToInput || serviceType === null) {
+      callMistakeForm(
+        "Please choose origin address, distination address and type of moving"
+      );
+    } else {
+      if (truckSize && movers && hours !== "") {
+        calculPrice();
+      } else if (selectedForm === "short") {
+        if (truckSize && movers && hours === "") {
+          setMessage(
+            "Please choose truck size, how many movers and hours would you prefer"
+          );
         }
-      } else {
-        callMistakeForm(
-          "Please choose origin address, distination address and type of moving"
-        );
+      } else if (selectedForm === "full") {
+          switch (serviceType.id) {
+            case 1:
+              if (residenceType && bedroomQuantity === "") {
+                callMistakeForm(
+                  "Please choose residece type and how many bedroom"
+                );
+              }
+          }
+        }
       }
-    }
+    
   };
 
   const callMistakeForm = (text) => {
@@ -75,20 +75,50 @@ export const FormForFullQuote = () => {
     setOpenMistakeForm(true);
   };
 
-  const calculPrice = () => {
+  const calculPrice = async () => {
     setValidForm(true);
-    let price = calculateShortQuote(truckSize, movers, hours);
+    // let price = calculateShortQuote(truckSize, movers, hours);
+
+    let price = 0;
+
+    const data = {
+      var1: truckSize,
+      var2: movers,
+      var3: hours,
+    };
+    const endpoint = "https://localhost:8000/get_price";
+
+    console.log(JSON.stringify(data));
+
+    await fetch(endpoint, {
+      method: "POST",
+      //body: data,
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((blob) => blob.json())
+      .then((data1) => {
+        console.log(data1[0]);
+        price = data1[0];
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
+
     dispatch({
       type: "PRICE",
       payload: price,
     });
   };
+
   return (
     <FormProvider {...methods}>
       <form
         className={!openMistakeForm ? "quoteFullForm" : "quoteFullFormOpacity"}
       >
-        <BlockForInput
+        <BlockForInputQuote
           name="From:"
           value={movingFromInput}
           component={movingFromComponent}
@@ -96,7 +126,7 @@ export const FormForFullQuote = () => {
           type="MOVING_FROM"
           form="full"
         />
-        <BlockForInput
+        <BlockForInputQuote
           name="To:"
           value={movingToInput}
           component={movingToComponent}
@@ -104,7 +134,7 @@ export const FormForFullQuote = () => {
           type="MOVING_TO"
           form="full"
         />
-        <BlockForInput
+        <BlockForInputQuote
           name="Service:"
           value={serviceType}
           component={serviceTypeComponent}

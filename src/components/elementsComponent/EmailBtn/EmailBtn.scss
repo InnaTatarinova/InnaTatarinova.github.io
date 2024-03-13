@@ -1,0 +1,46 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.btn-floating-email {
+    align-items: center;
+    background-color: #f50404bf;
+    border-radius: 50%;
+    bottom: 7rem;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: fixed;
+    right: 2rem;
+    user-select: none;
+    width: 60px;
+    z-index: 9997;
+    border: #f50404 1px solid;
+}
+
+.btn-floating-email svg {
+    height: 70%;
+    width: 70%;
+    margin: auto;
+}
+
+.btn-floating-email_animated::before {
+    animation: pulseEmail 1.2s infinite;
+    border-color: inherit;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+    content: "";
+    height: 60px;
+    position: absolute;
+    width: 60px;
+}
+
+@keyframes pulseEmail {
+    0% {
+        box-shadow: 0 0 0 0 rgba(238, 5, 5, 0.75);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+    }
+}

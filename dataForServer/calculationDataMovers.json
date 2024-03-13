@@ -1,0 +1,19 @@
+[
+  {
+    "quantity": 2,
+    "perHour": 120
+  },
+  {
+    "quantity": 3,
+    "perHour": 180
+  },
+  {
+    "quantity": 4,
+    "perHour": 240
+  },
+  {
+    "quantity": 5,
+    "perHour": 300
+  }
+]
+

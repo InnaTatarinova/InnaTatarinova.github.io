@@ -27,13 +27,15 @@ export const Input = ({
 
   return (
     <div className={className}>
-
-   
       {multiline ? (
         <textarea
           id={id}
           type={type}
-          className="form-input form-message"
+          className={
+            isInvalid
+              ? `form-input form-message form-input-withMistake `
+              : `form-input form-message`
+          }
           placeholder={placeholder}
           {...register(`${name}`, validation)}
           value={value}
@@ -43,12 +45,13 @@ export const Input = ({
           id={id}
           type={type}
           value={value}
-          className="form-input"
+          className={
+            isInvalid ? `form-input form-input-withMistake` : `form-input`
+          }
           placeholder={placeholder}
           {...register(`${name}`, validation)}
           onChange={(event) => {
             setValue(event.target.value);
-            
           }}
         ></input>
       )}

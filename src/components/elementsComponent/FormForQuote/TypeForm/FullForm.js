@@ -5,7 +5,7 @@ import { Storage } from "../FormElementForQuote/Storage";
 import { Floor } from "../FormElementForQuote/Floor";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 import { ShortForm } from "./ShortForm";
-import { conectionTruckSizeAndBedroom } from "../../../../data/calculationData";
+// import { conectionTruckSizeAndBedroom } from "../data/calculationData";
 
 export const FullForm = () => {
   const {
@@ -18,28 +18,28 @@ export const FullForm = () => {
   const [showRecom, setShowRec] = useState(false);
 
   const setRecomendationValue = () => {
-    if (bedroomQuantity !== 0) {
-      switch (residenceType) {
-        case "House":
-          for (let i of conectionTruckSizeAndBedroom) {
-            if (i.bedroom === bedroomQuantity) {
-              dispatch({
-                type: "TRUCK_SIZE",
-                payload: i.truckSize,
-              });
-              dispatch({
-                type: "MOVERS",
-                payload: i.movers,
-              });
-              dispatch({
-                type: "HOURS",
-                payload: i.hours,
-              });
-            }
-          }
-      }
-      setShowRec(true);
-    }
+    // if (bedroomQuantity !== 0) {
+    //   switch (residenceType) {
+    //     case "House":
+    //       for (let i of conectionTruckSizeAndBedroom) {
+    //         if (i.bedroom === bedroomQuantity) {
+    //           dispatch({
+    //             type: "TRUCK_SIZE",
+    //             payload: i.truckSize,
+    //           });
+    //           dispatch({
+    //             type: "MOVERS",
+    //             payload: i.movers,
+    //           });
+    //           dispatch({
+    //             type: "HOURS",
+    //             payload: i.hours,
+    //           });
+    //         }
+    //        }
+    //   }
+    //   setShowRec(true);
+    // }
     
   };
 

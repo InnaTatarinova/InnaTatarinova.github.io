@@ -4,7 +4,6 @@ import { DropDownList } from "./DropDownList";
 import temporaryLinkToJSON from "../../../data/list.json";
 import "../FormForQuote/ElementsForQuote.scss";
 
-
 //Component for Input which get information from server and call DropDownList
 
 export const InputWithDropList = (props) => {
@@ -19,31 +18,31 @@ export const InputWithDropList = (props) => {
 
       //Working code! Conect with server. Temporary turn off!!!!
 
-      // let list = [];
-      // let bb = JSON.stringify({ keyword: value });
-      // await fetch(props.endpoint, {
-      //   method: "POST",
-      //   body: bb,
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // })
-      //   .then((blob) => blob.json())
-      //   .then((data) => {
-      //     list.push(...data);
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   });
-      // setResult(list);
+      let list = [];
+      let bb = JSON.stringify({ keyword: e.target.value });
+      await fetch(props.endpoint, {
+        method: "POST",
+        body: bb,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((blob) => blob.json())
+        .then((data) => {
+          list.push(...data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      setResult(list);
 
-      setResult(temporaryLinkToJSON);
+      // setResult(temporaryLinkToJSON);
     }
+    setValue(e.target.value);
   };
 
   return (
-    <div className={`formQuoteInput ${props.zPosition}`} onChange={getList} >
-      
+    <div className={`formQuoteInput ${props.zPosition}`} onChange={getList}>
       <Input
         {...props.validat}
         className={props.className}
@@ -51,13 +50,13 @@ export const InputWithDropList = (props) => {
         value={value}
       />
 
-      {!wasSelectedItem ? (
+      {!wasSelectedItem  || value !== ""? (
         resultList.length > 0 ? (
           //value as a props.list temporary for get info fromLocal JSON
           <DropDownList
             list={resultList}
             value={value}
-            setValue ={setValue}
+            setValue={setValue}
             type={props.type}
             setWasSelectedItem={setWasSelectedItem}
           />

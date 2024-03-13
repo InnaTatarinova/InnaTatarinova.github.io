@@ -143,7 +143,7 @@ const Navbar = () => {
           </li>
           <li className="nav-menu-li">
             <Link
-              to="/products"
+              to="/"
               onClick={clickToCloseMenu}
               className="nav-menu-item"
             >
@@ -152,7 +152,7 @@ const Navbar = () => {
           </li>
           <li className="nav-menu-li">
             <Link
-              to="/products"
+              to="/contactUs"
               onClick={clickToCloseMenu}
               className="nav-menu-item"
             >

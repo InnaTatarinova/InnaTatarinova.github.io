@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/mainComponent/Navbar/Navbar";
 import { Home } from "./pages/Home";
-import { ContactUs } from "./components/mainComponent/ContactUs/ContactUs";
 import { AboutUs } from "./pages/AboutUs";
 import { Services } from "./pages/Services";
 import { Service_LocalMoving } from "./pages/Service_LocalMoving";
@@ -13,6 +12,8 @@ import { Service_Storage } from "./pages/Service_Storage";
 import { Service_Delivery } from "./pages/Service_Delivery";
 import { Service_Junk } from "./pages/Service_Junk";
 import { Price } from "./pages/Price";
+import { Contacts } from "./pages/Contacts";
+import { ContactUsFooter } from "./components/mainComponent/ContactUs/ContactUsFooter";
 
 function App() {
   return (
@@ -47,8 +48,9 @@ function App() {
           />
           <Route path="/services/junk" exact element={<Service_Junk />} />
           <Route path="/quote" exact element={<Price />} />
+          <Route path="/contactUs" exact element={<Contacts />} />
         </Routes>
-        <ContactUs />
+        <ContactUsFooter />
       </BrowserRouter>
     </div>
   );

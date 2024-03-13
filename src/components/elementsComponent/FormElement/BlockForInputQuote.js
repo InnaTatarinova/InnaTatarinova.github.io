@@ -3,7 +3,7 @@ import "../FormForQuote/ElementsForQuote.scss";
 import { combineAddress } from "../../../function/combineAddress";
 import { MovingFormContext } from "../../../context/MovingFormContext";
 
-export const BlockForInput = (props) => {
+export const BlockForInputQuote = (props) => {
   const { dispatch } = useContext(MovingFormContext);
 
   const changeValue = () => {

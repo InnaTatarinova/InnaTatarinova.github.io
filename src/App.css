@@ -1,4 +1,3 @@
-
 .App {
   min-width: 40%;
 }
@@ -45,9 +44,31 @@ h4 {
 .bi {
   font-size: 30px;
   color: white;
-  
 }
 
-.component{
+.componentStyle {
   margin-top: 90px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0px;
+  background-size: cover;
+  position: relative;
+}
+
+.titleStyle {
+  color: #003566;
+  font-size: 250%;
+  font-weight: 900;
+  text-align: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 2px;
+  text-shadow: -6px 1px 10px #ffffff;
+}
+
+.text-component {
+  margin: 50px 20px 20px 20px;
+  font-size: 18px;
+  
 }

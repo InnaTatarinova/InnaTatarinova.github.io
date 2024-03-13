@@ -5,7 +5,7 @@
     display: grid;
     grid-template-rows: 80px 1fr 100px;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2%;
+    grid-column-gap: 20px;
     grid-template-areas:
         "inputName inputPhone"
         "inputMessage inputMessage"
@@ -29,19 +29,24 @@
 
 .inputName {
     grid-area: inputName;
+    font-weight: 900;
     
 }
 
 .nameForContact{
     width: 100%;
+    font-weight: 900;
 }
 
 .inputPhone {
     grid-area: inputPhone;
+    font-weight: 900;
 }
 
 .inputMessage {
     grid-area: inputMessage;
+    font-weight: 900;
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -50,7 +55,7 @@
         grid-template-rows: 50px 50px 1fr 50px;
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-row-gap: 20px;
         grid-template-areas:
             "inputName"
             "inputPhone"
