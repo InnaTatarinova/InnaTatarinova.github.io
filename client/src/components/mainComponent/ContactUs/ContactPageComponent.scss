@@ -1,0 +1,36 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.contactBlock {
+    color: $mainDarkColor;
+    text-align: center;
+    @include addMainFlex(column, 90%);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.redColor {
+    color: $fourthColor;
+    text-align: center;
+}
+
+.blueColor{
+    color: $mainDarkColor;
+    text-align: center;
+    
+}
+
+.map_block {
+    margin-top: 30px;
+}
+.form_contact {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.emailLinkDark{
+    text-decoration: none;
+    color: $mainDarkColor;
+}

@@ -1,0 +1,42 @@
+@import "../../../../style/mainStyle.scss";
+@import "../../../../style/mixin.scss";
+
+.form-input {
+    height: 40px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 100%; 
+    border:1px solid $mainDarkColor;
+}
+
+.form-input-withMistake{
+    border:1.5px $fourthColor solid;
+}
+
+
+.formQuoteInput {
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+}
+
+// .formQuoteInput div input {
+//     height: 40px;
+//     border: 1.5px solid $mainDarkColor;
+// }
+
+
+.form-message {
+    width: 100%;
+    height: 150px;
+}
+
+.infoMistake {
+    color: red;
+    font-size: 14px;
+    text-align: end;
+    width: 100%;
+    margin-bottom: 5px;
+}
+

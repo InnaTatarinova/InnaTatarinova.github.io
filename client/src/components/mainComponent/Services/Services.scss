@@ -1,0 +1,28 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.servicesPageComponent {
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: px;
+}
+
+.servicesPageComponent-title {
+    // color: $mainDarkColor;
+    // font-size: 22px;
+    // text-align: center;
+    // font-weight: 900;
+
+    font-size: 250%;
+    font-weight: 900;
+    text-align: center;
+    color: $fourthColor;
+    text-shadow: 0px 0px 5px #c5baba, 0px 0px 10px #d5d0d0cf, 0px 0px 15px #ffffffd6;
+    padding-left: 5%;
+    padding-right: 5%;
+    animation-name: opacityOn;
+    animation-duration: 2s;
+    margin: 0px;
+    height: 15%;
+}

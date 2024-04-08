@@ -1,0 +1,121 @@
+@import "./mainStyle.scss";
+
+@mixin addMainFlex($direction, $width) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    width: $width;
+}
+
+//Title
+
+@mixin titleForComponent($size, $weight, $color) {
+    color: $color;
+    @include setTextSize($size, $weight);
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    // text-shadow: 0px 2px 2px $shadowColor;
+}
+
+//Button
+@mixin setbtnSize($fontSize, $fontWeight, $minWidth) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    min-width: $minWidth;
+}
+
+@mixin setTranspareentBackgrForBTN() {
+    background-color: transparent;
+}
+
+//Text
+@mixin setTextSize($fontSize, $fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-align: center;
+}
+
+@mixin addTextStyleForName($fontSize) {
+    font-size: $fontSize;
+    font-weight: bold;
+}
+
+//Border
+@mixin addBorder($fontColor) {
+    border: 2px solid $fontColor;
+}
+
+//Theme
+@mixin darkTheme() {
+    color: $mainLightColor;
+    background-color: $mainDarkColor;
+}
+
+@mixin lightTheme() {
+    color: $mainDarkColor;
+    background-color: $mainLightColor;
+}
+
+@mixin addDarkTheme {
+    @include darkTheme();
+}
+
+@mixin addLightTheme {
+    @include lightTheme();
+}
+
+//Hover
+@mixin addMainHoverAction() {
+    transform: scale(1.1);
+}
+
+//Container
+@mixin addMainContainer($background) {
+    background-color: $background;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+//Form
+@mixin form($background, $width, $height) {
+    width: $width;
+    border-radius: 5px;
+    height: $height;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    background-color: $background;
+    box-shadow:
+        rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+
+// @mixin formEl($width, $mainBorderRadius, $mainActiveFontColor) {
+//     width: $width;
+//     min-height: 50px;
+//     border-radius: $mainBorderRadius;
+//     box-shadow:
+//         rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+//         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+//     margin: 20px auto;
+//     color: $mainActiveFontColor;
+//     font-size: 30px;
+//     text-align: center;
+// }
+
+// @mixin formForList($fontColor, $fontSize, $height){
+//     margin-top: -22px;
+//     @include addBorderToBtn($fontColor);
+//     border-top: none;
+//     padding: 10px;
+//     text-align: left;
+//     font-size: $fontSize;
+//     height: $height;
+//     position: sticky;
+//     overflow: scroll;
+//     overflow-x: hidden;
+//     overflow-y: hidden;
+// }

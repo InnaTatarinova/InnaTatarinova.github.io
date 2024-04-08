@@ -1,0 +1,28 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.mistakeComponent {
+    border-radius: 5px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    list-style-type: none;
+    padding: 0px;
+    padding-top: 3px;
+    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    z-index: 99;
+    opacity: 1;
+    border: solid 1px $mainDarkColor;
+    text-align: center;
+
+}
+.mistakeMessage {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+

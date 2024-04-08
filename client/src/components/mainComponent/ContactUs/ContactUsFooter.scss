@@ -1,0 +1,92 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.contactUs-container {
+    @include addMainContainer($mainDarkColor);
+    margin-top: 90px;
+}
+
+.contactUs-title {
+    @include titleForComponent($fontSizeForPC, 900, $mainLightColor);
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: row;
+    padding: $mainPadding;
+    padding-top: 25px;
+    column-gap: 30px;
+    @include darkTheme();
+   
+}
+
+.contactInfo {
+    width: 50%;
+}
+
+.contactInfoName {
+    @include setTextSize($fontSizeForMobile, 900);
+    color: $thirdColor;
+    text-align: left;
+    width: 100px;
+}
+
+.contactInfoValue {
+    @include setTextSize($fontSizeForMini, 900);
+    margin-top: 0px;
+    margin-left: 10px;
+   
+}
+
+.emailLink{
+    text-decoration: none;
+    color: $mainLightColor;
+}
+
+.writeUs {
+    width: 50%;
+}
+
+.contactUsTitle {
+    @include setTextSize($fontSizeForMini, 900);
+    color: $thirdColor;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .contact-block {
+        flex-direction: column;
+    }
+
+    .contactInfo {
+        width: 100%;
+    }
+
+    .writeUs {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contactUs-title {
+        @include titleForComponent($fontSizeForMobile, 900, $mainLightColor);
+    }
+
+    .contactInfoDetails {
+        display: flex;
+        flex-direction: row;
+    }
+    .contactInfoName {
+        @include setTextSize($fontSizeForMini, 700);
+        color: $thirdColor;
+        text-align: left;
+    }
+
+    .contactInfoValue {
+        @include setTextSize($fontSizeForMini, 700);
+    }
+}

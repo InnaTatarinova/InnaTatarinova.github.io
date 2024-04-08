@@ -1,0 +1,319 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.banner-container {
+    width: 100%;
+    height: calc(100vh - #{$heightForHeaderContainer});
+    height: 100vh;
+    position: relative;
+    // margin-top: $heightForHeaderContainer;
+    padding-top: $heightForHeaderContainer;
+    background-size: cover;
+    background-position: center;
+
+    background-color: #2136444a; /* Semi-transparent black */
+    background-image: url("../../../assets/img/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg");
+    background-blend-mode: hard-light;
+}
+
+.banner-img-block {
+    position: absolute;
+    height: 80%;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.banner-h1 {
+    @include setTextSize(400%, 900);
+    color: red;
+    text-shadow:
+        0px 0px 5px rgba(255, 255, 255, 1),
+        0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 15px rgba(255, 255, 255, 1);
+    padding-top: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+    animation-name: opacityOn;
+    animation-duration: 2s;
+    margin: 0px;
+    height: 15%;
+}
+
+.banner-img {
+    width: 100%;
+    text-align: center;
+    min-height: 20%;
+    min-height: 160px;
+    overflow: hidden;
+    position: relative;
+    bottom: 0%;
+    animation: truckSlide 6s ease;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes truckSlide {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+//Test with wheel
+
+.car {
+    background-image: url(../../../assets/img/transformTruck/whiteTruckWithoutWheels.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    //  position: absolute;
+    height: 7.699rem;
+    width: 22rem;
+}
+
+.wheel {
+    // // position: absolute;
+    // animation: wheelanimation linear .6s infinite;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.wheel2 {
+    background-image: url(../../../assets/img/transformTruck/wheel2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 49px;
+    animation: wheelanimation linear 6s infinite;
+    margin-top: -31px;
+    margin-left: 80px;
+}
+.wheel1 {
+    background-image: url(../../../assets/img/transformTruck/wheel1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 44px;
+    animation: wheelanimation linear 3s infinite;
+    margin-top: -31px;
+    margin-left: 170px;
+}
+
+@keyframes wheelanimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+    // 100% {
+    //     transform: rotate(360deg);
+    // }
+}
+
+.banner-img img {
+    bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.askPriceStyle {
+    width: 33%;
+    transform: translate(7%, 30%);
+    border-radius: 5px;
+    height: 70%;
+    height: 65%;
+}
+
+.askPriceStyle h2 {
+    @include setTextSize(330%, 700);
+    color: $colorTruckLogo;
+}
+
+.clickMe {
+    background-color: $fourthColor;
+    // animation: pulse 2s infinite;
+}
+
+.scroll-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: $mainDarkColor;
+    font-size: 30px;
+}
+
+.bi-chevron-down:hover {
+    font-size: 40px;
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 $mainDarkColor;
+        box-shadow: 0 0 0 0 $fourthColor;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px $mainDarkColor;
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 0 0 0 0 $mainDarkColor;
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .askPriceStyle {
+        top: 4%;
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(250%, 700);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .banner-h1 {
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 20%;
+    }
+
+    // .banner-img {
+    //     height: calc(75% - 80px - 20px);
+    // }
+
+    .askPriceStyle {
+        left: 3%;
+        transform: translate(15%, 40%);
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(200%, 700);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    // .banner-img img {
+    //     bottom: auto;
+    //     height: calc(65% - 5% - 5%);
+    // }
+
+    .askPriceStyle {
+        text-align: center;
+        width: 100%;
+
+        transform: none;
+        // bottom: 10%;
+        // top: auto;
+        // height: auto;
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(250%, 700);
+        color: $mainDarkColor;
+        margin-bottom: 30px;
+    }
+
+    .clickMe {
+        background-color: $fourthColor;
+    }
+
+    .clickMe:hover {
+        background-color: $mainLightColor;
+        color: $fourthColor;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner-h1 {
+        @include setTextSize(300%, 700);
+    }
+
+    .banner-img img {
+        // height: calc(45% - 5% - 5%);
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(200%, 500);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-container {
+        height: calc(100vh - 5vh - #{$heightForHeaderContainer});
+        height: calc(100vh - 5vh);
+    }
+    .banner-h1 {
+        @include setTextSize(250%, 500);
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(150%, 300);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .banner-h1 {
+        @include setTextSize(150%, 500);
+    }
+
+    .askPriceStyle h2 {
+        @include setTextSize(20px, 500);
+    }
+}
+
+// @media screen and(max-height: 601px){
+//     .banner-container{
+//         height: 1000px;
+//     }
+
+// };
+
+@media (max-height: 601px) and (orientation: landscape) {
+    // .banner-container {
+    //     height: 1000px;
+    // }
+}
+
+@media screen and(min-height: 1024px) {
+    .banner-img img {
+        // height: calc(50% - 5% - 5%);
+        // top: 5%;
+    }
+}

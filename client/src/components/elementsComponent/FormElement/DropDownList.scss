@@ -1,0 +1,35 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.dropDownList {
+  position: relative;
+    height: 155px;
+    background-color: $mainLightColor;
+    margin-top: -3px;
+    border: 1.5px solid $mainDarkColor;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 2px 5px;
+    text-align: left;
+    font-size: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-bottom: 3px;
+    
+}
+
+.dropDownList li {
+  border-bottom: 0.5px rgb(165, 159, 159) solid;
+  font-size: 13px;
+    
+}
+
+.dropDownSelect{
+    width: 70%;
+    border-radius: 5px;
+    z-index: 10;
+    height: 80%;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+}

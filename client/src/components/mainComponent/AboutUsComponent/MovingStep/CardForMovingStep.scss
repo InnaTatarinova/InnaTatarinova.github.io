@@ -1,0 +1,103 @@
+@import "../../../../style/mainStyle.scss";
+@import "../../../../style/mixin.scss";
+
+.blockForMovingStep {
+  position: relative;
+  width: 77%;
+  opacity: 1;
+  cursor: pointer;
+  height: 120px;
+  border-radius: 5px;
+  border: $mainDarkColor solid 2px;
+  text-align: center;
+  // @include setTextSize(110%, 700);
+  font-style: italic;
+  color: $mainDarkColor;
+  line-height: 1.2;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  // animation: rotateCard 5s infinite;
+}
+
+@keyframes rotateCard{
+  0%{
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  100%{
+    transform: perspective(600px) rotateY(0);
+  }
+}
+
+.blockForMovingStep:hover .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.blockForMovingStep:hover .back {
+  transform: perspective(600px) rotateY(0);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0);
+  font-size: 17px;
+  font-weight: 700;
+  color: $fourthColor;
+  display: flex;
+  flex-direction: row;
+}
+
+.front p {
+  padding: 15px 5px 0px;
+  text-shadow:
+    0px 0px 5px white,
+    0px 0px 10px white,
+    0px 0px 15px white;
+}
+
+.frontImg {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 5px;
+  color: $mainDarkColor;
+  padding-top: 7px;
+}
+
+.textBlockForMovingStep{
+  display: flex;
+  flex-direction: column;
+}
+
+.bi-arrow-clockwise{
+  position: absolute;
+  font-size: 20px;
+  right: 3%;
+  top: 75%;
+  transform: rotate(175deg);
+}
+
+.color{
+  color: $mainDarkColor;
+}

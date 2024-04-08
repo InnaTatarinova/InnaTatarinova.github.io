@@ -1,0 +1,118 @@
+@import "../../../../style/mainStyle.scss";
+@import "../../../../style/mixin.scss";
+
+.priceComponent {
+  text-align: center;
+  margin: 30px 15px;
+  font-size: 18px;
+  color:$mainDarkColor;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.price {
+  color: red;
+  font-weight: 900;
+  font-size: 35px;
+  
+}
+
+.price-explanation {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.proposedTocall-component {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.price-callUs {
+  color: $mainDarkColor;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.price-red {
+  color: red;
+  margin-right: 20px;
+}
+
+.movingPhone {
+  align-items: center;
+  background-color: $fourthColor;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+  border: #f50404 1px solid;
+  margin-left: 15px;
+  animation: changeColor 3s infinite;
+}
+
+
+.proposedToOnlineForm-component {
+  @include addMainFlex(row, 100%);
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.openOnlineOrderform {
+  margin: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  background: $mainDarkColor;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 40px;
+  width: 30%;
+  animation: changeColor 3s infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: $mainDarkColor;
+  }
+  50% {
+    background-color: $fourthColor;
+  }
+  100% {
+    background-color: $mainDarkColor;
+  }
+}
+
+.openOnlineOrderform:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.openOnlineOrderform:active {
+  transform: scale(0.95);
+}
+
+.callUsBtn {
+}
+
+@media (min-width: 768px) {
+  .openOnlineOrderform {
+    padding: 16px 48px;
+  }
+}

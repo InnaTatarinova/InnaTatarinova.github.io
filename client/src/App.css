@@ -1,0 +1,74 @@
+.App {
+  min-width: 40%;
+}
+
+.mainPageInfo {
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* margin: 30px; */
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* margin: 30px; */
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 10px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 10px;
+}
+
+.bi {
+  font-size: 30px;
+  color: white;
+}
+
+.componentStyle {
+  margin-top: 90px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0px;
+  background-size: cover;
+  position: relative;
+}
+
+.titleStyle {
+  color: #003566;
+  font-size: 250%;
+  font-weight: 900;
+  text-align: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 2px;
+  text-shadow: -6px 1px 10px #ffffff;
+}
+
+.text-component {
+  margin: 50px 20px 20px 20px;
+  font-size: 18px;
+  
+}
