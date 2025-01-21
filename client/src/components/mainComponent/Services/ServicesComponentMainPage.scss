@@ -1,0 +1,79 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+//For mainPage
+.cardItem-container-ForMainPage {
+    width: 30%;
+    height: 250px;
+}
+
+.cardItem-container-ForMainPage:nth-last-child(-n + 3) {
+    width: 30%;
+}
+
+.cardItem-img-ForMainPage {
+    width: 100%;
+    height: 80%;
+    
+}
+
+.cardItem-text-ForMainPage {
+    @include setTextSize(130%, 700);
+    height: 30px;
+}
+
+@media screen and (max-width: 1280px) {
+    .cardItem-container-ForMainPage {
+        width: 40%;
+    }
+
+    .cardItem-text-ForMainPage {
+        @include setTextSize(20px, 900);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cardItem-container-ForMainPage {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cardItem-container-ForMainPage:nth-last-child() {
+        width: 40%;
+    }
+
+    .cardItem-text-ForMainPage {
+        @include setTextSize(100%, 700);
+        height: 30px;
+        padding: 3px;
+    }
+    .cardItem-container-ForMainPage {
+        width: 45%;
+        margin-bottom: 30px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardItem-text-ForMainPage{
+        @include setTextSize(90%, 500);
+    }
+    .cardItem-container-ForMainPage:nth-last-child(-n + 3) {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cardItem-text-ForMainPage{
+        @include setTextSize(100%, 700);
+    }
+
+    .cardItem-container-ForMainPage {
+        width: 90%;
+    }
+
+
+    .cardItem-container-ForMainPage:nth-last-child(-n + 3) {
+        width: 90%;
+    }
+}

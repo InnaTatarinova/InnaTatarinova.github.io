@@ -19,10 +19,10 @@ export const BlockForInputContact = (props) => {
   };
 
   return (
-    <div onChange={saveValue}>
+    <div onChange={saveValue} className={props.className}>
       <Input
         {...props.validation}
-        className={props.className}
+        // className={props.className}
         setValue={props.setValue}
         value={props.value}
       />

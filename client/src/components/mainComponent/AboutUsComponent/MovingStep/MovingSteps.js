@@ -18,31 +18,31 @@ export const MovingSteps = () => {
 
   return (
     <div className="movingStep-container">
-      <CardForMovingStep id={1} src={consultation} />
+      <CardForMovingStep id={1} src={consultation} className="firstStep"/>
 
-      <img src={arrow} alt="arrow" className="arrowStyle"></img>
+      <img src={arrow} alt="arrow" className="arrowStyle firstArrow"></img>
 
-      <CardForMovingStep className="moveToRight" id={2} src={packing} />
-
-      <img
-        src={arrowLeft}
-        alt="arrow"
-        className="arrowStyle moveToRightArrow"
-      ></img>
-
-      <CardForMovingStep id={3} src={loading} />
-
-      <img src={arrow} alt="arrow" className="arrowStyle"></img>
-
-      <CardForMovingStep className="moveToRight" id={4} src={unloading} />
+      <CardForMovingStep className="moveToRight secondStep" id={2} src={packing} />
 
       <img
         src={arrowLeft}
         alt="arrow"
-        className="arrowStyle moveToRightArrow"
+        className="arrowStyle moveToRightArrow secondArrow"
       ></img>
 
-      <CardForMovingStep id={5} src={hauling} />
+      <CardForMovingStep id={3} src={loading} className="thirdStep"/>
+
+      <img src={arrow} alt="arrow" className="arrowStyle thirdArrow"></img>
+
+      <CardForMovingStep className="moveToRight fourthStep" id={4} src={unloading} />
+
+      <img
+        src={arrowLeft}
+        alt="arrow"
+        className="arrowStyle moveToRightArrow fourthArrow"
+      ></img>
+
+      <CardForMovingStep id={5} src={hauling} className="fifthStep"/>
     </div>
   );
 };

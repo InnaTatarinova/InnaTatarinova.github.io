@@ -1,0 +1,44 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.card_Page {
+    width: 33%;
+    margin-bottom: 10px;
+}
+.testimonCardComponent_Page {
+    display: grid;
+    grid-template-rows: 100px 50px 1fr 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "photoTestim"
+        "star"
+        "textReview"
+        "nameReviewer";
+    width: 90%;
+    box-shadow: 0 6px 20px #21364496;
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.testimon_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin: 50px 20px;
+    justify-content: space-around;
+   
+}
+
+.photoTestim_Page {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 568px) {
+    .card_Page {
+        width: 90%;
+    }
+}

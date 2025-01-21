@@ -16,7 +16,7 @@ export const BlockForInputQuote = (props) => {
   };
 
   return (
-    <div className="quoteInputLine" onClick={changeValue}>
+    <div className={`quoteInputLine ${props.gridName}`} onClick={changeValue}>
       {props.form === "full" ?  <div className="inputName"> {props.name}</div> : null}
      
 

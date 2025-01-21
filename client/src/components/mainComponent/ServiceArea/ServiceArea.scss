@@ -6,7 +6,7 @@
 }
 
 .serviceArea-title {
-    @include titleForComponent(250%, 900,$mainDarkColor);
+    @include titleForComponent(250%, 900, $mainDarkColor);
     // @include darkTheme();
     margin-top: 20px;
 }
@@ -15,9 +15,9 @@
     height: calc(100vh - #{$heightForHeaderContainer} - 150px);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 10px;
-    grid-template-rows: repeat(5, 1fr);
-    row-gap: 10px;
+    column-gap: 5px;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 5px;
     grid-template-areas:
         "img1 img3 img6 img8 img4"
         "img1 img2 img6 img9 img4"
@@ -29,21 +29,23 @@
     margin-right: 70px;
     padding-left: 0px;
     list-style: none;
+    margin: 10px;
 }
 
 .serviceAreaCardItem-conteiner {
     object-fit: cover;
     height: 100%;
     position: relative;
-
 }
 
-
-
 .serviceAreaCardItem-conteiner:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.2s;
     opacity: 1;
+
+    .serviceAreaCardItem-text{
+        backdrop-filter: blur(0.1px) brightness(90%);
+    }
 }
 
 .serviceAreaCardItem-img {
@@ -52,11 +54,6 @@
     height: 100%;
     opacity: 1;
     position: relative;
-
-}
-
-.serviceAreaCardItem-img:hover {
-    opacity: 0.7;
 }
 
 .serviceAreaCardItem-text {
@@ -70,12 +67,15 @@
     top: 0%;
     padding-top: 30%;
 }
-
+.serviceAreaCardItem-text {
+    @include setTextSize(130%, 700);
+}
 
 .bottomServiceArea {
     width: 100%;
     height: 100px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .titleForQuestion {
@@ -85,58 +85,28 @@
     @include setTranspareentBackgrForBTN();
 }
 
-.btnCallUs{
+.btnCallUs {
     animation: pulseCallMe 1.2s infinite;
 }
 
-@keyframes pulseCallMe{
+@keyframes pulseCallMe {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 127, 211, 0.75);
     }
     100% {
-        box-shadow: 0 0 0 15px rgba(37,211,101,0);
+        box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
     }
 }
 
-@media screen and (max-width: 1460px) {
-    .serviceAreaCardItem-text {
-        @include setTextSize(200%, 700);
-    }
-}
-@media screen and (max-width: 1280px) {
-    .serviceAreaCardItem-text {
-        @include setTextSize(170%, 700);
-    }
-}
 @media screen and (max-width: 1024px) {
-    .serviceArea-list {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas:
-            "img1 img3 img6 img8"
-            "img1 img2 img6 img9"
-            "img1 img2 img10 img9"
-            "img11 img2 img10 img9"
-            "img11 img2 img10 img7"
-            "img4 img2 img5 img7"
-            "img4 img12 img5 img7";
-    }
-
-    .serviceAreaCardItem-text {
-        @include setTextSize(150%, 700);
-    }
 }
-
 
 @media screen and (max-width: 768px) {
-   
-   
 }
 @media screen and (max-width: 568px) {
-    
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .serviceArea-list {
         margin: 10px;
     }
@@ -159,15 +129,29 @@
 
     .serviceAreaCardItem-text {
         @include setTextSize(130%, 700);
-        
     }
-    
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .serviceAreaCardItem-text {
-        @include setTextSize(100%, 700);
+        @include setTextSize(80%, 500);
+        padding-top: 30px;
+    }
+    .serviceArea-list {
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 75px);
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10"
+            "img11 img12";
     }
 }
+
 @media (max-height: 601px) and (orientation: landscape) {
     .serviceArea-conteiner {
         height: 100%;

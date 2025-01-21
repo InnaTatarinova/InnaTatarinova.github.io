@@ -3,7 +3,10 @@
 
 .contactUs-container {
     @include addMainContainer($mainDarkColor);
-    margin-top: 90px;
+    // margin-top: 90px;
+    // min-height: calc(100vh - #{$heightForHeaderContainer});
+    // height: 100%;
+    padding: 50px 10px 10px 10px;
 }
 
 .contactUs-title {
@@ -14,10 +17,10 @@
     display: flex;
     flex-direction: row;
     padding: $mainPadding;
-    padding-top: 25px;
+    padding-top: 35px;
     column-gap: 30px;
     @include darkTheme();
-   
+    height: 350px;
 }
 
 .contactInfo {
@@ -28,17 +31,17 @@
     @include setTextSize($fontSizeForMobile, 900);
     color: $thirdColor;
     text-align: left;
-    width: 100px;
+    width: 120px;
 }
 
 .contactInfoValue {
     @include setTextSize($fontSizeForMini, 900);
     margin-top: 0px;
     margin-left: 10px;
-   
+    text-align: left;
 }
 
-.emailLink{
+.emailLink {
     text-decoration: none;
     color: $mainLightColor;
 }
@@ -49,16 +52,27 @@
 
 .contactUsTitle {
     @include setTextSize($fontSizeForMini, 900);
+    font-size: 25px;
     color: $thirdColor;
     text-align: left;
     width: 100%;
 }
 
-
+@media screen and (max-width: 1050px) {
+    .contact-block {
+        height: 100%;
+    }
+}
 
 @media screen and (max-width: 768px) {
+    .contactUs-container {
+        min-height: calc(100vh - #{$heightForHeaderContainer});
+        padding: 100px 10px 20px 10px;
+    }
     .contact-block {
         flex-direction: column;
+        padding-top: 65px;
+        height: 100%;
     }
 
     .contactInfo {
@@ -67,7 +81,7 @@
 
     .writeUs {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 60px;
     }
 }
 
@@ -82,11 +96,34 @@
     }
     .contactInfoName {
         @include setTextSize($fontSizeForMini, 700);
+        font-size: 30px;
         color: $thirdColor;
         text-align: left;
     }
 
     .contactInfoValue {
         @include setTextSize($fontSizeForMini, 700);
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .contactUs-container {
+        min-height: calc(100vh - #{$heightForHeaderContainer});
+        padding: 50px 10px 20px 10px;
+    }
+
+    .contact-block {
+        flex-direction: column;
+        padding-top: 35px;
+        height: 80%;
+    }
+
+    .contactInfoName {
+        font-size: 25px;
+    }
+
+    .writeUs {
+        margin-top: 30px;
     }
 }

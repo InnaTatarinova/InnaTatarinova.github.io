@@ -72,7 +72,7 @@ export const ServicePageInformation = (props) => {
                   })}
                 </ul>
               </section>
-              <section>
+              <section className="sectionForQuote">
                 {props.quote === "no" ? (
                   <div
                     className="servicePage-title linkStyle backgroundDark highlightWhite"

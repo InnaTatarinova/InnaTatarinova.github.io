@@ -14,6 +14,7 @@ import { FullForm } from "./TypeForm/FullForm";
 import { ShortForm } from "./TypeForm/ShortForm";
 import { ResultQuote } from "./ResultQuote/ResultQuote";
 import { BlockForInputQuote } from "../FormElement/BlockForInputQuote";
+import { ContactUsForDetailed } from "./ContactUsForDetailed";
 
 export const FormForFullQuote = () => {
   const methods = useForm();
@@ -68,6 +69,8 @@ export const FormForFullQuote = () => {
                 callMistakeForm(
                   "Please choose residece type and how many bedroom"
                 );
+              } else {
+                calculPrice();
               }
           }
           break;
@@ -119,7 +122,11 @@ export const FormForFullQuote = () => {
   return (
     <FormProvider {...methods}>
       <form
-        className={!openMessageForm ? "quoteFullForm" : "quoteFullFormOpacity"}
+        className={
+          !openMessageForm
+            ? "quoteFullForm"
+            : " quoteFullForm quoteFullFormOpacity"
+        }
       >
         <BlockForInputQuote
           name="From:"
@@ -128,6 +135,7 @@ export const FormForFullQuote = () => {
           componentType="address"
           type="MOVING_FROM"
           form="full"
+          gridName="fromBlock"
         />
         <BlockForInputQuote
           name="To:"
@@ -136,6 +144,7 @@ export const FormForFullQuote = () => {
           componentType="address"
           type="MOVING_TO"
           form="full"
+          gridName="toBlock"
         />
         <BlockForInputQuote
           name="Service:"
@@ -145,9 +154,10 @@ export const FormForFullQuote = () => {
           type="SERVICE_TYPE"
           form="full"
           classNameForList="selectDropItem"
+          gridName="serviceBlock"
         />
 
-        <div className="formForChooseTypeOfForm">
+        <div className="formForChooseTypeOfForm formSize">
           <div>
             <input
               type="radio"
@@ -171,24 +181,49 @@ export const FormForFullQuote = () => {
         </div>
 
         {movingFromInput && movingToInput && serviceType !== null ? (
-          selectedForm === "full" ? (
-            <FullForm />
+          serviceType.id === 3 ? (
+            <ContactUsForDetailed text="Commercial Moving" />
+          ) : serviceType.id === 4 ? (
+            <ContactUsForDetailed text="Packing" />
+          ) : serviceType.id === 5 ? (
+            <ContactUsForDetailed text="Storage" />
+          ) : serviceType.id === 6 ? (
+            <ContactUsForDetailed text="Delivery" />
+          ) : serviceType.id === 7 ? (
+            <ContactUsForDetailed text="Junk Removal" />
+          ) : selectedForm === "full" ? (
+            <FullForm gridName="formQuote" />
           ) : selectedForm === "short" ? (
-            <ShortForm />
+            <ShortForm gridName="formQuote" />
           ) : null
         ) : null}
 
-        <div className="getEstimQuoteContainer">
-          <ButtonComponent
-            btnSize="btn-large"
-            btnColor="btn-dark"
-            btnBorder="btn-border-light"
-            className="getEstimQuoteBtn"
-            onClick={getEstimQuote}
-          >
-            Get Estimated Quote
-          </ButtonComponent>
-        </div>
+        {/* {movingFromInput && movingToInput && serviceType !== null ? (
+          selectedForm === "full" ? (
+            <FullForm gridName="formQuote" />
+          ) : selectedForm === "short" ? (
+            <ShortForm gridName="formQuote" />
+          ) : null
+        ) : null} */}
+
+        {serviceType !== null &&
+        serviceType.id !== 3 &&
+        serviceType.id !== 4 &&
+        serviceType.id !== 5 &&
+        serviceType.id !== 6 &&
+        serviceType.id !== 7 ? (
+          <div className="getEstimQuoteContainer">
+            <ButtonComponent
+              btnSize="btn-large"
+              btnColor="btn-dark"
+              btnBorder="btn-border-light"
+              className="getEstimQuoteBtn"
+              onClick={getEstimQuote}
+            >
+              Get Estimated Quote
+            </ButtonComponent>
+          </div>
+        ) : null}
       </form>
       {validForm ? (
         <ResultQuote

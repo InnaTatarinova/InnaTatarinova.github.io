@@ -1,5 +1,6 @@
 import React from "react";
 import "./ServicesComponent.scss";
+import "./ServicesComponentMainPage.scss";
 import { forwardRef } from "react";
 import { ServiceList } from "./ServiceList";
 

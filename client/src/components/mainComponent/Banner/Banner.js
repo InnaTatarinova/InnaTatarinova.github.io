@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Banner.scss";
 import { FormForStartQuoteBanner } from "../../elementsComponent/FormForQuote/FormForStartQuoteBanner";
+import { ScrollBtn } from "../../elementsComponent/ScrollBtn/ScrollBtn";
 
 const banner = require("../../../assets/img/whiteTruckResize.png");
 const bannerLogo = require("../../../assets/img/truckWithSmallLogoResize.png");
@@ -43,9 +44,11 @@ export const Banner = ({ resultRef }) => {
           </div>
         </div>
 
-        <div className="scroll-btn" onClick={scrollDown}>
+        {/* <div className="scroll-btn" onClick={scrollDown}>
           <i className="bi bi-chevron-down"></i>
-        </div>
+        </div> */}
+
+        <ScrollBtn onClick={scrollDown}/>
       </div>
     </div>
   );

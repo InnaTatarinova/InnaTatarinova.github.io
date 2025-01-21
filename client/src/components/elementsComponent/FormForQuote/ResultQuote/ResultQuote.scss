@@ -3,11 +3,11 @@
 
 .priceComponent {
   text-align: center;
-  margin: 30px 15px;
+  margin: 50px 15px;
   font-size: 18px;
-  color:$mainDarkColor;
+  color: $mainDarkColor;
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 700;
 }
 
@@ -15,7 +15,6 @@
   color: red;
   font-weight: 900;
   font-size: 35px;
-  
 }
 
 .price-explanation {
@@ -26,7 +25,7 @@
 .proposedTocall-component {
   font-size: 22px;
   font-weight: 700;
-  margin-top: 20px;
+  margin: 50px 30%;
 }
 
 .price-callUs {
@@ -55,12 +54,14 @@
   animation: changeColor 3s infinite;
 }
 
-
 .proposedToOnlineForm-component {
-  @include addMainFlex(row, 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 25px;
   font-style: italic;
   font-weight: 900;
+  margin-left: 30%;
 }
 
 .openOnlineOrderform {
@@ -82,6 +83,7 @@
   touch-action: manipulation;
   height: 40px;
   width: 30%;
+  max-width: 300px;
   animation: changeColor 3s infinite;
 }
 
@@ -111,8 +113,37 @@
 .callUsBtn {
 }
 
-@media (min-width: 768px) {
-  .openOnlineOrderform {
-    padding: 16px 48px;
+@media screen and (max-width: 1280px) {
+  .proposedTocall-component {
+    margin: 50px 25%;
+    
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .proposedTocall-component {
+    margin: 50px 15%;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proposedToOnlineForm-component {
+    // margin: auto;
+  }
+  .proposedTocall-component {
+    margin: 50px 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 450px) {
+  .proposedToOnlineForm-component {
+    margin: auto;
+  }
+  .proposedTocall-component {
+    margin: 50px 5px;
   }
 }

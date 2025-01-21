@@ -3,9 +3,9 @@
 
 .formContactUs {
     display: grid;
-    grid-template-rows: 80px 1fr 100px;
+    grid-template-rows: 60px 1fr 30px;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
     grid-template-areas:
         "inputName inputPhone"
         "inputMessage inputMessage"
@@ -14,7 +14,7 @@
 
 .submitBTN {
     text-align: center;
-    margin-top:2px;
+    margin-top: 2px;
     width: 100%;
     grid-area: submitBTN;
 }
@@ -25,16 +25,15 @@
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    width: 80%;
+    // width: 80%;
 }
 
 .inputName {
     grid-area: inputName;
     font-weight: 900;
-    
 }
 
-.nameForContact{
+.nameForContact {
     width: 100%;
     font-weight: 900;
 }
@@ -47,7 +46,7 @@
 .inputMessage {
     grid-area: inputMessage;
     font-weight: 900;
-    
+    width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -56,11 +55,17 @@
         grid-template-rows: 50px 50px 1fr 50px;
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
-        grid-row-gap: 20px;
+        grid-row-gap: 10px;
         grid-template-areas:
             "inputName"
             "inputPhone"
             "inputMessage"
             "submitBTN";
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .formContactUs {
+        grid-row-gap: 5px;
     }
 }

@@ -14,6 +14,9 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
+// app.get("/", function (req, res) {
+//   // res.sendFile(__dirname + "/index.html");
+// });
 
 let rateLimit = require("express-rate-limit");
 const { createDiffieHellmanGroup } = require("crypto");
@@ -97,7 +100,6 @@ function calculateShortQuote(truckSize, movers, hours) {
 }
 
 //Get message from ContactUsForm
-
 const { MailtrapClient } = require("mailtrap");
 const creds = require("./config.js");
 
@@ -149,7 +151,7 @@ app.post("/get_message_ContactUs", function (req, res) {
   // res.send(reply);
 });
 
-//Send online form
+//Send online otder form to email
 app.post("/get_message_SendOrder", function (req, res) {
   let content = `Name: \b${req.body.name} \n Phone: ${req.body.phone} \n Email: ${req.body.email} \n  Addition Info : ${req.body.adInfo}\n Service Type: ${req.body.serviceType} \n From: ${req.body.from} \n To: ${req.body.to} \n Truck size: ${req.body.truckSize} \n Movers: ${req.body.movers} \n Hours: ${req.body.hours} \n Residence Type: ${req.body.residenceType} \n Bedroom Quantity: ${req.body.bedroomQuantity} \n Floor: ${req.body.floor} \n Price: ${req.body.price}`;
   console.log("content: " + content);
@@ -183,10 +185,45 @@ app.post("/get_message_SendOrder", function (req, res) {
   res.send(reply);
 });
 
+//Get advise for Full Form
+app.post("/get_advice", function (req, res) {
+  const { var1, var2, var3, var4 } = req.body;
+  let result = searchAdvices(var1, var2, var3, var4);
+  res.send(result);
+});
+//Function search advice
+function searchAdvices(residenceType, bedroomQuantity, serviceType, storage) {
+  let result = [];
+  const connectionsData = fs.readFileSync(
+    "./server/dataForServer/calculationDataConectionTruckSizeBedroom.json",
+    "utf8"
+  );
+  const data = JSON.parse(connectionsData);
+
+  for (let object of data) {
+    if (object.name === residenceType) {
+      for (let i of object.conection) {
+        if(storage !== 0){
+          if (i.bedroom === storage) {
+            result.push(i.truckSize);
+            result.push(i.movers);
+            result.push(i.hours);
+          }
+        } else if (i.bedroom === bedroomQuantity) {
+          result.push(i.truckSize);
+          result.push(i.movers);
+          result.push(i.hours);
+        }
+      }
+    }
+  }
+  return result;
+}
+
 //Key and sertificates
 const options = {
   key: fs.readFileSync("./server/server.key"),
-  cert: fs.readFileSync("./server/server.crt"),
+  cert: fs.readFileSync("./server/server.cert"),
 };
 
 //Creation server

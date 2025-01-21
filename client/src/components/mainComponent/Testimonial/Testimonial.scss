@@ -23,7 +23,7 @@
 }
 
 .testimon {
-    height: 450px;
+    height: 250px;
     width: 90%;
     margin: auto;
     padding: 10px;
@@ -65,13 +65,15 @@
 .star {
     grid-area: star;
     text-align: center;
-  
 }
 
-.bi-star-fill{
+.bi-star-fill {
     color: $thirdColor;
 }
 
+.bi-star-fill:hover{
+    color: $thirdColor;
+}
 
 .textReview {
     grid-area: textReview;
@@ -107,6 +109,9 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .testimon {
+        height: 370px;
+    }
     .testimonCardComponent {
         grid-template-rows: 150px 1fr 50px;
         grid-template-columns: repeat(2, 1fr);
@@ -115,6 +120,7 @@
             "textReview textReview"
             "nameReviewer nameReviewer";
     }
+
     .textReview {
         margin-top: 25px;
     }
@@ -142,6 +148,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .testimon {
+        height: 420px;
+    }
     .testimonCardComponent {
         grid-template-rows: 100px 50px 1fr 50px;
         grid-template-columns: 1fr;
@@ -152,14 +161,18 @@
             "nameReviewer";
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
+    .testimon {
+        height: 470px;
+    }
+
     .bi-chevron-left,
     .bi-chevron-right {
         @include setTextSize(25px, 900);
     }
 
     .testimonials-component {
-        padding: 10px;
+        padding: 90px 10px;
     }
 
     .nameReviewer {
@@ -167,4 +180,11 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+}
+
+@media screen and (max-width: 300px){
+    .testimon {
+        height: 550px;
+    }
+
 }

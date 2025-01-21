@@ -10,8 +10,7 @@ import {
 } from "../FormElement/Input/InputValidation";
 import { BlockForInputContact } from "./BlockForInputContact";
 
-
-export const FormForContact = () => {
+export const FormForContact = (props) => {
   const methods = useForm();
   const [wasSentSuccessfuly, setSuccess] = useState(false);
   const [name, setName] = useState("");
@@ -43,69 +42,73 @@ export const FormForContact = () => {
             setPhone("");
             setMessage("");
             setSuccess(true);
+            props.setShowForm(false);
+            props.setWasSentInfo(true);
           } else {
             console.log("Message failed to send.");
           }
         });
-    } catch {console.log("Server is not respond.");}
+    } catch {
+      console.log("Server is not respond.");
+    }
   });
 
   return (
     <FormProvider {...methods}>
-      <form
-        className="formContactUs"
-        onSubmit={(e) => e.preventDefault()}
-        noValidate
-        autoComplete="off"
-      >
-        <BlockForInputContact
-          type="NAME"
-          validation={name_validation}
-          className="inputName nameForContact"
-          value={name}
-          setValue={setName}
-          setSuccess={setSuccess}
-          wasSentSuccessfuly={wasSentSuccessfuly}
-        />
+        <form
+          className="formContactUs"
+          onSubmit={(e) => e.preventDefault()}
+          noValidate
+          autoComplete="off"
+        >
+          <BlockForInputContact
+            type="NAME"
+            validation={name_validation}
+            className="inputName nameForContact"
+            value={name}
+            setValue={setName}
+            setSuccess={setSuccess}
+            wasSentSuccessfuly={wasSentSuccessfuly}
+          />
 
-        <BlockForInputContact
-          type="PHONE"
-          validation={phoneNumber_validation}
-          className="inputPhone"
-          value={phone}
-          setValue={setPhone}
-          setSuccess={setSuccess}
-          wasSentSuccessfuly={wasSentSuccessfuly}
-        />
+          <BlockForInputContact
+            type="PHONE"
+            validation={phoneNumber_validation}
+            className="inputPhone"
+            value={phone}
+            setValue={setPhone}
+            setSuccess={setSuccess}
+            wasSentSuccessfuly={wasSentSuccessfuly}
+          />
 
-        <BlockForInputContact
-          type="MESSAGE"
-          validation={message_validation}
-          className="inputMessage"
-          value={message}
-          setValue={setMessage}
-          setSuccess={setSuccess}
-          wasSentSuccessfuly={wasSentSuccessfuly}
-        />
+          <BlockForInputContact
+            type="MESSAGE"
+            validation={message_validation}
+            className="inputMessage"
+            value={message}
+            setValue={setMessage}
+            setSuccess={setSuccess}
+            wasSentSuccessfuly={wasSentSuccessfuly}
+          />
 
-        <div className="submitBTN">
-          {wasSentSuccessfuly ? (
-            <p className="infoSuccess">
-              Your message was sent. We will call you back.
-            </p>
-          ) : (
-            <ButtonComponent
-              btnSize="btn-large"
-              btnColor="btn-dark"
-              btnBorder="btn-border-light"
-              btnHoverStyle="btn-lightHoverTheme"
-              onClick={onSubmit}
-            >
-              Contact us
-            </ButtonComponent>
-          )}
-        </div>
-      </form>
+          <div className="submitBTN">
+            {wasSentSuccessfuly ? (
+              <p className="infoSuccess">
+                Your message was sent. We will call you back.
+              </p>
+            ) : (
+              <ButtonComponent
+                btnSize="btn-large"
+                btnColor="btn-dark"
+                btnBorder="btn-border-light"
+                btnHoverStyle="btn-lightHoverTheme"
+                onClick={onSubmit}
+              >
+                Contact us
+              </ButtonComponent>
+            )}
+          </div>
+        </form>
     </FormProvider>
   );
 };

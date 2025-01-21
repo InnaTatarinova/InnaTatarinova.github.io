@@ -5,8 +5,19 @@
     @include form($mainLightColor, 90%, 100%);
     background-color: rgba(255, 255, 255, 0.9);
     padding-bottom: 20px;
+    margin-top: 20px;
     padding-left: 5px;
-    font-weight: 500; 
+    font-weight: 700; 
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 50px minmax(1fr, 3fr) 50px 1fr;
+    grid-template-areas: 
+    "fromBlock toBlock serviceArea"
+    "formSize formSize formSize "
+    "formQuote formQuote formQuote"
+    "getEstimQuoteContainer getEstimQuoteContainer getEstimQuoteContainer";
+ 
 }
 
 
@@ -26,4 +37,62 @@
     color: $fourthColor;
     text-decoration: underline;
     font-weight: 700;
+    margin: 20px 10px;
+}
+
+//Grid area
+.fromBlock{
+    grid-area: fromBlock;
+}
+
+.toBlock{
+    grid-area: toBlock;
+}
+
+.serviceBlock{
+    grid-area: serviceArea;
+}
+
+.formSize{
+    grid-area: formSize;
+}
+
+.formQuote{
+    grid-area:formQuote;
+    border-top: 1px solid $mainDarkColorTransp;
+    text-align: center;
+  
+}
+
+.getEstimQuoteContainer{
+    grid-area: getEstimQuoteContainer;
+}
+
+
+@media screen and (max-width: 1280px){
+
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 768px){
+    .quoteFullForm{
+        display: block;
+
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    .formQuote{
+        text-align: left;
+    }
+
+
+}
+
+@media screen and (max-width: 400px){
+
 }

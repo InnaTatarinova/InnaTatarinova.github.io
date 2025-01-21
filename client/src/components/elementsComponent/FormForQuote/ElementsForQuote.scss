@@ -55,22 +55,11 @@
     color: $fourthColor;
 }
 
-// .zPosition1 {
-//     z-index: 3;
-// }
-// .zPosition2 {
-//     z-index: 2;
-// }
-
-// .zPosition3 {
-//     z-index: 1;
-// }
-
 .chooseType {
     grid-area: chooseMovingType;
     display: flex;
     flex-direction: row;
-    height: 40px;
+    height: 37px;
     border: 1.5px solid #213644;
     // width: 90%;
     margin: 0 auto;
@@ -94,13 +83,15 @@
 }
 
 //Spinner
-.spinnerStyle{
+.spinnerStyle {
     position: absolute;
-    margin-top: -30px;
-    left: 70%; 
     width: 20px;
     height: 20px;
     border-width: 0.05em;
+    margin-top: 10px;
+    margin-left:-30px
+
+    
 }
 
 //Icon
@@ -116,14 +107,12 @@
 }
 
 .iconType {
-     color: $mainDarkColor;
-}
-
-.iconType:hover{
     color: $mainDarkColor;
 }
 
-
+.iconType:hover {
+    color: $mainDarkColor;
+}
 
 .chooseName:hover {
     background-color: $fourthColor;
@@ -131,8 +120,9 @@
 
 .adContainerForQuote {
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .type {
@@ -140,7 +130,7 @@
     flex-direction: column;
     margin: 1%;
     text-align: center;
-    border: 1px solid $mainDarkColor;
+    border: 2px solid $mainDarkColor;
     border-radius: 5px;
     font-size: 13px;
     font-weight: 500;
@@ -154,13 +144,16 @@
 
 .typeWidthForSix {
     width: 31%;
+    max-width: 250px;
 }
 .typeWidthForFour {
-    width: 23%;
+    width: 26%;
+    max-width: 250px;
 }
 
 .typeWidthForThree {
-    width: 31%;
+    width: 29%;
+    max-width: 250px;
 }
 
 .typeChoosen {
@@ -169,7 +162,7 @@
 
 .spanChoosenItem {
     // color: $fourthColor;
-    color:$mainDarkColor;
+    color: $mainDarkColor;
     font-size: 18px;
     font-weight: 700;
 }
@@ -260,6 +253,7 @@
     display: flex;
     flex-wrap: wrap;
     grid-area: formForChooseTypeOfForm;
+    margin-bottom: 10px;
 }
 
 .formForChooseTypeOfForm div {
@@ -308,4 +302,38 @@
     border: 2px solid #213644b5;
     text-decoration: none;
     display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+    .getQuoteBtn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .adContainerForQuote {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chooseType {
+        height: $heightInputFor768px;
+    }
+    .getQuoteBtn {
+        height: 40px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chooseType {
+        height: $heightInputFor480px;
+    }
+
+    .getQuoteBtn {
+        height: 40px;
+        font-size: 20px;
+    }
 }

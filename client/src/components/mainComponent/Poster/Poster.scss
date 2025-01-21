@@ -6,7 +6,7 @@
     align-items: center;
     height: 450px;
     width: 100%;
-    margin-top: 90px;
+    margin-top: 70px;
     // background-color: rgb(143 152 234 / 19%);
     background-color: $mainDarkColorTransp;
 }
@@ -20,7 +20,7 @@
 }
 
 .poster-h1 {
-    @include setTextSize(250%, 900);
+    @include setTextSize(300%, 900);
     color: red;
     text-shadow:
         0px 0px 5px rgba(255, 255, 255, 1),
@@ -43,7 +43,7 @@
     color: $mainDarkColor;
     width: 50%;
     font-style: italic;
-    @include setTextSize(175%, 900);
+    @include setTextSize(200%, 900);
     text-shadow:
         0px 0px 17px white,
         0px 0px 30px white,
@@ -56,9 +56,9 @@
 }
 
 .poster-addPicture {
-    width: 30%;
+    width: 20%;
     height: 50px;
-    margin-left: 60px;
+    margin-left: 25%;
 }
 
 .btnLink {
@@ -68,11 +68,13 @@
     color: white;
     font-size: 20px;
     font-weight: 900;
-    min-width: 120px;
+    min-width: 130px;
+    width: 15%;
     border: 2px solid white;
     text-decoration: none;
     display: inline-block;
     margin-left: 50%;
+
     text-align: center;
     animation: pulse 2s infinite;
 }
@@ -89,5 +91,32 @@
 
     100% {
         box-shadow: 0 0 0 0 rgba(240, 6, 6, 0);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .poster-addPicture {
+        margin-left: 15%;
+        width: 30%;
+    }
+
+    .btnLink {
+        margin-top: -10px;
+    }
+    .poster-h1 {
+        @include setTextSize(250%, 900);
+    }
+    .poster-h3 {
+        @include setTextSize(175%, 900);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .poster-addPicture {
+        margin-left: 65px;
+    }
+
+    .btnLink {
+        margin-top: -10px;
     }
 }

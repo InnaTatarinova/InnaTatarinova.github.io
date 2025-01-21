@@ -3,14 +3,12 @@
 
 .banner-container {
     width: 100%;
-    height: calc(100vh - #{$heightForHeaderContainer});
+    // height: calc(100vh - #{$heightForHeaderContainer});
     height: 100vh;
     position: relative;
-    // margin-top: $heightForHeaderContainer;
     padding-top: $heightForHeaderContainer;
     background-size: cover;
     background-position: center;
-
     background-color: #2136444a; /* Semi-transparent black */
     background-image: url("../../../assets/img/johnson-johnson-U6Q6zVDgmSs-unsplash.jpg");
     background-blend-mode: hard-light;
@@ -18,12 +16,13 @@
 
 .banner-img-block {
     position: absolute;
-    height: 80%;
-    height: 70%;
+    // height: 79%;
+    height: 81vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    // margin-top: 20%;
 }
 
 .banner-h1 {
@@ -33,26 +32,33 @@
         0px 0px 5px rgba(255, 255, 255, 1),
         0px 0px 10px rgba(255, 255, 255, 1),
         0px 0px 15px rgba(255, 255, 255, 1);
-    padding-top: 20px;
+    padding-top: 5vh;
     padding-left: 6%;
     padding-right: 6%;
     animation-name: opacityOn;
     animation-duration: 2s;
     margin: 0px;
-    height: 15%;
 }
-
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .banner-img {
     width: 100%;
     text-align: center;
     min-height: 20%;
-    min-height: 160px;
+    min-height: 200px;
     overflow: hidden;
     position: relative;
     bottom: 0%;
-    animation: truckSlide 6s ease;
+    animation: truckSlide 12s ease;
     animation-iteration-count: infinite;
-    
+    padding-top: 0px;
+    z-index: 1;
 }
 
 @keyframes truckSlide {
@@ -69,19 +75,17 @@
 }
 
 //Test with wheel
-
 .car {
     background-image: url(../../../assets/img/transformTruck/whiteTruckWithoutWheels.png);
     background-repeat: no-repeat;
     background-size: cover;
-    //  position: absolute;
-    height: 7.699rem;
-    width: 22rem;
+    // height: 10rem;
+    // width: 30rem;
+    height: 12rem;
+    width: 33rem;
 }
 
 .wheel {
-    // // position: absolute;
-    // animation: wheelanimation linear .6s infinite;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -90,21 +94,29 @@
     background-image: url(../../../assets/img/transformTruck/wheel2.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 46px;
-    height: 49px;
+    // width: 46px;
+    // height: 49px;
+    width: 56px;
+    height: 59px;
     animation: wheelanimation linear 6s infinite;
-    margin-top: -31px;
-    margin-left: 80px;
+    // margin-top: -33px;
+    // margin-left: 119px;
+    margin-top: -53px;
+    margin-left: 130px;
 }
 .wheel1 {
     background-image: url(../../../assets/img/transformTruck/wheel1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 43px;
-    height: 44px;
+    // width: 43px;
+    // height: 44px;
+    width: 53px;
+    height: 54px;
     animation: wheelanimation linear 3s infinite;
-    margin-top: -31px;
-    margin-left: 170px;
+    // margin-top: -33px;
+    // margin-left: 246px;
+    margin-top: -53px;
+    margin-left: 263px;
 }
 
 @keyframes wheelanimation {
@@ -118,159 +130,95 @@
     100% {
         transform: rotate(360deg);
     }
-
-    // 100% {
-    //     transform: rotate(360deg);
-    // }
-}
-
-.banner-img img {
-    bottom: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes opacityOn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .askPriceStyle {
     width: 33%;
-    transform: translate(7%, 30%);
+    transform: translate(205%, 25%);
     border-radius: 5px;
-    height: 70%;
-    height: 65%;
+    height: 75%;
+    z-index: 100;
 }
 
-.askPriceStyle h2 {
-    @include setTextSize(330%, 700);
-    color: $colorTruckLogo;
-}
-
-.clickMe {
-    background-color: $fourthColor;
-    // animation: pulse 2s infinite;
-}
-
-.scroll-btn {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: $mainDarkColor;
-    font-size: 30px;
-}
-
-.bi-chevron-down:hover {
-    font-size: 40px;
-}
-
-@keyframes pulse {
-    0% {
-        -moz-box-shadow: 0 0 0 0 $mainDarkColor;
-        box-shadow: 0 0 0 0 $fourthColor;
+@media screen and (max-width: 1080px){
+    .banner-container {
+        height: calc(100vh - 5vh);
     }
-    70% {
-        -moz-box-shadow: 0 0 0 10px $mainDarkColor;
-        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    .banner-img-block {
+        height: 57vh;
     }
-    100% {
-        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-    }
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 0 0 0 0 $mainDarkColor;
-    }
-    70% {
-        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
-    }
-    100% {
-        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-    }
-}
-
-@media screen and (max-width: 1460px) {
-    .askPriceStyle {
-        top: 4%;
-    }
-
-    .askPriceStyle h2 {
-        @include setTextSize(250%, 700);
-    }
-}
-
-@media screen and (max-width: 1280px) {
     .banner-h1 {
-        padding-left: 5%;
-        padding-right: 5%;
-        height: 20%;
+        @include setTextSize(400%, 700);
+        padding-top: 40px;
+    }
+    .car {
+        height: 10rem;
+        width: 30rem;
+    }
+    .wheel2 {
+        width: 46px;
+        height: 49px;
+        margin-top: -33px;
+        margin-left: 119px;
+    }
+    .wheel1 {
+        width: 43px;
+        height: 44px;
+        margin-top: -33px;
+        margin-left: 246px;
     }
 
-    // .banner-img {
-    //     height: calc(75% - 80px - 20px);
-    // }
-
-    .askPriceStyle {
-        left: 3%;
-        transform: translate(15%, 40%);
-    }
-
-    .askPriceStyle h2 {
-        @include setTextSize(200%, 700);
-    }
 }
 
-@media screen and (max-width: 1024px) {
-    // .banner-img img {
-    //     bottom: auto;
-    //     height: calc(65% - 5% - 5%);
-    // }
+@media screen and (max-width: 1023px) {
+    .banner-container {
+        height: calc(100vh - 5vh);
+    }
+
+    .banner-img-block {
+        height: 64vh;
+    }
 
     .askPriceStyle {
         text-align: center;
         width: 100%;
-
         transform: none;
-        // bottom: 10%;
-        // top: auto;
-        // height: auto;
+    }
+    .banner-h1 {
+        @include setTextSize(400%, 700);
+        padding-top: 70px;
     }
 
-    .askPriceStyle h2 {
-        @include setTextSize(250%, 700);
-        color: $mainDarkColor;
-        margin-bottom: 30px;
+    .banner-img {
+        padding-top: 30px;
     }
 
-    .clickMe {
-        background-color: $fourthColor;
-    }
-
-    .clickMe:hover {
-        background-color: $mainLightColor;
-        color: $fourthColor;
-    }
+    // .car {
+    //     height: 10rem;
+    //     width: 30rem;
+    // }
+    // .wheel2 {
+    //     width: 46px;
+    //     height: 49px;
+    //     margin-top: -33px;
+    //     margin-left: 119px;
+    // }
+    // .wheel1 {
+    //     width: 43px;
+    //     height: 44px;
+    //     margin-top: -33px;
+    //     margin-left: 246px;
+    // }
 }
 
 @media screen and (max-width: 768px) {
+    .banner-img {
+        animation: truckSlide 8s ease;
+        animation-iteration-count: infinite;
+    }
     .banner-h1 {
-        @include setTextSize(300%, 700);
-    }
-
-    .banner-img img {
-        // height: calc(45% - 5% - 5%);
-    }
-
-    .askPriceStyle h2 {
-        @include setTextSize(200%, 500);
+        @include setTextSize(350%, 700);
+        padding-top: 70px;
     }
 }
 
@@ -279,22 +227,62 @@
         height: calc(100vh - 5vh - #{$heightForHeaderContainer});
         height: calc(100vh - 5vh);
     }
+    .banner-img-block {
+        height: 70vh;
+    }
     .banner-h1 {
-        @include setTextSize(250%, 500);
+        @include setTextSize(250%, 700);
+        // padding-top: 50px;
+        padding-top: 5%;
+    }
+    .banner-img {
+        overflow: visible;
+        width: auto;
+        min-height: 190px;
+    }
+    .car {
+        height: 9rem;
+        width: 24rem;
+    }
+    .wheel {
+        margin-top: -36px;
     }
 
-    .askPriceStyle h2 {
-        @include setTextSize(150%, 300);
+    .wheel1 {
+        margin-top: -7px;
+        margin-left: 188px;
+        padding-left: 42px;
+    }
+
+    .wheel2 {
+        margin-top: -7px;
+        margin-left: 94px;
+        padding-left: 42px;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
     .banner-h1 {
-        @include setTextSize(150%, 500);
+        @include setTextSize(210%, 700);
+    }
+    .car {
+        height: 7.699rem;
+        width: 22rem;
+    }
+    .wheel {
+        margin-top: -34px;
     }
 
-    .askPriceStyle h2 {
-        @include setTextSize(20px, 500);
+    .wheel1 {
+        margin-top: -1px;
+        margin-left: 173px;
+        padding-left: 42px;
+    }
+
+    .wheel2 {
+        margin-top: -2px;
+        margin-left: 81px;
+        padding-left: 42px;
     }
 }
 
@@ -305,15 +293,39 @@
 
 // };
 
-@media (max-height: 601px) and (orientation: landscape) {
-    // .banner-container {
-    //     height: 1000px;
-    // }
-}
-
-@media screen and(min-height: 1024px) {
-    .banner-img img {
-        // height: calc(50% - 5% - 5%);
-        // top: 5%;
+@media (max-height: 801px) and (orientation: landscape) {
+    .askPriceStyle {
+        transform: translate(190%, 0%);
     }
 }
+
+@media (max-height: 601px) and (orientation: landscape) {
+    .banner-container {
+        height: 700px;
+    }
+    .banner-h1 {
+        padding-top: 30px;
+    }
+
+    .banner-img-block {
+        height: 100vh;
+    }
+
+    .askPriceStyle {
+        transform: translate(185%, 10%);
+    }
+ 
+
+}
+
+@media (orientation: landscape) {
+    .banner-img {
+        bottom: 1%;
+    }
+    .scroll-btn {
+        bottom: 1%;
+    }
+
+    
+}
+

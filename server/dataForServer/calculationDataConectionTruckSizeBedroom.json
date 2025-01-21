@@ -1,5 +1,8 @@
 [
   {
+  "name":"House",
+  "conection":[
+  {
     "bedroom": 1,
     "truckSize": 16,
     "movers": 2,
@@ -23,4 +26,91 @@
     "movers": 5,
     "hours": 5
   }
+]
+},
+{
+  "name":"Apartment",
+  "conection":[
+  {
+    "bedroom": 1,
+    "truckSize": 16,
+    "movers": 2,
+    "hours": 3
+  },
+  {
+    "bedroom": 2,
+    "truckSize": 20,
+    "movers": 3,
+    "hours": 3
+  },
+  {
+    "bedroom": 3,
+    "truckSize": 26,
+    "movers": 4,
+    "hours": 4
+  },
+  {
+    "bedroom": 4,
+    "truckSize": 26,
+    "movers": 5,
+    "hours": 5
+  }
+]
+},
+{
+  "name":"Storage",
+  "conection":[
+  {
+    "bedroom": 25,
+    "truckSize": 16,
+    "movers": 2,
+    "hours": 3
+  },
+  {
+    "bedroom": 50,
+    "truckSize": 16,
+    "movers": 3,
+    "hours": 4
+  },
+  {
+    "bedroom": 100,
+    "truckSize": 16,
+    "movers": 3,
+    "hours": 4
+  },
+  {
+    "bedroom": 150,
+    "truckSize": 20,
+    "movers": 3,
+    "hours": 5
+  },
+  {
+    "bedroom": 200,
+    "truckSize": 20,
+    "movers": 4,
+    "hours": 6
+  },
+  {
+    "bedroom": 250,
+    "truckSize": 20,
+    "movers": 5,
+    "hours": 5
+  },  {
+    "bedroom": 300,
+    "truckSize": 26,
+    "movers": 5,
+    "hours": 6
+  },  {
+    "bedroom": 400,
+    "truckSize": 26,
+    "movers": 5,
+    "hours": 7
+  },  {
+    "bedroom": 900,
+    "truckSize": 26,
+    "movers": 5,
+    "hours": 8
+  }
+]
+}
 ]

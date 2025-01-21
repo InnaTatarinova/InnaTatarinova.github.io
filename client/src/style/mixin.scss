@@ -8,7 +8,6 @@
 }
 
 //Title
-
 @mixin titleForComponent($size, $weight, $color) {
     color: $color;
     @include setTextSize($size, $weight);
@@ -56,6 +55,7 @@
     background-color: $mainLightColor;
 }
 
+
 @mixin addDarkTheme {
     @include darkTheme();
 }
@@ -74,7 +74,7 @@
     background-color: $background;
     height: 100%;
     width: 100%;
-    padding: 20px 0px;
+    padding: 100px 10px 20px 10px;
 }
 
 //Form

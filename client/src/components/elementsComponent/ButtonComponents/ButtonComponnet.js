@@ -18,8 +18,8 @@ export const ButtonComponent = ({
   const SIZES = [" ", "btn-medium", "btn-small", "btn-large"];
   const BORDER = ["", "btn-border-light", "btn-border-dark"];
   const FORM = ["", "btn-circle", "btn-circle-small"];
-  const COLOR = ["btn-light", "btn-dark", "btn-red"];
-  const CLASSNAME = ["", "visiblePhoneNumber", "clickMe", "getEstimQuoteBtn", "movingPhone","movingPhone_animated","btnCallUs", "openOnlineOrderform"];
+  const COLOR = ["", "btn-light", "btn-dark", "btn-red"];
+  const CLASSNAME = ["", "visiblePhoneNumber", "clickMe", "getEstimQuoteBtn", "movingPhone","movingPhone_animated","btnCallUs", "openOnlineOrderform", "send_ForOrder"];
 
   const checkBtnStyle = STYLES.includes(btnStyle) ? btnStyle : STYLES[0];
   const checkBtnHoverStyle = HOVERSTYLES.includes(btnHoverStyle) ? btnHoverStyle : STYLES[0];

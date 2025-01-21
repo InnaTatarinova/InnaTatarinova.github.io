@@ -15,7 +15,7 @@ export const Floor = (props) => {
   };
 
   return (
-    <div className="floorForm-component" onblur={setFloor}>
+    <div className="floorForm-component" onBlur={setFloor}>
       <span>{props.name}</span>
       <Input
         {...number_validation}

@@ -1,33 +1,58 @@
 @import "../../../style/mainStyle.scss";
 @import "../../../style/mixin.scss";
 
-// .formShortQuote {
-//     display: grid;
-//    
-//     grid-template-rows: 50px 1fr 100px;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-column-gap: 5%;
-//    
-//     grid-template-areas:
-//         "inputFrom inputFrom"
-//         "inputTo inputTo"
-  
-//         "submitBTN submitBTN";
-// }
-
+.formShortQuote {
+    display: grid;
+    @include form($formColor, 70%, 100%);
+    max-height: 255px;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 5%;
+    grid-template-areas:
+        "inputFrom"
+        "inputTo"
+        "chooseMovingType"
+        "submitBTN";
+}
 
 @media screen and (max-width: 1024px) {
-    .formShortQuote {
-        display: grid; 
-        @include form($formColor, 80%, 90%);
-        grid-template-rows: 50px 50px 50px 100px;
-        grid-template-columns: 1fr;
-        grid-column-gap: 1%; 
+    .formShortQuote{
+        @include form($formColor, 70%, 100%);
+        // margin-top: 130px;
+        
+    }
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .formShortQuote{
+        @include form($formColor, 80%, 100%);
+        margin-top: 150px;
+        grid-row-gap: 7%;
+        max-height: 350px;
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .formShortQuote{
+        // margin-top: 100px;
+        margin-top: 15%;
         grid-row-gap: 5%;
-        grid-template-areas:
-            "inputFrom"
-            "inputTo"
-            "chooseMovingType"
-            "submitBTN";
+        max-height: 270px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .formShortQuote {
+        height: 100%;
+    }
+}
+
+@media (max-height: 601px) and (orientation: landscape){
+    .formShortQuote{
+        min-height: 250px;
+        @include form($formColor, 80%, 100%);
     }
 }

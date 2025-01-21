@@ -5,6 +5,7 @@ import { findInputError } from "./FindInputError";
 import { isFormInvalid } from "../IsFormValid";
 import { AnimatePresence } from "framer-motion";
 import "./Input.scss";
+import { Spinner } from "react-bootstrap";
 
 export const Input = ({
   type,
@@ -16,6 +17,7 @@ export const Input = ({
   className,
   setValue,
   value,
+  showSpinner
 }) => {
   const {
     register,
@@ -55,6 +57,7 @@ export const Input = ({
           }}
         ></input>
       )}
+      {showSpinner ? <Spinner className="spinnerStyle" /> : null}
       <AnimatePresence mode="wait" initial={false}>
         {isInvalid && (
           <InputError

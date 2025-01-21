@@ -28,7 +28,6 @@ export const CardForMovingStep = (props) => {
                   return (
                     <div key={key}>
                       <span >{el.value}</span>{" "}
-                      <i className="bi bi-arrow-clockwise color"></i>;
                     </div>
                   );
                 })}

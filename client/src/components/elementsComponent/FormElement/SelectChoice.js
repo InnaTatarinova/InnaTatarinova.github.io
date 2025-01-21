@@ -11,6 +11,39 @@ export const SelectChoice = (props) => {
       type: props.type,
       payload: value,
     });
+    dispatch({
+      type:"RESIDENCE_TYPE",
+      payload: ""
+    });
+    dispatch({
+      type:"BEDROOM_QUANTITY",
+      payload: 0
+    });
+    dispatch({
+      type:"FLOOR_LEVEL",
+      payload: 0
+    });
+    dispatch({
+      type:"TRUCK_SIZE",
+      payload: null
+    });
+    dispatch({
+      type:"MOVERS",
+      payload: 0
+    });
+    dispatch({
+      type:"HOURS",
+      payload: 0
+    });
+    dispatch({
+      type:"STORAGE",
+      payload: ""
+    });
+    dispatch({
+      type:"PRICE",
+      payload: 0
+    });
+
 
     props.showSelectForm(false);
   };

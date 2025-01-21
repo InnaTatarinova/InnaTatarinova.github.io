@@ -57,8 +57,9 @@ export const InputWithDropList = (props) => {
         className={props.className}
         setValue={setValue}
         value={value}
+        showSpinner={showSpinner}
       />
-      {showSpinner ? <Spinner className="spinnerStyle" /> : null}
+      {/* {showSpinner ? <Spinner className="spinnerStyle" /> : null} */}
 
       {!wasSelectedItem || value !== "" ? (
         resultList.length > 0 ? (

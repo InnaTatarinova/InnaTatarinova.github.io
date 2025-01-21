@@ -1,0 +1,40 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+@media screen and (max-width: 768px) {
+    .cardItem-container-ForNavbar {
+        width: 100%;
+        box-shadow: none;
+        height: 30px;
+        margin-bottom: 0px;
+        text-align: center;
+        
+      }
+
+      .cardItem-container-ForNavbar:nth-last-child(-n + 3){
+        width: 100%;
+      }
+    
+      .infoCard-list-ForNavbar {
+        cursor: pointer;
+        margin-top: 15px;
+        flex-direction: column;
+      }
+    
+      .cardItem-text-ForNavbar {
+        @include setTextSize(15px, 700);
+        height: 30px;
+        padding: 0px;
+      }
+    
+      .heightForServiceList-ForNavbar {
+        height: 40%;
+      }
+}
+
+@media screen and (max-width: 375px){
+  .cardItem-container-ForNavbar {
+    height: 22px;
+  }
+
+}

@@ -1,0 +1,59 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+
+.btn-scroll {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    right: 45%;
+    width: 60px;
+    // border: #fc0808 1px solid;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: $mainDarkColor;
+    font-size: 60px;
+    z-index: 50;
+}
+
+.btn-scroll svg {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.bi-chevron-down{
+    color: $fourthColor;
+}
+
+.btn-scroll_animated::before {
+    // animation: pulseScroll 1.2s infinite;
+    border-color: inherit;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 101, 0);
+    content: "";
+    height: 60px;
+    position: absolute;
+    width: 60px;
+}
+
+@keyframes pulseScroll {
+    0% {
+        box-shadow: 0 0 0 0 rgba(238, 5, 5, 0.75);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 101, 0);
+    }
+}
+
+@media (max-height: 601px) and (orientation: landscape) {
+    .btn-scroll {
+        bottom: -20%;
+    }
+
+}

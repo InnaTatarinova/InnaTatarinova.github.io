@@ -46,20 +46,123 @@
 
 .movingStep-container {
     margin: 20px;
-    display: flex;
-    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px 1fr 50px 1fr 50px 1fr 1fr;
+        grid-template-rows: 120px 70px 120px;
+        grid-template-areas:
+            "firstStep firstStep firstArrow secondStep secondStep secondStep thirdArrow thirdStep thirdStep"
+            ". . . . . . . secondArrow ."
+            ". fifthStep fifthStep fifthStep fourthArrow fourthStep fourthStep fourthStep."
+            ;
 }
 
 .moveToRight {
-    margin-left: 30%;
+    margin-left: 20px;
 }
 
 .arrowStyle {
-    width: 30%;
+    width: 70px;
     height: 50px;
-    margin-left: 20%;
+    margin-top: 2%;
+    transform: rotateX(40deg);
 }
 
 .moveToRightArrow {
-    margin-left: 50%;
+    // margin-left: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+    .movingStep-container {
+        width: 100%;
+        grid-template-columns: 1fr 70px 1fr 70px 1fr;
+        grid-template-rows: 120px 70px 120px;
+        grid-template-areas:
+            "firstStep firstArrow secondStep thirdArrow thirdStep"
+            ". . . . secondArrow"
+            "fifthStep fourthArrow fourthStep fourthStep ."
+            ;
+    }
+   
+}
+
+@media screen and (max-width: 968px) {
+    .movingStep-container {
+        margin: 0px;
+        width: 100%;
+         grid-template-columns:70px 1fr 70px 1fr 70px;
+        grid-template-rows: 120px 70px 120px 70px 120px;
+        grid-template-areas:
+            "firstStep firstStep firstArrow secondStep secondStep"
+            ". . . . secondArrow "
+            "fourthStep fourthStep fourthArrow thirdStep thirdStep"
+            ". . thirdArrow . ."
+            "fifthStep fifthStep fifthStep fifthStep fifthStep"
+            ;
+
+            // "firstStep firstStep firstArrow secondStep secondStep"
+            // ". . . . secondArrow"
+            // "thirdStep thirdStep thirdStep thirdStep thirdStep"
+            // ". . . thirdArrow  ."
+            // "fifthStep fifthStep fourthArrow fourthStep fourthStep "
+            // ;
+       
+    }
+    .arrowStyle {
+       width: 90%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .movingStep-container {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .arrowStyle {
+        width: 30%;
+        height: 50px;
+        margin-left: 30%;
+    }
+    .moveToRight {
+        margin-left: 30%;
+    }
+}
+
+//grid area name
+.firstStep {
+    grid-area: firstStep;
+}
+
+.firstArrow {
+    grid-area: firstArrow;
+}
+
+.secondStep {
+    grid-area: secondStep;
+}
+
+.secondArrow {
+    grid-area: secondArrow;
+}
+.thirdStep {
+    grid-area: thirdStep;
+}
+
+.thirdArrow {
+    grid-area: thirdArrow;
+}
+.fourthStep {
+    grid-area: fourthStep;
+}
+
+.fourthArrow {
+    grid-area: fourthArrow;
+}
+.fifthStep {
+    grid-area: fifthStep;
 }

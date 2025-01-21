@@ -15,20 +15,9 @@ import { Price } from "./pages/Price";
 import { Contacts } from "./pages/Contacts";
 import { ContactUsFooter } from "./components/mainComponent/ContactUs/ContactUsFooter";
 import { useEffect, useState } from "react";
+import { Testimonial, Testimonial_Page } from "./pages/Testimonial_Page";
 
 function App() {
-  //Testing connect backend and FrontEnd
-
-  const [ message, setMessage] = useState("");
-
-  // useEffect(()=>{
-  //   fetch("https://localhost:8000/message")
-  //   .then((res)=>res.json())
-  //   .then((data)=>setMessage(data.message));
-
-  // },[])
-
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -61,6 +50,7 @@ function App() {
           />
           <Route path="/services/junk" exact element={<Service_Junk />} />
           <Route path="/quote" exact element={<Price />} />
+          <Route path="/testimonials" exact element ={<Testimonial_Page/>} />
           <Route path="/contactUs" exact element={<Contacts />} />
         </Routes>
         <ContactUsFooter />

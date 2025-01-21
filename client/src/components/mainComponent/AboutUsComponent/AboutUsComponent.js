@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import "./AboutUsComponent.scss";
+import "../Services/ServicesComponentAboutUs.scss";
 import { BlockForInformationFromIcon } from "./BlockForInformationFromIcon";
 import { ourProsList } from "../../../data/abouUsInfo";
 import { ItemForChoose } from "../../elementsComponent/ItemForChoose/ItemForChoose";

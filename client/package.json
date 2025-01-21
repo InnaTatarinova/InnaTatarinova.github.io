@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
+    "client": "file:",
     "framer-motion": "^10.16.16",
     "mailtrap": "^3.3.0",
     "node-sass": "^7.0.3",
@@ -54,5 +55,4 @@
     "gh-pages": "^6.1.0"
   },
   "proxy": "http://localhost/8000"
-
 }

@@ -6,26 +6,21 @@
     border-radius: 8px;
     font-size: 15px;
     padding-left: 10px;
-    width: 100%; 
-    border:1px solid $mainDarkColor;
+    width: 100%;
+    border: 1px solid $mainDarkColor;
+    
 }
 
-.form-input-withMistake{
-    border:1.5px $fourthColor solid;
+.form-input-withMistake {
+    border: 1.5px $fourthColor solid;
 }
-
 
 .formQuoteInput {
     width: 90%;
-    margin: auto;
+    margin: 2px auto;
     font-size: 15px;
+   
 }
-
-// .formQuoteInput div input {
-//     height: 40px;
-//     border: 1.5px solid $mainDarkColor;
-// }
-
 
 .form-message {
     width: 100%;
@@ -40,3 +35,28 @@
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 1024px) {
+    .form-input {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-input {
+        font-size: 18px;
+        height: $heightInputFor768px;
+    }
+    .form-message {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-input {
+        font-size: 15px;
+        height: $heightInputFor480px;
+    }
+    .form-message {
+        height: 80px;
+    }
+}

@@ -20,13 +20,14 @@ const Navbar = () => {
 
   //show btn with phoneNumber
   const showButton = () => {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth < 480) {
+      setVisiblePhoneNumber(false);
       setShowButton(false);
     } else {
       setShowButton(true);
     }
-    if (window.innerWidth < 480) {
-      setVisiblePhoneNumber(false);
+    if(window.innerWidth > 768){
+      showServiceList();
     }
   };
 
@@ -46,18 +47,15 @@ const Navbar = () => {
 
   //Show phone number in small window after click on phone icon
   const showPhoneNumber = () => {
-    if (window.innerWidth > 480) {
-      setVisiblePhoneNumber(!visiblePhoneNumber);
-    }
-    phoneNumberDial();
-  };
-
-  const phoneNumberDial = () => {
     window.location.href = `tel://${phoneNumber}`;
   };
 
   const showServiceList = () => {
-    setShowServiceType(!showServiceType);
+    if (window.innerWidth > 768) {
+      clickToCloseMenu();
+    } else {
+      setShowServiceType(!showServiceType);
+    }
   };
 
   useEffect(() => {
@@ -72,6 +70,7 @@ const Navbar = () => {
             <img src={logo} alt="logo" className="nav-img" />
           </Link>
         </div>
+        {/* Link to PhoneIcon. Hide till 480px  */}
         <div className="phoneBtn" onClick={showPhoneNumber}>
           {!visiblePhoneNumber ? (
             <i className="bi bi-telephone-fill menuIcon biNavbar"></i>
@@ -80,8 +79,8 @@ const Navbar = () => {
               <ButtonComponent
                 btnStyle="btn-transparent"
                 btnSize="btn-large"
-                btnColor="btn-dark"
-                btnBorder="btn-border-light"
+                btnColor="btn-light"
+                btnBorder="btn-border-dark"
                 className="visiblePhoneNumber"
               >
                 {phoneNumber}
@@ -90,6 +89,7 @@ const Navbar = () => {
           )}
         </div>
 
+        {/* Link to MenuIcon. Hide till 768px */}
         <div onClick={clickOnMenu} className="menuBtn">
           <i
             className={
@@ -100,7 +100,9 @@ const Navbar = () => {
           ></i>
         </div>
 
+        {/* Link to Menu */}
         <ul className={clickOnMenuStatus ? "nav-menu active" : "nav-menu"}>
+          {/* Link to About us */}
           <li className="nav-menu-li">
             <Link
               to="/about"
@@ -110,28 +112,34 @@ const Navbar = () => {
               About us
             </Link>
           </li>
+          {/* Link to Services */}
           <li
             onClick={showServiceList}
             className={
               !showServiceType
                 ? `nav-menu-li`
-                : `nav-menu-li heightForServiceList`
+                : `nav-menu-li heightForServiceList-ForNavbar`
             }
           >
-            <>
-              <div className="nav-menu-item">Services</div>
-              <div onClick={clickToCloseMenu}>
-                {showServiceType ? (
-                  <ServiceList
-                    classNameForList="infoCard-list-ForNavbar"
-                    classNameForContainer="cardItem-container-ForNavbar"
-                    classNameForText="cardItem-text-ForNavbar"
-                    showImg="no"
-                  />
-                ) : null}
-              </div>
-            </>
+            <Link
+              to="/services"
+              onClick={showServiceList}
+              className="nav-menu-item"
+            >
+              Services
+            </Link>
+            <div onClick={clickToCloseMenu}>
+              {showServiceType ? (
+                <ServiceList
+                  classNameForList="infoCard-list-ForNavbar"
+                  classNameForContainer="cardItem-container-ForNavbar"
+                  classNameForText="cardItem-text-ForNavbar"
+                  showImg="no"
+                />
+              ) : null}
+            </div>
           </li>
+          {/* Link to Price */}
           <li className="nav-menu-li">
             <Link
               to="/quote"
@@ -141,15 +149,13 @@ const Navbar = () => {
               Price
             </Link>
           </li>
+          {/* Link to Testimonial */}
           <li className="nav-menu-li">
-            <Link
-              to="/"
-              onClick={clickToCloseMenu}
-              className="nav-menu-item"
-            >
+            <Link to="/testimonials" onClick={clickToCloseMenu} className="nav-menu-item">
               Testimonial
             </Link>
           </li>
+          {/* Link to Contact us */}
           <li className="nav-menu-li">
             <Link
               to="/contactUs"
@@ -161,15 +167,10 @@ const Navbar = () => {
           </li>
         </ul>
 
+        {/* Link to PhoneNumber btn */}
         {button && (
-          <Link className="phoneNumberStyle">
-            <ButtonComponent
-              btnStyle="btn-transparent"
-              btnSize="btn-large"
-              btnColor="btn-dark"
-              btnBorder="btn-border-light"
-              className="visiblePhoneNumber"
-            >
+          <Link className="phoneNumberStyle" onClick={showPhoneNumber}>
+            <ButtonComponent className="visiblePhoneNumber">
               {phoneNumber}
             </ButtonComponent>
           </Link>

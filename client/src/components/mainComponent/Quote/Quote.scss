@@ -3,11 +3,12 @@
 
 .quote_component {
     @include addMainContainer($mainLightColor);
-    // background-image: url("../../../assets/img/calculation8.jpg");
     background-size: cover;
     position: relative;
-    //    background:  linear-gradient(#f0ecec86 20%, #ebedee88 80%)
-    //   ,url("../../../assets/img/calculation8.jpg");
+    padding-top:55px;
+    padding-bottom:55px;
+
+    
 }
 
 .quote-title {
@@ -21,10 +22,31 @@
     margin-top: 2px;
 }
 
-.quoteItem {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 80%;
-    text-align: center;
+// .quoteItem {
+//     display: flex;
+//     flex-direction: row;
+//     height: 100%;
+//     width: 80%;
+//     text-align: center;
+// }
+
+@media screen and (max-width: 1280px){
+
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
+
+}
+
+@media screen and (max-width: 400px){
+
 }

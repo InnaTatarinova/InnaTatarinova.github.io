@@ -1,4 +1,5 @@
 import React from "react";
+import "./ServicesComponentNavbar.scss";
 import { CardItemComponent } from "./CardComponent";
 import localPhoto from "../../../assets/img/ServicePhoto/local.jpg";
 import longDistPhoto from "../../../assets/img/ServicePhoto/longDistance.jpg";

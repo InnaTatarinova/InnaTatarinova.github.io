@@ -28,7 +28,7 @@ export const number_validation = {
 export const phoneNumber_validation = {
   type: "tel",
   id: "phone",
-  placeholder: "Your phone number",
+  placeholder: "Your phone number (format xxx-xxx-xxxx)",
   multiline: false,
   label: "phone",
   name:"phone",
@@ -56,7 +56,7 @@ export const email_validation = {
 export const message_validation = {
   type: "text",
   id: "message",
-  placeholder: "Your message",
+  placeholder: "Your message (min 6 characters)",
   name: "message",
   multiline: true,
   validation: {

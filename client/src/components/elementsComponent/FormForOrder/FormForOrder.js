@@ -150,12 +150,16 @@ export const FormForOrder = (props) => {
           onSubmit={(e) => e.preventDefault()}
           noValidate
           autoComplete="off"
-          className={openThanksForm ? "formOrderOpacity" : null}
+          className={
+            openThanksForm
+              ? "formOrderOpacity"
+              : "formForOrderContactInformation"
+          }
         >
-          <h3 className="title">just add contact information</h3>
+          <h3 className="title info_ForOrder">just add contact information</h3>
           <BlockForInputContact
             validation={name_validation}
-            className="inputFormOrder"
+            className="inputFormOrder name_ForOrder"
             value={name}
             setValue={setName}
             setSuccess={setSuccess}
@@ -163,7 +167,7 @@ export const FormForOrder = (props) => {
           />
           <BlockForInputContact
             validation={phoneNumber_validation}
-            className="inputFormOrder"
+            className="inputFormOrder phone_ForOrder"
             value={phone}
             setValue={setPhone}
             setSuccess={setSuccess}
@@ -171,27 +175,26 @@ export const FormForOrder = (props) => {
           />
           <BlockForInputContact
             validation={email_validation}
-            className="inputFormOrder"
+            className="inputFormOrder email_ForOrder"
             value={email}
             setValue={setEmail}
             setSuccess={setSuccess}
             wasSentSuccessfuly={wasSentSuccessfuly}
           />
-
           <BlockForInputContact
             validation={add_info_validation}
-            className="inputFormOrder"
+            className="inputFormOrder addInfo_ForOrder"
             value={message}
             setValue={setMessage}
             setSuccess={setSuccess}
             wasSentSuccessfuly={wasSentSuccessfuly}
           />
-
           <ButtonComponent
             btnSize="btn-large"
             btnColor="btn-dark"
             btnBorder="btn-border-light"
             btnHoverStyle="btn-lightHoverTheme"
+            className="send_ForOrder"
             onClick={sendOrder}
           >
             Send order

@@ -1,0 +1,44 @@
+@import "../../../style/mainStyle.scss";
+@import "../../../style/mixin.scss";
+//For aboutUsPage
+.cardItem-container-ForAboutUsPage {
+    width: 30%;
+    height: 70px;
+}
+
+.infoCard-list-ForAboutUsPage {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cardItem-text-ForAboutUsPage {
+    @include setTextSize(100%, 500);
+    height: 30px;
+}
+
+@media screen and (max-width: 980px) {
+    .cardItem-container-ForAboutUsPage {
+        height: 70px;
+    }
+
+   
+}
+
+@media screen and (max-width: 768px) {
+    .cardItem-container-ForAboutUsPage {
+        width: 90%;
+        height: 70px;
+        border: 1px #003566 solid;
+        margin-bottom: 10px;
+    }
+
+    .cardItem-container-ForAboutUsPage:nth-last-child(-n + 3){
+        width: 90%;
+    }
+
+    .cardItem-text-ForAboutUsPage {
+        @include setTextSize(100%, 500);
+        height: 30px;
+        color: $fourthColor;
+    }
+}

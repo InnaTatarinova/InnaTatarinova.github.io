@@ -73,7 +73,7 @@ const initialMovingForm = {
   truckSize: null,
   movers: 0,
   hours: 0,
-  storage: "",
+  storage: 0,
   price:0,
  
 };

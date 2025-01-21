@@ -4,6 +4,8 @@
 .blockForMovingStep {
   position: relative;
   width: 77%;
+  margin: auto;
+  max-width: 300px;
   opacity: 1;
   cursor: pointer;
   height: 120px;
@@ -96,8 +98,16 @@
   right: 3%;
   top: 75%;
   transform: rotate(175deg);
+  color: $mainDarkColor;
 }
 
 .color{
   color: $mainDarkColor;
+}
+
+@media screen and (max-width: 768px) {
+  .blockForMovingStep{
+    max-width: 550px;
+    width: 80%;
+  }
 }

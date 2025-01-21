@@ -5,50 +5,70 @@ import { Storage } from "../FormElementForQuote/Storage";
 import { Floor } from "../FormElementForQuote/Floor";
 import { MovingFormContext } from "../../../../context/MovingFormContext";
 import { ShortForm } from "./ShortForm";
-// import { conectionTruckSizeAndBedroom } from "../data/calculationData";
+//import { conectionTruckSizeAndBedroom } from "../data/calculationData";
 
-export const FullForm = () => {
-  const {
-    serviceType,
-    residenceType,
-    bedroomQuantity,
-    dispatch,
-  } = useContext(MovingFormContext);
+export const FullForm = (props) => {
+  const { serviceType, residenceType, bedroomQuantity, storage, dispatch } =
+    useContext(MovingFormContext);
 
   const [showRecom, setShowRec] = useState(false);
 
-  const setRecomendationValue = () => {
-    // if (bedroomQuantity !== 0) {
-    //   switch (residenceType) {
-    //     case "House":
-    //       for (let i of conectionTruckSizeAndBedroom) {
-    //         if (i.bedroom === bedroomQuantity) {
-    //           dispatch({
-    //             type: "TRUCK_SIZE",
-    //             payload: i.truckSize,
-    //           });
-    //           dispatch({
-    //             type: "MOVERS",
-    //             payload: i.movers,
-    //           });
-    //           dispatch({
-    //             type: "HOURS",
-    //             payload: i.hours,
-    //           });
-    //         }
-    //        }
-    //   }
-    //   setShowRec(true);
-    // }
-    
+  const setRecomendationValue = async () => {
+    if (bedroomQuantity !== 0 || storage > 0) {
+      let truck = 0;
+      let movers = 0;
+      let hours = 0;
+
+      const data = {
+        var1: residenceType,
+        var2: bedroomQuantity,
+        var3: serviceType,
+        var4: storage,
+      };
+      const endpoint = "https://localhost:8000/get_advice";
+
+      console.log(JSON.stringify(data));
+
+      await fetch(endpoint, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((blob) => blob.json())
+        .then((data1) => {
+          console.log(data1[0]);
+          truck = data1[0];
+          movers = data1[1];
+          hours = data1[2];
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
+
+      dispatch({
+        type: "TRUCK_SIZE",
+        payload: truck,
+      });
+      dispatch({
+        type: "MOVERS",
+        payload: movers,
+      });
+      dispatch({
+        type: "HOURS",
+        payload: hours,
+      });
+      setShowRec(true);
+    }
   };
 
   useEffect(() => {
     setRecomendationValue();
-  }, [bedroomQuantity]);
+  }, [bedroomQuantity, storage]);
 
   return (
-    <div>
+    <div className={props.gridName}>
       <div className="residenceType">
         {serviceType.id === 1 || serviceType.id === 2 ? (
           <LocalResidentForm />
@@ -73,7 +93,7 @@ export const FullForm = () => {
         ) : null}
       </div>
 
-      {showRecom=== true ? (
+      {showRecom === true ? (
         <div>
           <div className="proposedOptionBlockText">
             You can choose the different options, but we recommend the next

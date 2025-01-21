@@ -6,8 +6,8 @@ const Star = () => (
 
 export const TestimonialCard = (props) => {
   return (
-    <div className="testimonCardComponent">
-      <div className="photoTestim">
+    <div className={`testimonCardComponent ${props.className}`}>
+      <div className={`photoTestim ${props.className_img}`}>
         <img src={props.review.photo} />
       </div>
       <div className="star">
