@@ -91,6 +91,7 @@ export const AboutUsComponent = () => {
           KL Cargo Moving Company has developed a finely tuned process for
           expertly tackling moves small and large, local or long distance, with
           any level of complexity.
+          We will do all hard work for you.
         </p>
         <p>
           Our combination of training, moving services, technology, and
