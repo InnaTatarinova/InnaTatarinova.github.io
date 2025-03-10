@@ -13,6 +13,8 @@ export const ContactPageComponent = () => {
       <div className="contactBlock">
         <h5>Hours of operation: </h5>
         <h5>8 AM : 9 PM Daily</h5>
+        <h5>10 AM : 3 PM Weekend</h5>
+        <h5>We are not working on Independence day</h5>
       </div>
       <div className="contactBlock">
         <h3 className="redColor">Office:</h3>
